@@ -1,5 +1,9 @@
-## TBD [Spring Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Spring%20Portfolio%20Starter)
-Runtime link: TBD
-# Team Members: Akshay, Ashwin, Aman, Nolan
+## Name TBD 
+  * Runtime link: TBD
+  * Team Members: Akshay, Ashwin, Aman, Nolan
 
+## Project Info
+
+## Week 0 
+### Timebox and Tangibles:
 
