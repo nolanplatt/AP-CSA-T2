@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head><div layout:fragment="metadata" th:remove="tag">
+    <!-- Start of head content specific to page -->
+    <title>Birds</title>
+    <!-- End of head content specific to page -->
+</div></head>
+
+<body><div layout:fragment="content" th:remove="tag">
+    <!-- Start of body content specific to page -->
+    <div class="product" style="margin-top: 2%;">
+        <div class="row" style="padding: 0% 10% 5%;">
+
+            <div class="col-8" >
+                <h1>Birds</h1>
+            </div>
+
+        </div>
+    </div>
+    <!-- End of body content specific to page -->
+</div></body>
+
+<div layout:fragment="script" th:remove="tag">
+    <!-- Start of custom script specific to page -->
+    <script src="/static/vanta/three.r119.min.js" th:src="@{/vanta/three.r119.min.js}"></script>
+    <script src="/static/vanta/vanta.birds.min.js" th:src="@{/vanta/vanta.birds.min.js}"></script>
+    <script>
+        VANTA.BIRDS({
+            el: "body",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00
+        })
+    </script>
+    <!-- End of custom script specific to page -->
+</div>
+
+</html>
