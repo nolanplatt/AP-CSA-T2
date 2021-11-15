@@ -1,5 +1,10 @@
-## Name TBD 
-  * Runtime link: TBD
+## Name TBD - README.md
+
+## Project Information
+- [Runtime Link (Running Project)](https://tbd.com/)
+- [Team Scrum Board](https://github.com/nolanplatt/AP-CSA-T2/projects/2)
+- [All Team Commits](https://github.com/nolanplatt/AP-CSA-T2/commits/master)
+- [Team Insight Graphs](https://github.com/nolanplatt/AP-CSA-T2/graphs/contributors)
 
 ## Team Members:
 | Team Member | Github Username | Github Profile | Journal Link | Github Contributions | Issues | Scrum Board Tasks | Role |
