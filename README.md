@@ -6,6 +6,9 @@
 - [All Team Commits](https://github.com/nolanplatt/AP-CSA-T2/commits/master)
 - [Team Insight Graphs](https://github.com/nolanplatt/AP-CSA-T2/graphs/contributors)
 
+## Our Idea
+TBD
+
 ## Team Members:
 | Team Member | Github Username | Github Profile | Journal Link | Github Contributions | Issues | Scrum Board Tasks | Role |
 | ----------- | --------------- | -------------- | ------------ | -------------------- | ------ | ----------------- | --------------- |
@@ -16,7 +19,6 @@
 | Varnit G. | VarnitGupta24 | [Varnit's Profile](https://github.com/VarnitGupta24) | [Varnit's Journal](https://docs.google.com/document/d/1fls5rsfbgSZj54k3tJZ_JKrsNKcyBi5pQE1LzBQ5njI/edit) | [Varnit's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=VarnitGupta24) | [Issues](https://github.com/nolanplatt/AP-CSA-T2/issues/assigned/VarnitGupta24) | [Scrum Board Tasks](https://github.com/nolanplatt/AP-CSA-T2/projects/1?card_filter_query=assignee%3Aprishamaiti) | Deployment Manager |
 
 
-## Project Info
 
 
 ## Week 0 
