@@ -10,7 +10,7 @@
 We want to create a full-stack application that makes students' school lunch experiences much more enjoyable. We allow students to input their order for lunch ahead of time so that the right amount can be prepared before lunch starts, making it much faster for kids to get their food.
 
 ## Team Members:
-| Team Member | Github Username | Journal Link | Github Contributions | Issues | Role |
+| Team Member | Github Profile | Journal Link | Repository Contributions | Issues | Role |
 | ----------- | --------------- | ------------ | -------------------- | ------ | --------------- |
 | Akshay R. | [@Akshay-Rohatgi](https://github.com/Akshay-Rohatgi) | [Akshay's Journal](https://google.com) | [Akshay's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=Akshay-Rohatgi) | [Issues](https://github.com/nolanplatt/AP-CSA-T2/issues/assigned/Akshay-Rohatgi) | Primary Designer |
 | Ashwin B. | [@ashwinbabu888](https://github.com/ashwinbabu888) | [Ashwin's Journal](https://docs.google.com/document/d/1XHgzNtQLO_iJDqhN8yUhwT3ZiHj_SWNv9xixzUOAF8c/edit?usp=sharing) | [Ashwin's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=ashwinbabu888) | [Issues](https://github.com/nolanplatt/AP-CSA-T2/issues/assigned/ashwinbabu888) | Scrum Master |
