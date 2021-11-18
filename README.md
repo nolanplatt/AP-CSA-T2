@@ -7,7 +7,7 @@
 - [Team Insight Graphs](https://github.com/nolanplatt/AP-CSA-T2/graphs/contributors)
 
 ## Our Idea
-TBD
+We want to create a full-stack application that makes students' school lunch experiences much more enjoyable. We allow students to input their order for lunch ahead of time so that the right amount can be prepared before lunch starts, making it much faster for kids to get their food.
 
 ## Team Members:
 | Team Member | Github Username | Github Profile | Journal Link | Github Contributions | Issues | Role |
