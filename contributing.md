@@ -18,7 +18,7 @@ To report a bug, simply create an issue by clicking [here](https://github.com/no
 
 If you find a big, error, or even a typo, feel free to fix it by pulling the repository, fixing it, and then creating a pull request. In your pull request, include information on the error, the cause of it, and how you fixed it. Relevant pull requests that pass tests will be merged into the main repository. For more information, see the section below.
 
-### Pull Requests
+## Pull Requests
 
 <hr>
 
