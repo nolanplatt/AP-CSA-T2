@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## 🟣 Purple Team 🟣 - README.md
 ## Project Information
 - [Runtime Link (Running Project)](https://tbd.com/)
