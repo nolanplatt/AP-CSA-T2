@@ -4,8 +4,6 @@
 
 Team Purple is committed to ensuring the Github community is able to contribute and add to our project this trimester. We are very appreciative in anyone wanting to contribute, but before creating a pull request or otherwise altering the repository, please ensure you take a careful look at these contributing guidelines.
 
-
-
 ## Reporting Bugs
 
 <hr>
@@ -46,7 +44,7 @@ Any contribution that includes the aforementioned information, and anything that
 There are multiple methods to use the .gitignore file to its upmost ability. See below.
 
 1. Simply type ".<filename>" in your terminal, excluding the "<>". This will make Github ignore any file called <filename>.
-2. To ignore an entire directory, usually in cases that have modules or packages, simply do "<filedirectory>/". With the slash after the directory path, Github will ignore that entire directory (all files in it and the folder/directory in general).
+2. To ignore an entire directory, usually in cases that have modules or packages, simply do "<filedirectory>/". With the slash after the directory path, Github will ignore that entire directory (all files in it and the folder/directory in general). 
 
 
 

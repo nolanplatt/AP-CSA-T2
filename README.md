@@ -1,4 +1,4 @@
-## Purple Team - README.md
+Purple Team - README.md
 
 ## Project Information
 - [Runtime Link (Running Project)](https://tbd.com/)
@@ -24,3 +24,15 @@ We want to create a full-stack application that makes students' school lunch exp
 ## Week 0 
 ### Timebox and Tangibles:
 
+In Week 0, our group came up with ideas, created the GitHub, and really started brainstorming everything. We also shared ideas with our respective Birds of the Feather (BOF) groups/meetings.
+
+### Week 0 Individual Technicals (Timebox)
+
+## Team Members
+| Team Member | Github Profile                                       | Scrum Board Task                                             | Contribution Links                                           |
+| ----------- | ---------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Akshay R.   | [@Akshay-Rohatgi](https://github.com/Akshay-Rohatgi) | Assign team roles, come up with team name, share ideas from BOF. | [Akshay's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=Akshay-Rohatgi) |
+| Ashwin B.   | [@ashwinbabu888](https://github.com/ashwinbabu888)   | Come up with team name, assign team roles, brainstorm project idea. | [Ashwin's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=ashwinbabu888) |
+| Nolan P.    | [@nolanplatt](https://github.com/nolanplatt)         | Format README with week 0 timebox, create contributing guidelines, share ideas from BOF, brainstorm project idea. | [Nolan's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=nolanplatt) |
+| Aman J.     | [@amanj31](https://github.com/amanj31)               | Add best practices wiki, assign team roles                   | [Aman's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=amanj31) |
+| Varnit G.   | [@VarnitGupta24](https://github.com/VarnitGupta24)   | Brainstorm project idea, add deployment and version control wiki. | [Varnit's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=VarnitGupta24) |
