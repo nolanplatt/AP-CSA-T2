@@ -19,7 +19,6 @@ We want to create a full-stack application that makes students' school lunch exp
 
 
 ## Week 1
-
 [Wireframe](https://www.figma.com/file/H1QWnYH57ODeVYfTJFpNSn/LunchLine?node-id=0%3A1)
 
 ## Week 0 
@@ -29,8 +28,8 @@ In Week 0, our group came up with ideas, created the GitHub, and really started 
 
 | Team Member | Github Profile                                       | Scrum Board Task                                             | Contribution Links                                           |
 | ----------- | ---------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Akshay R.   | [@Akshay-Rohatgi](https://github.com/Akshay-Rohatgi) | Assign team roles, come up with team name, share ideas from BOF. | [Akshay's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=Akshay-Rohatgi) |
-| Ashwin B.   | [@ashwinbabu888](https://github.com/ashwinbabu888)   | Come up with team name, assign team roles, brainstorm project idea. | [Ashwin's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=ashwinbabu888) |
-| Nolan P.    | [@nolanplatt](https://github.com/nolanplatt)         | Format README with week 0 timebox, create contributing guidelines, share ideas from BOF, brainstorm project idea. | [Nolan's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=nolanplatt) |
-| Aman J.     | [@amanj31](https://github.com/amanj31)               | Add best practices wiki, assign team roles                   | [Aman's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=amanj31) |
-| Varnit G.   | [@VarnitGupta24](https://github.com/VarnitGupta24)   | Brainstorm project idea, add deployment and version control wiki. | [Varnit's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=VarnitGupta24) |
+| Akshay R.   | [@Akshay-Rohatgi](https://github.com/Akshay-Rohatgi) | [Assign team roles](https://github.com/nolanplatt/AP-CSA-T2/issues/2), [come up with team name](https://github.com/nolanplatt/AP-CSA-T2/issues/1), [share ideas from BOF](https://github.com/nolanplatt/AP-CSA-T2/issues/5). | [Akshay's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=Akshay-Rohatgi) |
+| Ashwin B.   | [@ashwinbabu888](https://github.com/nolanplatt/AP-CSA-T2/issues/1https://github.com/ashwinbabu888)   | [Come up with team name](https://github.com/nolanplatt/AP-CSA-T2/issues/1), [assign team roles](https://github.com/nolanplatt/AP-CSA-T2/issues/2), [brainstorm project idea](https://github.com/nolanplatt/AP-CSA-T2/issues/3). | [Ashwin's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=ashwinbabu888) |
+| Nolan P.    | [@nolanplatt](https://github.com/nolanplatt)         | [Format README with week 0 timebox](https://github.com/nolanplatt/AP-CSA-T2/issues/6), [create contributing guidelines](https://github.com/nolanplatt/AP-CSA-T2/issues/11), [share ideas from BOF](https://github.com/nolanplatt/AP-CSA-T2/issues/5), [brainstorm project idea](https://github.com/nolanplatt/AP-CSA-T2/issues/3). | [Nolan's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=nolanplatt) |
+| Aman J.     | [@amanj31](https://github.com/amanj31)               | [Add best practices wiki](https://github.com/nolanplatt/AP-CSA-T2/issues/9), [assign team roles](https://github.com/nolanplatt/AP-CSA-T2/issues/2)                   | [Aman's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=amanj31) |
+| Varnit G.   | [@VarnitGupta24](https://github.com/VarnitGupta24)   | [Brainstorm project idea](https://github.com/nolanplatt/AP-CSA-T2/issues/3), [add deployment and version control wiki](https://github.com/nolanplatt/AP-CSA-T2/issues/12). | [Varnit's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=VarnitGupta24) |
