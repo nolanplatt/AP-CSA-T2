@@ -1,9 +1,5 @@
 <<<<<<< HEAD
-Purple Team - README.md
-=======
-## 🟣 Purple Team 🟣
->>>>>>> 85c1c32496ba3b76632491e7d8b294e5359e896d
-
+## 🟣 Purple Team 🟣 - README.md
 ## Project Information
 - [Runtime Link (Running Project)](https://tbd.com/)
 - [Team Scrum Board](https://github.com/nolanplatt/AP-CSA-T2/projects/1)
@@ -30,9 +26,6 @@ We want to create a full-stack application that makes students' school lunch exp
 
 In Week 0, our group came up with ideas, created the GitHub, and really started brainstorming everything. We also shared ideas with our respective Birds of the Feather (BOF) groups/meetings.
 
-### Week 0 Individual Technicals (Timebox)
-
-## Team Members
 | Team Member | Github Profile                                       | Scrum Board Task                                             | Contribution Links                                           |
 | ----------- | ---------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Akshay R.   | [@Akshay-Rohatgi](https://github.com/Akshay-Rohatgi) | Assign team roles, come up with team name, share ideas from BOF. | [Akshay's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=Akshay-Rohatgi) |
