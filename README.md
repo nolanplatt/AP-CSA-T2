@@ -18,7 +18,9 @@ We want to create a full-stack application that makes students' school lunch exp
 | Varnit G. | [@VarnitGupta24](https://github.com/VarnitGupta24) | [Varnit's Journal](https://docs.google.com/document/d/1fls5rsfbgSZj54k3tJZ_JKrsNKcyBi5pQE1LzBQ5njI/edit) | [Varnit's Contributions](https://github.com/nolanplatt/AP-CSA-T2/commits?author=VarnitGupta24) | [Issues](https://github.com/nolanplatt/AP-CSA-T2/issues/assigned/VarnitGupta24)| Deployment Manager |
 
 
+## Week 1
 
+[Wireframe](https://www.figma.com/file/H1QWnYH57ODeVYfTJFpNSn/LunchLine?node-id=0%3A1)
 
 ## Week 0 
 ### Timebox and Tangibles:
