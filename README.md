@@ -1,5 +1,5 @@
 ## 🟣 Purple Team 🟣 - README.md
-## Project Information
+## -Lunchline- Project Information
 - [Runtime Link (Running Project)](https://tbd.com/)
 - [Team Scrum Board](https://github.com/nolanplatt/AP-CSA-T2/projects/1)
 - [All Team Commits](https://github.com/nolanplatt/AP-CSA-T2/commits/master)
