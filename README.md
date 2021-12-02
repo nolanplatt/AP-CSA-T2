@@ -22,13 +22,16 @@ We want to create a full-stack application that makes students' school lunch exp
 ### Timebox and Tangibles:
 [Wireframe](https://www.figma.com/file/H1QWnYH57ODeVYfTJFpNSn/LunchLine?node-id=0%3A1)
 ### Technical Officer: 10-12 Key Ideas
-- Each user will have a balance for how much they have paid for lunch
-- We will have a login to ensure that the information is relevant and appropriate for the school
-- We will have an SQL database to store user information and data
-- There will be a menu page that people can choose from when placing their order
-- The menu page will be updated daily to stay on track with the items available each day
-- There will be a page where students can place their orders and see the price
-
+1. Each user will have a balance for how much they have paid for lunch
+2. We will have a login to ensure that the information is relevant and appropriate for the school
+3. Passwords will be hashed to ensure maximum security of information for each user.
+4. We will have an SQL database to store user information and data
+5. There will be a menu page that people can choose from when placing their order
+6. The menu page will be updated daily to stay on track with the items available each day
+7. There will be a page where students can place their orders and see the price
+8. There will be a dark mode and light mode to conform with societal standards
+9. There will be an admin panel where new meals can be added
+10. Admin panel will also be able to add new student accounts to the system. 
 
 ## Week 0 
 ### Timebox and Tangibles:
