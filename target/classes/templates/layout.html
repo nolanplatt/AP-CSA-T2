@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <div th:replace="fragments/head :: header"></div>
+    <div layout:fragment="metadata">...</div>
+</head>
+
+<body>
+    <div th:replace="fragments/nav :: header"></div>
+
+    <div layout:fragment="content">...</div>
+
+    <div th:replace="fragments/footer :: footer"></div>
+</body>
+
+<div layout:fragment="script">...</div>
+
+</html>
