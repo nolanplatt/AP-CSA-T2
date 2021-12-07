@@ -1,1 +1,23 @@
-// N/A
+Ashwin Babu | AP Computer Science A | Unit 2 FRQ
+
+a)
+    Lightsequence gradshow = new Lightsequence("0101 0101 0101");
+
+b)
+    gradshow.display();
+
+c)
+    gradshow.changeSequence("0011 0011 0011");
+
+d)
+    gradshow.insertSegment("1111 1111", 4);
+
+e)
+    public String removeSegment(String segment, String removeSegmentString) {
+        String newstr = oldSeq.replaceFirst(Pattern.quote(removeSegmentString), "");
+    }
+
+f)
+    public double calcDist(int a, int b) {
+        System.out.println(Math.sqrt(a*a + b*b));
+    }
