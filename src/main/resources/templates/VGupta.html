@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head>
+  <div layout:fragment="metadata" th:remove="tag">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <title>Varnit Gupta | About</title>
+
+    <style>
+      .lab-container {
+        width: 50vw;
+        border: 1px solid #E3DDF4;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: #313131;
+
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        margin: auto !important;
+        margin-top: 4vh !important;
+      }
+
+      h4 {
+        color: white;
+      }
+
+      p {
+        color: white;
+      }
+      .code {
+        font-family: MyFancyCustomFont, monospace;
+        font-size: inherit;
+      }
+
+      p > code,
+      li > code,
+      dd > code,
+      td > code {
+        background: #ffeff0;
+        word-wrap: break-word;
+        box-decoration-break: clone;
+        padding: .1rem .3rem .2rem;
+        border-radius: .2rem;
+      }
+
+
+    </style>
+  </div>
+</head>
+
+<body onload="fetchFRQs()">
+<div layout:fragment="content" th:remove="tag">
+  <div class="contact" style="min-height: 100vh;">
+    <div class="row justify-content-center lab-container">
+      <h4><u>Varnit Gupta: About Me and Individual Technicals </u></h4>
+      <h4><strong>Table of Contents</strong></h4><br>
+      <a href="#aboutMe">Item #1: About Me</a>
+      <a href="#unit2FRQ">Item #2: Unit 2 FRQ</a>
+
+    </div>
+
+    <div id="aboutMe" class="row justify-content-center lab-container">
+      <h4><strong>Item #1: About Me</strong></h4><br>
+      <p>TBD</p>
+
+    </div>
+    <div id="unit2FRQ" class="row justify-content-center lab-container">
+      <h4><strong>Item #2: Unit 2 FRQ</strong></h4><br>
+
+      <div class="code">
+        <code><p id="frqResult"></p></code>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<div layout:fragment="script" th:remove="tag">
+  <!-- Start of custom script specific to page -->
+  <script src="/static/vanta/three.r119.min.js" th:src="@{/vanta/three.r119.min.js}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+          integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+
+    function fetchFRQs() {
+      axios({
+        method: "GET",
+        url: "/frqAPI?name=VGupta&frqWeek=2"
+      }).then(resp => {
+        document.getElementById("frqResult").innerText = resp.data;
+      })
+    }
+  </script>
+</div>
+
+</html>

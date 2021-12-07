@@ -1,0 +1,18 @@
+// Nolan Platt | AP Computer Science A | Unit 2 FRQ
+
+
+//A
+LightSequence gradShow = new LightSequence(“0101 0101 0101”);
+//B
+gradShow.display();
+//C
+gradShow.changeSequence(“0011 0011 0011");
+//D
+String resultSeq = gradShow.insertSegment(“1111 1111”, 4);
+//E
+int newIndex= oldSeq.indexOf(segment);
+String newSeq = oldSeq.substring(0, newIndex) 
+newSeq += oldSeq.substring(newIndex + segment.length());
+//F
+System.out.print(Math.sqrt(a*a + b*b));
+

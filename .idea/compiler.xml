@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="serving-web-content" />
+        <module name="AP-CSA-T2" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="AP-CSA-T2" options="-parameters" />
       <module name="serving-web-content" options="-parameters" />
     </option>
   </component>
