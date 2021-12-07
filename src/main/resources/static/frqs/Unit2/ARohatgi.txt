@@ -1,1 +1,21 @@
-// N/A
+a) 
+LightSequence gradShow = new LightSequence("0101 0101 0101");
+
+b) 
+gradShow.display();
+
+c) 
+gradShow.changeSequence("0011 0011 0011");
+
+d) 
+gradShow.insertSegment("1111 1111", 4);
+
+e) 
+public String removeSegment(String segment, String removeSegmentString) {
+	String newSeq = oldSeq.replaceFirst(Pattern.quote(removeSegmentString), "");
+}
+
+f) 
+public double calculateDistance(double a, double b) {
+	System.out.println(Math.sqrt(a*a + b*b));
+}
