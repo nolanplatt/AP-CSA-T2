@@ -8,7 +8,7 @@ gradShow.display();
 //C
 gradShow.changeSequence(“0011 0011 0011");
 //D
-String resultSeq = gradShow.insertSegment(“1111 1111”, 4);
+String resultSeq = gradShow.insertSegment("1111 1111", 4);
 //E
 int newIndex= oldSeq.indexOf(segment);
 String newSeq = oldSeq.substring(0, newIndex) 

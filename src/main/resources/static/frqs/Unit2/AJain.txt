@@ -1,1 +1,17 @@
-// N/A
+Aman Jain | AP Computer Science A | Unit 2 FRQ
+
+
+A)
+    Lightsequence gradShow = new Lightsequence("0101 0101 0101");
+B)
+    gradShow.display();
+C)
+    gradShow.changeSequence(“0011 0011 0011");
+D)
+    String resultSeq = gradShow.insertSegment("1111 1111", 4);
+E)
+    removeSubstringIndex = oldSeq.find(String segment);
+    String newSeq = oldSeq.substring(0,removeSubstringIndex) + oldSeq.substring(removeSubstringIndex + segment.length());
+F)
+    Double distance = Math.sqrt(a*a+b*b);
+    System.out.println(distance);
