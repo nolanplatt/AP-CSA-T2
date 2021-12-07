@@ -1,1 +1,17 @@
-// N/A
+// Varnit Gupta | AP Computer Science A | Unit 2 FRQ
+
+
+   //A
+   LightSequence gradShow = new LightSequence(“0101 0101 0101”);
+   //B
+   gradShow.display();
+   //C
+   gradShow.changeSequence(“0011 0011 0011");
+   //D
+   String resultSeq = gradShow.insertSegment("1111 1111", 4);
+   //E
+    public String removeSegment(String segment, String removeSegmentString) {
+  	    String newSeq = oldSeq.replaceFirst(Pattern.quote(removeSegmentString), "");
+   //F
+   Double distance = Math.sqrt(a*a+b*b);
+       System.out.println(distance);
