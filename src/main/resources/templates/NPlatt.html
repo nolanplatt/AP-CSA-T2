@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+    <!DOCTYPE HTML>
 <!DOCTYPE HTML>
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
@@ -75,6 +75,10 @@
             <div class="code">
             <code><p id="frqResult"></p></code>
             </div>
+            <div class="output">
+                <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+                <code><p id="frqCodeOutput"></p></code>
+            </div>
 
         </div>
         </div>
@@ -98,7 +102,14 @@
                 method: "GET",
                 url: "/frqAPI?name=NPlatt&frqWeek=2"
             }).then(resp => {
-                document.getElementById("frqResult").innerText = resp.data;
+                console.log(resp.data);
+                for (let i = 0; i < resp.data.length; i++) {
+                    if(i == 0) {
+                        document.getElementById("frqResult").innerText = resp.data[i];
+                    } else {
+                        document.getElementById("frqCodeOutput").innerText = resp.data[1] + "\n" + resp.data[2] + "\n" + resp.data[3];
+                    }
+                }
             })
         }
     </script>
