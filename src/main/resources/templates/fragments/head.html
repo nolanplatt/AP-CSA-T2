@@ -10,23 +10,43 @@
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <!-- Common style for site -->
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+
             :root{
-                --yellow: #f1d483;
-                --green: #9daf9b;
-                --purple: #a59aaf;
-                --lblue: #6084a3;
-                --dblue: #2b425b;
-                --white: whitesmoke;
-                --black: black;
-                --grey: #363d47;
+                --grey: #555B6E;
+                --green: #89B0AE;
+            }
+
+            a {
+                color: var(--green);
+            }
+
+            nav .navbar-brand{
+                font-family: 'Iceberg', cursive !important;
+                font-size: 30px !important;
+            }
+
+            nav .navbar-nav li a{
+                color: var(--green) !important;
+            }
+
+            h1 {
+                font-family: 'Iceberg', cursive;
+            }
+
+            @media (min-width: 992px) {
+                .navbar-expand-lg {
+                    padding-right: 2rem;
+                    padding-left: 2rem;
+                }
             }
 
             html, body{
@@ -37,28 +57,13 @@
                 -webkit-animation: fadein 2s; /* Safari and Chrome */
                 -o-animation: fadein 2s; /* Opera */
                 animation: changeColor 8s infinite;
-
+                background: white;
             }
 
-            @keyframes changeColor {
-                0% {
-                    background-color: #1feaca;
-                }
-                50% {
-                    background-color: #126b5e;
-                }
-                100% {
-                    background-color: #1feaca;
-                }
-            }
-            .dark-mode {
-                background-color: var(--white);
-                color: var(--black);
-            }
-
-            a {
-                color: midnightblue;
-            }
+            /*.dark-mode {*/
+            /*    background-color: var(--white);*/
+            /*    color: var(--black);*/
+            /*}*/
 
             .fa{
                 font-size: 3em;
@@ -113,6 +118,7 @@
             /* large number helps nav remain top layer */
             .navbar {
                 z-index: 1000;
+                background-color: var(--grey);
             }
 
         </style>
