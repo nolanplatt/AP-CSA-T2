@@ -5,9 +5,8 @@
 </head>
 <body>
     <!-- Begin navigation fragments -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" th:fragment="header">
+    <nav class="navbar navbar-expand-lg" th:fragment="header">
         <a class="navbar-brand" href="/">
-            <img src="/static/images/lunchLineLogo.png" th:src="@{/images/lunchLineLogo.png}" width="50" height="50" class="d-inline-block align-center" alt="">
             LunchLine
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,14 +14,13 @@
         </button>
         <!-- Bootstrap menus -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <!--root menu -->
-                <li class="nav-item active">
-                   <!-- <a class="nav-link" href="/">Intro <span class="sr-only">(current)</span></a> -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarPBL" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Group Members
+                        About
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/individual/NPlatt">Nolan Platt</a>
@@ -32,16 +30,19 @@
                         <a class="dropdown-item" href="/individual/VGupta">Varnit Gupta</a>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/order">Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/balance">Balance</a>
+                </li>
             </ul>
-            <!-- Clock display -->
-            <div>
-                <span id="clock"></span>
-            </div>
+
             <!-- Dark mode action -->
-            <div class="custom-control custom-switch">
-                <input type="checkbox" onclick="darkFunction()" class="custom-control-input" id="darkSwitch">
-                <label class="custom-control-label" for="darkSwitch"></label>
-            </div>
+<!--            <div class="custom-control custom-switch">-->
+<!--                <input type="checkbox" onclick="darkFunction()" class="custom-control-input" id="darkSwitch">-->
+<!--                <label class="custom-control-label" for="darkSwitch"></label>-->
+<!--            </div>-->
             <!-- Navigation bar JavaScript support -->
             <script>
                 // Dark Mode Toggle
