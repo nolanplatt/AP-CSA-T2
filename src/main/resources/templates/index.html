@@ -15,10 +15,20 @@
 
 <body><div layout:fragment="content" th:remove="tag">
     <!-- Start of body content specific to page -->
-        <h1><strong>LunchLine | Home</strong></h1>
-        <h3><strong>WIP</strong></h3>
-
-
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <img class="w-100" src="/static/images/hero.jpg" th:src="@{/images/hero.jpg}"/>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-5 mt-4">
+                    <div class="wrapper-title" style="padding-top: 70px">
+                        <h1 class="display-4">LunchLine</h1>
+                        <p class="lead">Modern online ordering solution for contemporary school lunch systems</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     <!-- End of body content specific to page -->
 </div></body>
 
