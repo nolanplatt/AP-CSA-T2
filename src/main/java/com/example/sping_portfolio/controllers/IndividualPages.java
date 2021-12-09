@@ -78,6 +78,25 @@ public class IndividualPages {
         }
         // Aman Jain
         else if (name.equals("AJain")) {
+            //A)
+            LightSequence gradShow = new LightSequence("0101 0101 0101");
+            //B)
+            gradShow.display();
+            //C)
+            gradShow.changeSequence("0011 0011 0011");
+            //D)
+            String resultSeq = gradShow.insertSegment("1111 1111", 4);
+            array[1] = resultSeq;
+            //E)
+            String segment = "101";
+            String oldSeq = "0010 1001 1011";
+            int removeSubstringIndex = oldSeq.indexOf(segment);
+            String newSeq = oldSeq.substring(0,removeSubstringIndex) + oldSeq.substring(removeSubstringIndex + segment.length());
+            array[2] = newSeq;
+            //F)
+            Double distance = Math.sqrt(a*a+b*b);
+            System.out.println(distance);
+            array[3] = String.valueOf(distance);
 
         }
         // Akshay Rohatgi
