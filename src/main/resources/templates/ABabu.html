@@ -47,6 +47,12 @@
                 padding: .1rem .3rem .2rem;
                 border-radius: .2rem;
             }
+            .photoContainer {
+                left: 6px;
+                position:absolute;
+                width: 20vw;
+
+            }
 
 
         </style>
@@ -56,6 +62,22 @@
 <body onload="fetchFRQs()">
 <div layout:fragment="content" th:remove="tag">
     <div class="contact" style="min-height: 100vh;">
+        <div class="photoContainer">
+            <a class="image" style="width:200px">
+                <img id="ashwinImage"  src="/images/unmaskedAshwin.png" alt="Ashwin B Image"  height="300">
+            </a>
+            <h5><strong>Ashwin Babu | Scrum Master</strong></h5>
+            <button onclick="toggleMask()">Toggle Mask</button> <br>
+
+            <a href="https://github.com/ashwinbabu888">
+                <img src="https://mpng.subpng.com/20180320/cfw/kisspng-computer-icons-github-github-logo-save-icon-format-5ab0fad1349631.6791503015215479852154.jpg" style="width:130px;height:50px">
+            </a>
+
+            <a href="https://docs.google.com/document/d/1XHgzNtQLO_iJDqhN8yUhwT3ZiHj_SWNv9xixzUOAF8c/edit?usp=sharing">
+                <img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Open_Book_Emoji_large.png?v=1571606064" style="width:130px;height:50px">
+            </a>
+
+        </div>
         <div class="row justify-content-center lab-container">
             <h4><u>Ashwin Babu: About Me and Individual Technicals </u></h4>
             <h4><strong>Table of Contents</strong></h4><br>
@@ -100,6 +122,14 @@
             }).then(resp => {
                 document.getElementById("frqResult").innerText = resp.data;
             })
+        }
+        function toggleMask() {
+            let srcCheck = document.getElementById("ashwinImage").src;
+            if(srcCheck.includes("unmasked")) {
+                document.getElementById("ashwinImage").src = "/images/maskedAshwin.png";
+            } else {
+                document.getElementById("ashwinImage").src = "/images/unmaskedAshwin.png";
+            }
         }
     </script>
 </div>

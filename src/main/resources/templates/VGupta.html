@@ -47,7 +47,12 @@
         padding: .1rem .3rem .2rem;
         border-radius: .2rem;
       }
+      .photoContainer {
+        left: 6px;
+        position:absolute;
+        width: 20vw;
 
+      }
 
     </style>
   </div>
@@ -56,6 +61,22 @@
 <body onload="fetchFRQs()">
 <div layout:fragment="content" th:remove="tag">
   <div class="contact" style="min-height: 100vh;">
+    <div class="photoContainer">
+      <a class="image" style="width:200px">
+        <img id="varnitImage"  src="/images/unmaskedVarnit.png" alt="Varnit G Image"  height="300">
+      </a>
+      <h5><strong>Varnit Gupta | Deployment Manager</strong></h5>
+      <button onclick="toggleMask()">Toggle Mask</button> <br>
+
+      <a href="https://github.com/VarnitGupta24">
+        <img src="https://mpng.subpng.com/20180320/cfw/kisspng-computer-icons-github-github-logo-save-icon-format-5ab0fad1349631.6791503015215479852154.jpg" style="width:130px;height:50px">
+      </a>
+
+      <a href="https://docs.google.com/document/d/1fls5rsfbgSZj54k3tJZ_JKrsNKcyBi5pQE1LzBQ5njI/edit">
+        <img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Open_Book_Emoji_large.png?v=1571606064" style="width:130px;height:50px">
+      </a>
+
+    </div>
     <div class="row justify-content-center lab-container">
       <h4><u>Aman Jain: About Me and Individual Technicals </u></h4>
       <h4><strong>Table of Contents</strong></h4><br>
@@ -111,6 +132,14 @@
           }
         }
       })
+    }
+    function toggleMask() {
+      let srcCheck = document.getElementById("varnitImage").src;
+      if(srcCheck.includes("unmasked")) {
+        document.getElementById("varnitImage").src = "/images/maskedVarnit.png";
+      } else {
+        document.getElementById("varnitImage").src = "/images/unmaskedVarnit.png";
+      }
     }
   </script>
 </div>
