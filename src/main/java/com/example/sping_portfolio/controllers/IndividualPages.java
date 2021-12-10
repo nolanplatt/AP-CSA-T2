@@ -74,7 +74,24 @@ public class IndividualPages {
         }
         // Varnit Gupta
         else if (name.equals("VGupta")) {
-
+            //A
+            LightSequence gradShow = new LightSequence("0101 0101 0101");
+            //B
+            gradShow.display();
+            //C
+            gradShow.changeSequence("0011 0011 0011");
+            //D
+            String resultSeq = gradShow.insertSegment("1111 1111", 4);
+            array[1] = resultSeq;
+            //E
+            String segment = "11";
+            String oldSeq = "1100000111000";
+            int newIndex = oldSeq.indexOf(segment);
+            String newSeq = oldSeq.substring(0, newIndex);
+            newSeq += oldSeq.substring(newIndex + segment.length());
+            array[2] = newSeq;
+            //F
+            array[3] = String.valueOf((Math.sqrt(a * a + b * b)));
         }
         // Aman Jain
         else if (name.equals("AJain")) {
