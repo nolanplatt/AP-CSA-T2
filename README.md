@@ -1,6 +1,6 @@
 ## 🟣 Purple Team 🟣 - README.md
 ## -Lunchline- Project Information
-- [Runtime Link (Running Project)](https://tbd.com/)
+- [Runtime Link (Running Project)](http://lunchline.tk)
 - [Team Scrum Board](https://github.com/nolanplatt/AP-CSA-T2/projects/1)
 - [All Team Commits](https://github.com/nolanplatt/AP-CSA-T2/commits/master)
 - [Team Insight Graphs](https://github.com/nolanplatt/AP-CSA-T2/graphs/contributors)
@@ -27,7 +27,7 @@ In Week 2, our group began work on the project.
 | Ashwin B.   | [@ashwinbabu888](https://github.com/nolanplatt/AP-CSA-T2/issues/1https://github.com/ashwinbabu888)   | [Setup quality scrum board](https://github.com/nolanplatt/AP-CSA-T2/issues/25) | [Scrum Board](https://github.com/nolanplatt/AP-CSA-T2/projects/1) |
 | Nolan P.    | [@nolanplatt](https://github.com/nolanplatt)         | [Develop about me pages](https://github.com/nolanplatt/AP-CSA-T2/issues/22), [TPT Deployment](https://github.com/nolanplatt/AP-CSA-T2/issues/23) | [Commit 1](https://github.com/nolanplatt/AP-CSA-T2/commit/556967607cb0956dc3aed95baa8a0a53696c5cde), [Commit 2](https://github.com/nolanplatt/AP-CSA-T2/commit/a5d96d6cb8350c5c3ad0d60b622a19e84769a25c), [Commit 3](https://github.com/nolanplatt/AP-CSA-T2/commit/fbdff84a6effd85288f3581e53233544e43bb84a) |
 | Aman J.     | [@amanj31](https://github.com/amanj31)               | [Ensure completion of all technical requirements for week 2](https://github.com/nolanplatt/AP-CSA-T2/issues/20) | [Filled Out Issue](https://github.com/nolanplatt/AP-CSA-T2/issues/20) |
-| Varnit G.   | [@VarnitGupta24](https://github.com/VarnitGupta24)   | [Deploy website](https://github.com/nolanplatt/AP-CSA-T2/issues/24) | [Deployment Link]() |
+| Varnit G.   | [@VarnitGupta24](https://github.com/VarnitGupta24)   | [Deploy website](https://github.com/nolanplatt/AP-CSA-T2/issues/24) | [Deployment Link](http://lunchline.tk) |
 ## Week 1
 More planning for project.
 ### Timebox and Tangibles:
