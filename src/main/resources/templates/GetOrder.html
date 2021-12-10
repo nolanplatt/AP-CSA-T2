@@ -57,7 +57,7 @@
     <div class="contact" style="min-height: 100vh;">
         <div class="row justify-content-center lab-container">
             <h4><u>Get Order</u></h4>
-            <input type="text" id="orderID" name="orderID   "><br><br>
+            <input type="text" id="orderID" name="orderID">
             <button onclick="getOrder()" type="button">Get Order Info</button>
             <p id="orderResult"></p>
         </div>
@@ -92,18 +92,19 @@
                 document.getElementById("orderResult").innerText = resp.data[0] + resp.data[1] + resp.data[2];
             })
             */
-             let id = document.getElementById("orderID").innerText;
+             let id = document.getElementById("orderID").value;
+           console.log(id)
              if(id == 0) {
-                 document.getElementById("orderResult").innerText = "Order ID 001\nDrink: Low-Fat Chocolate Milk\nEntree: Hamburger\nSide: Tater Tots\nTotal Cost: $3.32"
+                 document.getElementById("orderResult").innerText = "Order ID 000\nDrink: Low-Fat Chocolate Milk\nEntree: Hamburger\nSide: Tater Tots\nTotal Cost: $3.32"
              }
-            if(id == 1) {
-                document.getElementById("orderResult").innerText = "Order ID 002\nDrink: Envy Energy Drink\nEntree: Salad\nSide: Tater Tots\nTotal Cost: $5.32"
+           else if(id == 1) {
+                document.getElementById("orderResult").innerText = "Order ID 001\nDrink: Envy Energy Drink\nEntree: Salad\nSide: Tater Tots\nTotal Cost: $5.32"
             }
-            if(id == 2) {
-                document.getElementById("orderResult").innerText = "Order ID 003\nDrink: Chug Jug Slurp Juice\nEntree: Hamburger\nSide: Tater Tots\nTotal Cost: $9.96"
+           else if(id == 2) {
+                document.getElementById("orderResult").innerText = "Order ID 002\nDrink: Chug Jug Slurp Juice\nEntree: Hamburger\nSide: Tater Tots\nTotal Cost: $9.96"
             }
-            if(id == 3) {
-                document.getElementById("orderResult").innerText = "Order ID 004\nDrink: High-Fat Chocolate Milk\nEntree: Chicken Tenders\nSide: Tater Tots\nTotal Cost: $8.32"
+           else if(id == 3) {
+                document.getElementById("orderResult").innerText = "Order ID 003\nDrink: High-Fat Chocolate Milk\nEntree: Chicken Tenders\nSide: Tater Tots\nTotal Cost: $8.32"
             }
         }
     </script>
