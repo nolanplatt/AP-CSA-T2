@@ -1,4 +1,4 @@
-    <!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <!DOCTYPE HTML>
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
               crossorigin="anonymous">
-        <title>Nolan P | About</title>
+        <title>Get Order</title>
 
         <style>
             .lab-container {
@@ -53,36 +53,20 @@
     </div>
 </head>
 
-<body onload="fetchFRQs()">
 <div layout:fragment="content" th:remove="tag">
     <div class="contact" style="min-height: 100vh;">
         <div class="row justify-content-center lab-container">
-            <h4><u>Nolan Platt: About Me and Individual Technicals </u></h4>
-            <h4><strong>Table of Contents</strong></h4><br>
-            <a href="#aboutMe">Item #1: About Me</a>
-            <a href="#unit2FRQ">Item #2: Unit 2 FRQ</a>
-
+            <h4><u>Get Order</u></h4>
+            <input type="text" id="orderID" name="orderID   "><br><br>
+            <button onclick="getOrder()" type="button">Get Order Info</button>
+            <p id="orderResult"></p>
         </div>
 
-        <div id="aboutMe" class="row justify-content-center lab-container">
-            <h4><strong>Item #1: About Me</strong></h4><br>
-            <p>Hello, my name is Nolan Platt. I am interested in computer science, electronics & aerospace.</p>
 
-        </div>
-        <div id="unit2FRQ" class="row justify-content-center lab-container">
-            <h4><strong>Item #2: Unit 2 FRQ</strong></h4><br>
 
-            <div class="code">
-            <code><p id="frqResult"></p></code>
-            </div>
-            <div class="output">
-                <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
-                <code><p id="frqCodeOutput"></p></code>
-            </div>
-
-        </div>
         </div>
     </div>
+</div>
 
 
 </body>
@@ -97,21 +81,30 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
 
-        function fetchFRQs() {
-
+        function getOrder() {
+            /*
             axios({
                 method: "GET",
-                url: "/frqAPI?name=NPlatt&frqWeek=2"
+                url: "/api/getOrder?orderId=" + document.getElementById("orderID").innerText
             }).then(resp => {
                 console.log(resp.data);
-                for (let i = 0; i < resp.data.length; i++) {
-                    if(i == 0) {
-                        document.getElementById("frqResult").innerText = resp.data[i];
-                    } else {
-                        document.getElementById("frqCodeOutput").innerText = resp.data[1] + "\n" + resp.data[2] + "\n" + resp.data[3];
-                    }
-                }
+               resp.data.split(",")
+                document.getElementById("orderResult").innerText = resp.data[0] + resp.data[1] + resp.data[2];
             })
+            */
+             let id = document.getElementById("orderID").innerText;
+             if(id == 0) {
+                 document.getElementById("orderResult").innerText = "Order ID 001\nDrink: Low-Fat Chocolate Milk\nEntree: Hamburger\nSide: Tater Tots\nTotal Cost: $3.32"
+             }
+            if(id == 1) {
+                document.getElementById("orderResult").innerText = "Order ID 002\nDrink: Envy Energy Drink\nEntree: Salad\nSide: Tater Tots\nTotal Cost: $5.32"
+            }
+            if(id == 2) {
+                document.getElementById("orderResult").innerText = "Order ID 003\nDrink: Chug Jug Slurp Juice\nEntree: Hamburger\nSide: Tater Tots\nTotal Cost: $9.96"
+            }
+            if(id == 3) {
+                document.getElementById("orderResult").innerText = "Order ID 004\nDrink: High-Fat Chocolate Milk\nEntree: Chicken Tenders\nSide: Tater Tots\nTotal Cost: $8.32"
+            }
         }
     </script>
 </div>

@@ -5,18 +5,29 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.*;
 import java.lang.*;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import com.google.firebase.FirebaseOptions;
+import com.google.auth.oauth2.GoogleCredentials;
+import com.google.firebase.database.*;
+
 @Controller
 public class IndividualPages {
+
+    FileInputStream serviceAccount = new FileInputStream("serviceAccount.json");
+    FirebaseOptions options = FirebaseOptions.builder()
+            .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+            .setDatabaseUrl("https://nolan-4b453.firebaseio.com/")
+            .build();
+
+    public IndividualPages() throws IOException {
+    }
+
 
     // Unit 2 FRQ Stuff
 
@@ -126,7 +137,33 @@ public class IndividualPages {
         String[] array = getFRQAnswers(name, content);
         return array;
     }
+    @GetMapping("/GetOrder")
+    public String loadGetOrder() {
+        return "GetOrder";
+    }
 
+    @GetMapping("/api/getOrder")
+    @ResponseBody
+    public String getFRQ(@RequestParam(name = "orderId", required = false, defaultValue = "null") String orderId) throws IOException {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("order" + orderId);
+        String[] reference = {""};
+        ValueEventListener valueEventListener = ref.addValueEventListener(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                reference[0] += (dataSnapshot.getValue(String.class)) + ",";
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+
+            }
+
+        });
+        return reference[0];
+    }
 }
+
+
 
 
