@@ -47,6 +47,11 @@
                 padding: .1rem .3rem .2rem;
                 border-radius: .2rem;
             }
+            .photoContainer {
+                left: 6px;
+                position:absolute;
+                width: 20vw;
+            }
 
 
         </style>
@@ -56,6 +61,22 @@
 <body onload="fetchFRQs()">
 <div layout:fragment="content" th:remove="tag">
     <div class="contact" style="min-height: 100vh;">
+        <div class="photoContainer">
+            <a class="image" style="width:200px">
+                <img id="amanImage"  src="/images/unmaskedAman.png" alt="Aman J Image"  height="300">
+            </a>
+            <h5><strong>Aman Jain | Technical Officer</strong></h5>
+            <button onclick="toggleMask()">Toggle Mask</button> <br>
+
+            <a href="https://github.com/amanj31">
+                <img src="https://mpng.subpng.com/20180320/cfw/kisspng-computer-icons-github-github-logo-save-icon-format-5ab0fad1349631.6791503015215479852154.jpg" style="width:130px;height:50px">
+            </a>
+
+            <a href="https://docs.google.com/document/d/1iLXz8z1btVtgNXo9SV-ctCNljM-F0qE_r5xcCBEF1l8/edit">
+                <img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Open_Book_Emoji_large.png?v=1571606064" style="width:130px;height:50px">
+            </a>
+
+        </div>
         <div class="row justify-content-center lab-container">
             <h4><u>Aman Jain: About Me and Individual Technicals </u></h4>
             <h4><strong>Table of Contents</strong></h4><br>
@@ -74,6 +95,10 @@
 
             <div class="code">
                 <code><p id="frqResult"></p></code>
+            </div>
+            <div class="output">
+                <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+                <code><p id="frqCodeOutput"></p></code>
             </div>
 
         </div>
@@ -98,8 +123,23 @@
                 method: "GET",
                 url: "/frqAPI?name=AJain&frqWeek=2"
             }).then(resp => {
-                document.getElementById("frqResult").innerText = resp.data;
+                console.log(resp.data)
+                for (let j = 0; j < resp.data.length; j++) {
+                    if(j == 0) {
+                        document.getElementById("frqResult").innerText = resp.data[j];
+                    } else {
+                        document.getElementById("frqCodeOutput").innerText = resp.data[1] + "\n" + resp.data[2] + "\n" + resp.data[3];
+                    }
+                }
             })
+        }
+        function toggleMask() {
+            let srcCheck = document.getElementById("amanImage").src;
+            if(srcCheck.includes("unmasked")) {
+                document.getElementById("amanImage").src = "/images/maskedAman.png";
+            } else {
+                document.getElementById("amanImage").src = "/images/unmaskedAman.png";
+            }
         }
     </script>
 </div>

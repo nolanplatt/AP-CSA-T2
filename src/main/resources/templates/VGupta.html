@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
           crossorigin="anonymous">
-    <title>Varnit Gupta | About</title>
+    <title>Aman J | About</title>
 
     <style>
       .lab-container {
@@ -47,7 +47,12 @@
         padding: .1rem .3rem .2rem;
         border-radius: .2rem;
       }
+      .photoContainer {
+        left: 6px;
+        position:absolute;
+        width: 20vw;
 
+      }
 
     </style>
   </div>
@@ -56,8 +61,24 @@
 <body onload="fetchFRQs()">
 <div layout:fragment="content" th:remove="tag">
   <div class="contact" style="min-height: 100vh;">
+    <div class="photoContainer">
+      <a class="image" style="width:200px">
+        <img id="varnitImage"  src="/images/unmaskedVarnit.png" alt="Varnit G Image"  height="300">
+      </a>
+      <h5><strong>Varnit Gupta | Deployment Manager</strong></h5>
+      <button onclick="toggleMask()">Toggle Mask</button> <br>
+
+      <a href="https://github.com/VarnitGupta24">
+        <img src="https://mpng.subpng.com/20180320/cfw/kisspng-computer-icons-github-github-logo-save-icon-format-5ab0fad1349631.6791503015215479852154.jpg" style="width:130px;height:50px">
+      </a>
+
+      <a href="https://docs.google.com/document/d/1fls5rsfbgSZj54k3tJZ_JKrsNKcyBi5pQE1LzBQ5njI/edit">
+        <img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Open_Book_Emoji_large.png?v=1571606064" style="width:130px;height:50px">
+      </a>
+
+    </div>
     <div class="row justify-content-center lab-container">
-      <h4><u>Varnit Gupta: About Me and Individual Technicals </u></h4>
+      <h4><u>Aman Jain: About Me and Individual Technicals </u></h4>
       <h4><strong>Table of Contents</strong></h4><br>
       <a href="#aboutMe">Item #1: About Me</a>
       <a href="#unit2FRQ">Item #2: Unit 2 FRQ</a>
@@ -68,13 +89,16 @@
       <h4><strong>Item #1: About Me</strong></h4><br>
       <p> Hello, my name is Varnit Gupta. I am interested in computer science, engineering, and science.</p>
 
-
     </div>
     <div id="unit2FRQ" class="row justify-content-center lab-container">
       <h4><strong>Item #2: Unit 2 FRQ</strong></h4><br>
 
       <div class="code">
         <code><p id="frqResult"></p></code>
+      </div>
+      <div class="output">
+        <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+        <code><p id="frqCodeOutput"></p></code>
       </div>
 
     </div>
@@ -99,8 +123,23 @@
         method: "GET",
         url: "/frqAPI?name=VGupta&frqWeek=2"
       }).then(resp => {
-        document.getElementById("frqResult").innerText = resp.data;
+        console.log(resp.data)
+        for (let j = 0; j < resp.data.length; j++) {
+          if(j == 0) {
+            document.getElementById("frqResult").innerText = resp.data[j];
+          } else {
+            document.getElementById("frqCodeOutput").innerText = resp.data[1] + "\n" + resp.data[2] + "\n" + resp.data[3];
+          }
+        }
       })
+    }
+    function toggleMask() {
+      let srcCheck = document.getElementById("varnitImage").src;
+      if(srcCheck.includes("unmasked")) {
+        document.getElementById("varnitImage").src = "/images/maskedVarnit.png";
+      } else {
+        document.getElementById("varnitImage").src = "/images/unmaskedVarnit.png";
+      }
     }
   </script>
 </div>
