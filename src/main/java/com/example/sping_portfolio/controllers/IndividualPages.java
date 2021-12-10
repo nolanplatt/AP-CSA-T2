@@ -110,6 +110,11 @@ public class IndividualPages {
         //A
         return array;
     }
+    @GetMapping("/groupMembers")
+    public String loadGroupMembers() {
+        return "GroupMembers";
+    }
+
     @GetMapping("/individual/NPlatt")
     public String loadNPlatt() {
         return "NPlatt";

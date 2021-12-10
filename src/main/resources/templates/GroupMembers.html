@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head>
+    <div layout:fragment="metadata" th:remove="tag">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        <title>Group Members | About</title>
+
+        <style>
+
+            .wrapper {
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+                grid-gap: 4px;
+                background-color: #fff;
+                color: #444;
+            }
+
+            h4 {
+                font-size: 30px;
+                color: black;
+            }
+            h3 {
+                font-size: 25px;
+                color: black;
+            }
+            h2 {
+                font-size: 20px;
+                color: black;
+            }
+
+            p {
+                color: black;
+            }
+
+            p > code,
+            li > code,
+            dd > code,
+            td > code {
+                background: #ffeff0;
+                word-wrap: break-word;
+                box-decoration-break: clone;
+                padding: .1rem .3rem .2rem;
+                border-radius: .2rem;
+            }
+
+            .container {
+                width: 50vw;
+                border: 1px solid #E3DDF4;
+                padding: 15px;
+                border-radius: 8px;
+                color: black;
+                flex-direction: column;
+                align-items: center;
+                overflow: hidden;
+                margin: auto !important;
+                margin-top: 4vh !important;
+            }
+
+
+        </style>
+    </div>
+</head>
+
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <div class="contact" style="min-height: 100vh;">
+        <div class="row justify-content-center container">
+          <div style="text-align: center;">
+              <h4><strong><u>Meet the Team</u></strong></h4>
+              <h3><strong>Special Customization</strong></h3>
+              <button onclick="toggleMasks()">Toggle Masks</button>
+              <h2>Change Background Color</h2>
+              <input type="color" id="colorInput"  value="#f6b73c" onchange="changeColor(this)" onkeyup="changeColor(this)">
+
+          </div>
+        </div>
+        <!-- Nolan Platt - Card -->
+        <div class="wrapper">
+            <div class="card">
+                <a class="image" style="width:300px">
+                <img id="nolanImage" class="card-img-top" src="/images/unmaskedNolan.png" alt="Nolan P Image"  height="300">
+                </a>
+                <div class="card-body">
+                    <a href="./individual/NPlatt"><h6 class="card-title"><strong>Nolan Platt | Github Administrator </strong></h6></a>
+                    <h6 class="card-title">Hello, my name is Nolan Platt. I am interested in computer science, electronics & aerospace.</h6>
+                </div>
+            </div>
+            <!-- Akshay Rohatgi- Card -->
+            <div class="card">
+                <a class="image" style="width:300px">
+                    <img id="akshayImage" class="card-img-top" src="/images/unmaskedAkshay.png" alt="Akshay R Image"  height="300">
+                </a>
+                <div class="card-body">
+                    <a href="./individual/ARohatgi"><h6 class="card-title"><strong>Akshay Rohatgi | Design Manager </strong></h6></a>
+                    <h6 class="card-title">Hi! My name is Akshay and I'm a highschool student interested in computer science and cybersecurity.</h6>
+                </div>
+            </div>
+            <!-- Ashwin Babu - Card -->
+            <div class="card">
+                <a class="image" style="width:300px">
+                    <img id="ashwinImage" class="card-img-top" src="/images/unmaskedAshwin.png" alt="Ashwin B Image"  height="300">
+                </a>
+                <div class="card-body">
+                    <a href="./individual/ABabu"><h6 class="card-title"><strong>Ashwin Babu | Scrum Master </strong></h6></a>
+                    <h6 class="card-title">Hi, I'm Ashwin. My interests include computer science and biology.</h6>
+                </div>
+            </div>
+            <!-- Aman Jain  - Card -->
+            <div class="card">
+                <a class="image" style="width:300px">
+                    <img id="amanImage" class="card-img-top" src="/images/unmaskedAman.png" alt="Aman J Image"  height="300">
+                </a>
+                <div class="card-body">
+                    <a href="./individual/AJain"><h6 class="card-title"><strong>Aman Jain | Technical Officer </strong></h6></a>
+                    <h6 class="card-title">Hey, I'm Aman! I am a junior who is interested in STEM fields like math and science.</h6>
+                </div>
+            </div>
+            <!-- Varnit Gupta  - Card -->
+            <div class="card">
+                <a class="image" style="width:300px">
+                    <img id="varnitImage" class="card-img-top" src="/images/unmaskedVarnit.png" alt="Varnit G Image"  height="300">
+                </a>
+                <div class="card-body">
+                    <a href="./individual/VGupta"><h6 class="card-title"><strong>Varnit Gupta | Deployment Manager </strong></h6></a>
+                    <h6 class="card-title">Hello, my name is Varnit Gupta. I am interested in computer science, engineering, and science.</h6>
+                </div>
+            </div>
+
+        </div>
+
+
+        </div>
+</div>
+
+
+</body>
+
+
+<div layout:fragment="script" th:remove="tag">
+    <!-- Start of custom script specific to page -->
+    <script src="/static/vanta/three.r119.min.js" th:src="@{/vanta/three.r119.min.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+            integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        function toggleMasks() {
+            let srcCheck = document.getElementById("nolanImage").src;
+            if(srcCheck.includes("unmasked")) {
+                document.getElementById("nolanImage").src = "/images/maskedNolan.png";
+                document.getElementById("akshayImage").src = "/images/maskedAkshay.png";
+                document.getElementById("ashwinImage").src = "/images/maskedAshwin.png";
+                document.getElementById("amanImage").src = "/images/maskedAman.png";
+                document.getElementById("varnitImage").src = "/images/maskedVarnit.png";
+            } else {
+                document.getElementById("nolanImage").src = "/images/unmaskedNolan.png";
+                document.getElementById("akshayImage").src = "/images/unmaskedAkshay.png";
+                document.getElementById("ashwinImage").src = "/images/unmaskedAshwin.png";
+                document.getElementById("amanImage").src = "/images/unmaskedAman.png";
+                document.getElementById("varnitImage").src = "/images/unmaskedVarnit.png";
+            }
+        }
+
+        function changeColor(t) {
+            document.body.style.backgroundColor = t.value;
+
+        }
+
+
+
+    </script>
+</div>
+
+</html>
