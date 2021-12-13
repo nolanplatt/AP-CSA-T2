@@ -1,0 +1,162 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"a8848f99-493c-46a0-afe9-fafac83bf0ad\" name=\"Changes\" comment=\"Initial Commit\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <excluded-from-favorite>\n      <branch-storage>\n        <map>\n          <entry type=\"LOCAL\">\n            <value>\n              <list>\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"master\" />\n              </list>\n            </value>\n          </entry>\n        </map>\n      </branch-storage>\n    </excluded-from-favorite>\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"22EsI0aQprdaGiVuTnMqPoMUXw5\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"ASKED_ADD_EXTERNAL_FILES\" value=\"true\" />\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"a8848f99-493c-46a0-afe9-fafac83bf0ad\" name=\"Changes\" comment=\"\" />\n      <created>1639413998584</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1639413998584</updated>\n      <workItem from=\"1639414002057\" duration=\"302000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Initial Commit\">\n      <created>1639414122031</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1639414122031</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"2\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\n    <MESSAGE value=\"Initial Commit\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Initial Commit\" />\n  </component>\n</project>
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -1,7 +1,101 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="a8848f99-493c-46a0-afe9-fafac83bf0ad" name="Changes" comment="Initial Commit" />
++    <list default="true" id="a8848f99-493c-46a0-afe9-fafac83bf0ad" name="Changes" comment="workspace.xml Unversioned File">
++      <change afterPath="$PROJECT_DIR$/docs/contributing.md" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/lib/lombok-1.18.20.jar" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/lib/noimagepic.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/sqlite.db" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/Main.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/MainController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/NameCheapController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/algorithm/FibonacciController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/algorithm/FibonacciModel/FibFor.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/algorithm/FibonacciModel/FibRecurse.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/algorithm/FibonacciModel/FibStream.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/algorithm/FibonacciModel/FibWhile.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/algorithm/FibonacciModel/_Fibonacci.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/algorithm/FunMath.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/consoleUI/ConsoleMethods.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/API/APIController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/CB/FRQ.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/CB/collegeboard.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/DataOps/DataOps.md" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/DataOps/genericDataModel/Alphabet.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/DataOps/genericDataModel/Animal.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/DataOps/genericDataModel/Cupcakes.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/DataOps/genericDataModel/Generics.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/DataOpsController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/LinkedLists/CircleQueue.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/LinkedLists/LinkedList.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/LinkedLists/Stack.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/LinkedLists/StackDriver.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/PersonSqlMvcController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/SQL/Person.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/SQL/PersonJpaRepository.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/SQL/PersonSqlRepository.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/SQL/SQLDialect.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/SQL/SportInfo.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/WebAPIController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/starters/ImageInfo.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/about.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/colors.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/colors2.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/palette.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Ak.jpeg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Ak.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ChrisAbout.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/EshaanAbout.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Mona_Lisa.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Sexy.jpeg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/black-square-16.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/blue-square-16.gif" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/blue-square-16.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/blue-square-16.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/bulb_off.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/bulb_on.gif" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/fibonacci_spiral.svg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/freenom.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/github_logo.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/green-square-16.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/java_logo.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/lassen-volcano-256.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/lassen-volcano-original.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ncs_logo.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/picOfYeonjoon.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/portforward.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/red-square-16.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/white-square-16.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/styles/styles.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/data/YeonjoonAPI.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/data/collegeboard.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/data/covid19.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/data/dataops.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/data/list-by-sport.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/data/person.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/data/personcreate.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/data/personsearch_get.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/data/personupdate.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/deploy.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/journal.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/starters/aboutus.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/starters/binary.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/starters/greet.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/starters/image.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/starters/image_grayscale.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/com/nighthawk/csa/MainTests.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -41,6 +135,15 @@
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
++  </component>
++  <component name="RunManager">
++    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
++      <module name="AP-CSA-Tri2" />
++      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nighthawk.csa.Main" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -50,7 +153,7 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1639413998584</updated>
+-      <workItem from="1639414002057" duration="302000" />
++      <workItem from="1639414002057" duration="1346000" />
+     </task>
+     <task id="LOCAL-00001" summary="Initial Commit">
+       <created>1639414122031</created>
+@@ -59,7 +162,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1639414122031</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="workspace.xml Unversioned File">
++      <created>1639414552349</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1639414552349</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -79,6 +189,7 @@
+   <component name="VcsManagerConfiguration">
+     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+     <MESSAGE value="Initial Commit" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
++    <MESSAGE value="workspace.xml Unversioned File" />
++    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml Unversioned File" />
+   </component>
+ </project>
+\ No newline at end of file

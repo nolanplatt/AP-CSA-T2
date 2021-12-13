@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+<head><div layout:fragment="head" th:remove="tag">
+    <meta charset="UTF-8">
+    <title>Grayscale Converter</title>
+    <link th:href="@{/styles/styles.css}" rel="stylesheet" /></div></head>
+
+<body style="background: linear-gradient(135deg, rgba(41,161,54,1) 0%, rgba(131,140,125,1) 51%, rgba(38,38,38,1) 100%);">
+<div layout:fragment="body" th:remove="tag">
+    <!-- Start of body content specific to page -->
+    <br><br><center><h1>Turning Pictures into Grayscale</h1><br>
+    <form id="gcfForm" action="" method="GET">
+        <select name="gray" id="gray" class="form-control">
+            <option value="false">Color</option>
+            <option value="true">Gray</option>
+        </select>
+        <button>Go!</button>
+    </form>
+
+    <div class="gray-images">
+        <!-- color -->
+        <span th:if="${file == false}">
+             <img class="solo-img" th:src="@{images/picOfYeonjoon.png}" alt="color" width="300px" height="300px">
+        </span>
+        <span th:if="${file == false}">
+            <img class="solo-img" th:src="@{images/ncs_logo.png}" alt="color" width="300px" height="300px">
+        </span>
+        <!-- gray -->
+        <span th:if="${file == true}">
+            <img class="solo-img" th:src="${str}" alt="gray" width="300px" height="300px">
+        </span>
+        <span th:if="${file == true}">
+            <img class="solo-img" th:src="${str1}" alt="gray" width="300px" height="300px">
+        </span>
+    </div>
+
+    <!-- End of body content specific to page -->
+</center>
+</div></body>
+</html>
