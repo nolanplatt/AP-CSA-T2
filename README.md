@@ -1,4 +1,4 @@
-# Code Code Coders!!
+# Team Rubber Chicken
 
 CSA Journal [Link](https://docs.google.com/document/d/19iVPSA6oKpUzUTcvJZSr133WR1m2qjpYma6liTT9ulo/edit?usp=sharing)
 
