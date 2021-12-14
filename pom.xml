@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.code</groupId>
-    <artifactId>coders</artifactId>
+    <artifactId>serving-web-content</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>coders</name>
+    <name>serving-web-content</name>
     <description>CSA project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>
