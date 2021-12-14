@@ -10,7 +10,21 @@
     <title>Draw</title>
 </th:block>
 
+
+
 <th:block layout:fragment="body" th:remove="tag">
+
+    <form>
+        <div class="form-group">
+            <div class="form"></div>
+            <input type="number" name="x0" id="x0_point" style="overflow:hidden;">
+            <input type="number" name="y0" id="y0_point" style="overflow:hidden;">
+            <input type="number" name="l" id="len" style="overflow:hidden;">
+            <button type="submit" onclick="draw()" class="btn btn-primary">Submit</button>
+        </div>
+
+    </form>
+
     <h1 class="text-center">JavaScript - Draw on Canvas</h1>
     <div class="container py-4 bg-primary" style="text-align:center;">
         <canvas id="canvas" width="512" height="384" ></canvas>
@@ -59,7 +73,7 @@
         }
 
         // square using lines
-        function square() {
+        function square(x, y, l) {
             ctx.strokeStyle = 'black';
             ctx.lineWidth = 5;
 
@@ -79,10 +93,16 @@
             ctx.stroke();
         }
         // three actions
+        function draw() {
+            var new_x0 = document.getElementById("x0_point");
+            var new_y0 = document.getElementById("y0_point");
+            var new_len = document.getElementById("len");
+            square();
+        }
+
         grid();
         axis();
         // hack 1: make square according to grid positioning
-        square();
         // hack 2: plot line or square on grid from user input according
     </script>
 </th:block>
