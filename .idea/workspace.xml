@@ -5,43 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8848f99-493c-46a0-afe9-fafac83bf0ad" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/consoleUI/ConsoleMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/graph.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/DataOps/genericDataModel/Cupcakes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/DataOps/genericDataModel/Cupcakes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/LinkedLists/StackDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/LinkedLists/StackDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/algorithm/FibonacciController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/algorithm/FibonacciModel/FibFor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/algorithm/FibonacciModel/FibRecurse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/algorithm/FibonacciModel/FibStream.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/algorithm/FibonacciModel/FibWhile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/algorithm/FibonacciModel/_Fibonacci.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/algorithm/FunMath.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/DataOps/genericDataModel/Cupcakes$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/DataOps/genericDataModel/Cupcakes$KeyType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/DataOps/genericDataModel/Cupcakes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/DataOpsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/LinkedLists/StackDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/LinkedLists/StackDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/PersonSqlMvcController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <excluded-from-favorite>
@@ -85,23 +55,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -122,7 +81,6 @@
       <updated>1639413998584</updated>
       <workItem from="1639414002057" duration="302000" />
       <workItem from="1639449907702" duration="980000" />
-      <workItem from="1639502483532" duration="1521000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1639414122031</created>
@@ -147,7 +105,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
