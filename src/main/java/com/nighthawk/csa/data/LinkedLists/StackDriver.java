@@ -4,7 +4,6 @@ package com.nighthawk.csa.data.LinkedLists;
 import com.nighthawk.csa.consoleUI.ConsoleMethods;
 import com.nighthawk.csa.data.DataOps.genericDataModel.Alphabet;
 import com.nighthawk.csa.data.DataOps.genericDataModel.Animal;
-import com.nighthawk.csa.data.DataOps.genericDataModel.Cupcakes;
 
 /**
  * Stack Driver takes a list of Objects and puts them onto the Stack
@@ -67,10 +66,6 @@ public class StackDriver {
         // setup for Animals
         trial.setDataType("Animals");
         trial.pushStack(Animal.animalData());
-
-        // setup for Cupcakes
-        trial.setDataType("Cupcakes");
-        trial.pushStack(Cupcakes.cupCakeData());
 
         // setup for Alphabet
         trial.setDataType("Alphabet");

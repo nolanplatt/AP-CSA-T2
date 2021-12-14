@@ -79,4 +79,10 @@ public class MainController {
     public String journal(){
         return "journal";
     }
+
+    @GetMapping("/graph")
+    public String graph(@RequestParam(name="gray", required=false, defaultValue ="0") boolean gray, Model model){
+
+        return "graph";
+    }
 }
