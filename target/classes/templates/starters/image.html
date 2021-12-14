@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+<head>
+    <div layout:fragment="head" th:remove="tag">
+        <title>Image Processing</title>
+    </div>
+</head>
+
+<body style="background: linear-gradient(135deg, rgba(41,161,54,1) 0%, rgba(131,140,125,1) 51%, rgba(38,38,38,1) 100%);">
+<div layout:fragment="body" th:remove="tag">
+    <div class="container">
+        <h1 class="text-center">RGB values within an Image</h1>
+        <p><a href="/grayscale">Grayscale</a></p>
+        <div class="row justify-content-md-center">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Meta Data</th>
+                    <th>Image</th>
+                    <th>Samples of Data</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="ii: ${lii}">
+                    <td>
+                        <div th:text="${ii.getFile()}">File name</div>
+                        <div th:text="'(' + ${ii.getHeight()} + ',' + ${ii.getWidth()} + ')'">Height,Width</div>
+                    </td>
+                    <td>
+                        <img class="img-responsive py-3" th:src="@{${ii.getFile()}}" alt="" src="${ii.getFile()}" width=128 height="Auto">
+                    </td>
+                    <td>
+                        <div class="overflow-auto" style="height: 256px">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Row</th>
+                                    <th>Column</th>
+                                    <th>RGB</th>
+                                    <th>Hex Code</th>
+                                    <th>Binary</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <span th:each="row: ${#numbers.sequence(0, ii.getScaled_height()-1)}">
+                  <tr th:each="col: ${#numbers.sequence(0, ii.getScaled_width()-1)}">
+                    <td th:text="${ii.getScaled_height(row)}">row</td>
+                    <td th:text="${ii.getScaled_width(col)}">column</td>
+                    <td th:text="${ii.getRGB(row,col)}">cell</td>
+                    <td th:text="${ii.getHexCode(row,col)}">cell</td>
+                    <td th:text="${ii.getBinary(row,col)}">cell</td>
+                  </tr>
+                </span>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<div layout:fragment="head" th:remove="tag">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <link th:href="@{/styles/styles.css}" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/ecb5994ee2.js" crossorigin="anonymous"></script>
+</div>
+
+<body class="about-bg"><div layout:fragment="body" th:remove="tag">
+<div class="about-bg">
+<h1 class="about-header">About Us</h1>
+    <p class="about-body">Collaborators On This Project</p>
+
+    <div class="row justify-content-center">
+        <div class="column">
+            <img th:src="@{/images/Sexy.jpeg}" width="50" height="50" class="face" alt="Dane">
+            <p class="face-name">Dane Vestal</p>
+            <p class="face-text">Technical Officer</p>
+            <dl>
+                <dd>I am learning to code in Mr. Mortensens Class</dd>
+            </dl>
+            <center><a href="https://github.com/D1935827V" style="text-decoration: none; color:black;"><i class="git fa fa-github fa-2x"></i></a></center>
+        </div>
+        <div class="column">
+            <img th:src="@{images/ChrisAbout.jpg}" width="50" height="50" class="face" alt="chris">
+            <p class="face-name">Chris Rubin</p>
+            <p class="face-text">Deployment Manager</p>
+            <dl>
+                <dd>Deploying on Raspberry Pi</dd>
+            </dl>
+            <center><a href="https://github.com/Chris-Ru" style="text-decoration: none; color:black;"><i class="git fa fa-github fa-2x"></i></a></center>
+        </div>
+        <div class="column">
+            <img th:src="@{images/picOfYeonjoon.png}" width="50" height="50" class="face" alt="Yeonjoon">
+            <p class="face-name">Yeonjoon Hong</p>
+            <p class="face-text">Github Admin</p>
+            <dl>
+                <dt>TBD</dt>
+                <dd>Desc. soon</dd>
+            </dl>
+            <center><a href="https://github.com/yeonjoonhong" style="text-decoration: none; color:black;"><i class="git fa fa-github fa-2x"></i></a></center>
+        </div>
+        <div class="column">
+           <img th:src="@{images/Ak.jpeg}" width="50" height="50" class="face" alt="AK">
+            <p class="face-name">Ak Prathipati</p>
+            <p class="face-text">Web Designer</p>
+            <dl>
+                <dt>TBD</dt>
+                <dd>Desc. soon</dd>
+            </dl>
+            <center><a href="https://github.com/akprathipati" style="text-decoration: none; color:black;"><i class="git fa fa-github fa-2x"></i></a></center>
+        </div>
+        <div class="column">
+            <img th:src="@{images/EshaanAbout.jpg}" width="50" height="50" class="face" alt="Eshaan">
+            <p class="face-name">Eshaan Parlikar</p>
+            <p class="face-text">Scrum Master</p>
+            <dl>
+                <dd>Desc. soon</dd>
+            </dl>
+            <center><a href="https://github.com/KrispyKremeSavage" style="text-decoration: none; color:black;"><i class="git fa fa-github fa-2x"></i></a></center>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+
+<style>
+    html,body{
+        background-color: lightblue;
+    }
+</style>
