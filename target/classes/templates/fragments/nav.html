@@ -8,35 +8,24 @@
     <a class="navbar-brand" href="/">
         <img alt="" class="d-inline-block align-center"
              src=""
-             th:src="@{/images/ncs_logo.png}"
+             th:src="@{/images/nighthawkrecruitingLogo.png}"
              height="50"
              width="auto">
-        P1-CodeCodeCoders
+        Nighthawk Recruiting
     </a>
 
     <!-- Bootstrap menus -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <!--root menu -->
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Data
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" th:href="@{/data/person}">SQL Person</a>
-                    <a class="dropdown-item" th:href="@{/data/covid19}">RapidAPI Covid19</a>
-                    <a class="dropdown-item" th:href="@{/data/dataops}">Data Ops</a>
-                </div>
-            </li>
+
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Course-materials
+                    Course Materials
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" th:href="@{/deploy}">Deployment</a>
+                    <a class="dropdown-item" th:href="@{/deploy}">Deployment Guide</a>
                     <a class="dropdown-item" th:href="@{/frq}">FRQs</a>
                 </div>
             </li>
@@ -50,10 +39,12 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown6" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Other
+                    About Us
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" th:href="@{/aboutus}">About Us</a>
+                    <a class="dropdown-item" th:href="@{/aboutus}">Meet the Team</a>
+                    <a class="dropdown-item" th:href="@{/individual/NPlatt}">Nolan Platt</a>
+
                 </div>
             </li>
         </ul>
