@@ -18,5 +18,14 @@ We will be creating a sports recruiting website, hence the name Nighthawk Recrui
 | Dane Vestal        | [@D1935827V](https://github.com/D1935827V)         | Technical Officer           |[Tasks](https://github.com/nolanplatt/AP-CSA-T2/issues/assigned/D1935827V)|[Scrumboard](https://github.com/nolanplatt/AP-CSA-T2/projects/1?card_filter_query=assignee%3AD1935827V)|[Commits](https://github.com/nolanplatt/AP-CSA-T2/commits?author=D1935827V )|[Profile](https://github.com/D1935827V)|
 | Nolan Platt        |   [@nolanplatt](https://github.com/nolanplatt)                |        Deployment Manager           |Tasks |Scrumboard |Commits |Profile |
 
-
+## Week 3 | WIP Project Review
+Note: our group does not have timeboxes or information prior to week three because we were in other groups. 
+During week three, we created: about pages, new frontend screens, ability to access data asynchrously, and deployment w/ https & ability to perform an update.
+| Team Member | Github Profile                                       | Scrum Board Task                                             | Contribution Links |
+| ----------- | ---------------------------------------------------- | ------------------------------------------------------------ | ---------------------- |
+| Nolan Platt   |  [@nolanplatt](https://github.com/nolanplatt)  | [Website running from https](https://github.com/nolanplatt/AP-CSA-T2/issues/4), [Process to perform update](https://github.com/nolanplatt/AP-CSA-T2/issues/5), [Unit 2/3 FRQ](https://github.com/nolanplatt/AP-CSA-T2/issues/6) |  |
+| Akshay Rohatgi   |  [@Akshay-Rohatgi](https://github.com/Akshay-Rohatgi) | [Bootstrap Layouts](https://github.com/nolanplatt/AP-CSA-T2/issues/7), [3 Frontend Screens with design/functionality towards Project Theme](https://github.com/nolanplatt/AP-CSA-T2/issues/8), [Unit 2/3 FRQ](https://github.com/nolanplatt/AP-CSA-T2/issues/9) | |
+|  Arch Huang      | [@Archkitten](https://github.com/Archkitten) | [GitHub README, Tickets, Wiki](https://github.com/nolanplatt/AP-CSA-T2/issues/10), [Week 4 Backlog](https://github.com/nolanplatt/AP-CSA-T2/issues/11), [Unit 2/3 FRQ](https://github.com/nolanplatt/AP-CSA-T2/issues/12) | |
+| Dane Vestal  | [@D1935827V](https://github.com/D1935827V)   | [Access data async + database with CRUD](https://github.com/nolanplatt/AP-CSA-T2/issues/13), [Unit 2/3 FRQ](https://github.com/nolanplatt/AP-CSA-T2/issues/14) | |
+| Christopher Rubin  | [@Chris-Ru](https://github.com/Chris-Ru)    | [Highlight commits and pull requests from each individual](https://github.com/nolanplatt/AP-CSA-T2/issues/15), [Unit 2/3 FRQ](https://github.com/nolanplatt/AP-CSA-T2/issues/16) | |
 
