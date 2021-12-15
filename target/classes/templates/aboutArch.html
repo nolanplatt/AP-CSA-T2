@@ -10,12 +10,12 @@
     <title>About Arch</title>
     <script>
         function Mask1(){
-            document.getElementById('myImage').src="https://images.unsplash.com/photo-1503803548695-c2a7b4a5b875?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8b2NlYW4lMjBzdW5zZXR8ZW58MHx8MHx8&w=1000&q=80";
+            document.getElementById('myImage').src="src/main/resources/static/images/maskedArch.jpeg";
             document.getElementById('message')
         }
 
         function Mask2(){
-            document.getElementById('myImage').src="https://images.freeimages.com/images/small-previews/fec/sunset-rays-1391805.jpg";
+            document.getElementById('myImage').src="src/main/resources/static/images/archnomask.jpg";
             document.getElementById('message')
         }
     </script>
@@ -56,14 +56,14 @@
 
     <div class=imageContainer>
         <img  id="myImage"
-              src="https://wallpaperaccess.com/full/1595904.jpg" width="530" height="300"/>
+              src="src/main/resources/static/images/maskedArch.jpeg" width="530" height="300"/>
     </div>
     <div class="button">
         <button class="btn btn-info" onclick=Mask1();>
-            Original
+            Mask
         </button>
         <button  class="btn btn-info" onclick=Mask2();>
-            New Image
+            No Mask
         </button>
     </div>
 
@@ -83,6 +83,12 @@
 
     <h4>Google Translate API</h4>
     <div id="languageId"></div>
+
+    <div class="button">
+        <button class="btn btn-success" onclick="location.href='/aboutArch/drawArch'">
+            Javascript Draw - Arch
+        </button>
+    </div>
 
     </body>
     <!-- End of body content specific to page -->
