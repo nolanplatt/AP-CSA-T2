@@ -9,6 +9,7 @@ Nighthawk Recruiting: Project Rundown
 ## Idea
 We will be creating a sports recruiting website, hence the name Nighthawk Recruiting. Each athlete will input pictures, statistics and other useful information to create a profile that college coaches can view and recruit athletes. The latest news on athletes across high school sports will be highlighted. Specific tools to assist coaches will also be seen throughout the site, such as a BMI calculator. Additionally, we will include a tab that allows users to rate athletes and sports. This will utilize a real-time, secure database. 
 
+## The Team
 |        Name        | Github Username   |Role                 |Tasks |Scrumboard |Commits |Profile |
 |:------------------:|-------------------|-------------------|------|-----------|--------|--------|
 | Akshay Rohatgi     |  [@Akshay-Rohatgi](https://github.com/Akshay-Rohatgi)                 |     Design  Manager              |Tasks |Scrumboard |Commits |Profile |
