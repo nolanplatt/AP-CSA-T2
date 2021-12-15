@@ -81,9 +81,7 @@ public class MainController {
     }
 
     @GetMapping("/graph")
-    public String graph(@RequestParam(name="graph", required=false, defaultValue ="0") boolean graph, Model model){
-        // @RequestParam handles required and default values, name and data are class variables, data looking like JSON
-        model.addAttribute("graph", graph);   // MODEL is passed to html
+    public String graph(){
         return "graph";
     }
 }
