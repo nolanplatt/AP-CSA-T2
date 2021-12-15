@@ -1,5 +1,11 @@
 # Team Rubber Chicken 🐔🐣
 
+Nighthawk Recruiting: Project Rundown
+- [Runtime Link (Running Project)](https://nighthawkrecruiting.tk/)
+- [Team Scrum Board](https://github.com/nolanplatt/AP-CSA-T2/projects/1)
+- [All Team Commits](https://github.com/nolanplatt/AP-CSA-T2/commits/master)
+- [Team Insight Graphs](https://github.com/nolanplatt/AP-CSA-T2/graphs/contributors)
+
 |        Name        | Github Username   |ID                 |Tasks |Scrumboard |Commits |Profile |
 |:------------------:|-------------------|-------------------|------|-----------|--------|--------|
 | Akshay Rohatgi     |                   |                   |Tasks |Scrumboard |Commits |Profile |
