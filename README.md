@@ -1,4 +1,4 @@
-# Team Rubber Chicken
+# Team Rubber Chicken 🐔🐣
 
 |        Name        | Github Username   |ID                 |Tasks |Scrumboard |Commits |Profile |
 |:------------------:|-------------------|-------------------|------|-----------|--------|--------|
