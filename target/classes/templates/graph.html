@@ -10,8 +10,7 @@
     <title>Draw</title>
 </th:block>
 
-<th:block layout:fragment="body" th:remove="tag">
-
+<body>
     <form>
         <div class="form-group">
             <div class="form"></div>
@@ -27,7 +26,15 @@
     <div class="container py-4 bg-primary" style="text-align:center;">
         <canvas id="canvas" width="512" height="384" ></canvas>
     </div>
+</body>
 
+<div layout:fragment="script" th:remove="tag">
+    <!-- Start of custom script specific to page -->
+    <script src="/static/vanta/three.r119.min.js" th:src="@{/vanta/three.r119.min.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+            integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         // https://www.w3schools.com/graphics/canvas_intro.asp
         const canvas = document.getElementById('canvas');
@@ -71,15 +78,15 @@
         }
 
         // square using lines
-        function square(x, y, l) {
+        function square(x_n, y_n, l_e) {
             ctx.strokeStyle = 'black';
             ctx.lineWidth = 5;
 
             // starting coordinates
-            const x = x0+16;
-            const y = y0-16;
+            const x = x0+(16*x_n);
+            const y = y0-(16*y_n);
             // length of sides is 4 units
-            const l = unit*4;
+            const l = unit*l_e;
 
             // draw a square
             ctx.beginPath();
@@ -95,7 +102,7 @@
             var new_x0 = document.getElementById("x0_point");
             var new_y0 = document.getElementById("y0_point");
             var new_len = document.getElementById("len");
-            square();
+            square(new_x0, new_y0, new_len);
         }
 
         grid();
@@ -103,6 +110,6 @@
         // hack 1: make square according to grid positioning
         // hack 2: plot line or square on grid from user input according
     </script>
-</th:block>
+  </div>
 
 </html>
