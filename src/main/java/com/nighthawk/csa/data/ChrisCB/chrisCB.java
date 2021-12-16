@@ -1,71 +1,65 @@
-package com.nighthawk.csa.data.CB;
+package com.nighthawk.csa.data.ChrisCB;
 
 import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.io.FileReader;
 
 @Controller
-public class collegeboard {
+public class chrisCB {
 
-    @GetMapping("/frq")
-    public String cb(Model model) {
+    @GetMapping("/Cfrq")
+    public String cb(@RequestParam(name = "week", required = false, defaultValue = "") Model model) {
+        String key = "";
+
         JSONParser parser = new JSONParser();
         try
         {
             Object object = parser
-                    .parse(new FileReader("src/main/java/com/nighthawk/csa/data/CB/FRQ.json"));
+                    .parse(new FileReader("src/main/java/com/nighthawk/csa/data/ChrisCB/ChrisFRQ.json"));
 
             //convert Object to JSONObject
             JSONObject jsonObject = (JSONObject)object;
 
             //Reading the array
-            JSONArray week2 = (JSONArray)jsonObject.get("Week 2");
-//            JSONArray week3 = (JSONArray)jsonObject.get("Week 3");
+            JSONArray CB = (JSONArray)jsonObject.get("CB");
 
             //Printing all the values
-            // Week 2
-            for(Object frq2 : week2)
+
+            // All CB frqs
+            for(Object frq : CB)
             {
-                System.out.println("\t"+frq2.toString());
+                System.out.println("\t"+frq.toString());
             }
 
-            // Week3
-//            for(Object frq3 : week3)
-//            {
-//                System.out.println("\t"+frq3.toString());
-//            }
-
-            // Week4
-//            for(Object frq4 : week4)
-//            {
-//                System.out.println("\t"+frq4.toString());
-//            }
+//            String week = object.getString("week");
 
 
-            model.addAttribute("week2", week2);
-//            model.addAttribute("week3", week3);
-//            model.addAttribute("week4", week4);
+            model.addAttribute("CB", CB);
+//            model.addAttribute("week", week);
+
 
 
         } catch(Exception fe)
         {
             fe.printStackTrace();
         }
-        return "data/collegeboard";
-
+        return "data/chrisCB";
     }
 }
+
+
+
 
 //        ArrayList<FRQ> frqs = new ArrayList<>();
 //
 //        JSONParser parser = new JSONParser();
-//        Object obj = parser.parse(new FileReader("src/main/java/com/nighthawk/csa/data/CB/FRQ.json"));
+//        Object obj = parser.parse(new FileReader("src/main/java/com/nighthawk/csa/data/CB/ChrisFRQ.json"));
 //        JSONObject jsonObject = (JSONObject) obj;
 //
 //        for (Object o : jsonObject.keySet()) {

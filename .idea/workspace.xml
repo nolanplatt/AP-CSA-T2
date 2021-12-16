@@ -5,24 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8848f99-493c-46a0-afe9-fafac83bf0ad" name="Changes" comment="workspace.xml Merge Conflict Push">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/archnomask.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/maskedArch.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/drawArch.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/ChrisCB/ChrisFRQ.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/ChrisCB/chrisCB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/data/ChrisCB.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21__9_19_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21__9_19_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21__9_19_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21__9_19_AM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_15_21__8_12_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_15_21__8_12_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/AboutArchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/AboutArchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/aboutArch.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/aboutArch.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/AboutArchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/AboutArchController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/aboutArch.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/aboutArch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coders.iml" beforeDir="false" afterPath="$PROJECT_DIR$/coders.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/CB/FRQ.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/CB/collegeboard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/data/collegeboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/CB/collegeboard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/DataOps/genericDataModel/Alphabet$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/DataOps/genericDataModel/Alphabet$KeyType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/DataOps/genericDataModel/Alphabet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/DataOps/genericDataModel/Animal$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/DataOps/genericDataModel/Animal$KeyType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/DataOps/genericDataModel/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/DataOps/genericDataModel/Generics.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/LinkedLists/CircleQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/LinkedLists/LinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/LinkedLists/Stack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/LinkedLists/StackDriver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/SQL/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/SQL/PersonJpaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/SQL/PersonSqlRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/SQL/SQLDialect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/SQL/SportInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/data/WebAPIController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/starters/ImageInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/data/collegeboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/nighthawk/csa/MainTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="HTML File" />
       </list>
     </option>
@@ -64,7 +101,7 @@
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -95,6 +132,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -126,6 +164,7 @@
       <workItem from="1639536667471" duration="1293000" />
       <workItem from="1639540605827" duration="509000" />
       <workItem from="1639541132264" duration="1365000" />
+      <workItem from="1639621842744" duration="3415000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1639414122031</created>
