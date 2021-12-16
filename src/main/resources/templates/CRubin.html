@@ -10,7 +10,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
         <meta charset="utf-8">
         <script src="https://kit.fontawesome.com/ecb5994ee2.js" crossorigin="anonymous"></script>
-        <link th:href="@{/styles/styles.css}" rel="stylesheet" />
 
         <title>Chris Rubin | About</title>
 
@@ -80,7 +79,7 @@
     </div>
 </head>
 
-<body onload="fetchFRQs()" style="z-index: -1;">
+<body onload="fetchFRQs()">
 <div layout:fragment="content" th:remove="tag">
     <div class="contact" style="min-height: 100vh;">
         <div class="photoContainer">
@@ -107,7 +106,7 @@
 
         <div id="aboutMe" class="row justify-content-center lab-container">
             <h4><strong><a href="#top">Item #1: About Me</a></strong></h4><br>
-            <p>Hello, my name is Chris Rubin. I am interested in computer science, electronics & aerospace.</p>
+            <p>Hello, my name is Chris Rubin. I am interested in computer science & electronics.</p>
         </div>
 
         <div id="FRQ" class="row justify-content-center lab-container">
