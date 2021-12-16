@@ -104,8 +104,99 @@
         </button>
     </div>
     </div>
+
+
+    <div id="unit2FRQ">
+        <h4><strong>Unit 2 FRQ</strong></h4><br>
+
+        <div class="code">
+            <code><p id="frqResultUnit2"></p></code>
+        </div>
+        <div>
+            <p>
+                LightSequence gradShow = new LightSequence("0101 0101 0101"); //1a
+                <br>
+                gradShow.display(); //1b
+                <br>
+                gradShow.changeSequence("0011 0011 0011"); //1c
+                <br>
+                String resultSeq = gradShow.insertSegment("1111 1111", 4); //1d
+                <br>
+                public String cutSegment(String oldSeq, String segment) {<br>
+                String newSeq = oldSeq.replaceFirst(segment, "");<br>
+                return newSeq;<br>
+                }
+                <br>
+                String newSeq = oldSeq.replaceFirst(segment, ""); //1e
+                <br>
+                double c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)); //1f
+                <br>
+            </p>
+        </div>
+        <div class="output">
+            <p><strong>Output</strong></p>
+            <code><p id="frqCodeOutputUnit2"></p></code>
+        </div>
+    </div>
+
+
+    <div id="unit3FRQ">
+        <h4><strong>Unit 3 FRQ</strong></h4><br>
+
+        <div class="code">
+            <code><p id="frqResultUnit3"></p></code>
+        </div>
+        <div class="output">
+            <p><strong>Output</strong></p>
+            <code><p id="frqCodeOutputUnit3"></p></code>
+        </div>
+    </div>
+
     </div>
     </body>
+
+
+ <div>
+     <script>
+
+         function fetchFRQs() {
+
+             // Unit 2
+             axios({
+                 method: "GET",
+                 url: "/frqAPI?name=NPlatt&frqUnit=2"
+             }).then(resp => {
+                 console.log(resp.data);
+                 for (let i = 0; i < resp.data.length; i++) {
+                     if(i == 0) {
+                         document.getElementById("frqResultUnit2").innerText = resp.data[i];
+                     } else {
+                         document.getElementById("frqCodeOutputUnit2").innerText = resp.data[1] + "\n" + resp.data[2] + "\n" + resp.data[3];
+                     }
+                 }
+             })
+
+             // Unit 3
+
+             axios({
+                 method: "GET",
+                 url: "/frqAPI?name=NPlatt&frqUnit=3"
+             }).then(resp => {
+                 console.log(resp.data);
+                 for (let i = 0; i < resp.data.length; i++) {
+                     if(i == 0) {
+                         document.getElementById("frqResultUnit3").innerText = resp.data[i];
+                     } else {
+                         document.getElementById("frqCodeOutputUnit3").innerText = resp.data[1] + "\n" + resp.data[2] + "\n" + resp.data[3] + "\n" + resp.data[4];
+                     }
+                 }
+             })
+         }
+     </script>
+ </div>
+
+
+
     <!-- End of body content specific to page -->
 </div>
 
