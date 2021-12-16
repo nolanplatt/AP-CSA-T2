@@ -16,12 +16,12 @@
          <div layout:fragment="script" th:remove="tag">
          <script>
         function Mask1(){
-            document.getElementById('myImage').src="@{/images/maskedArch.jpeg}";
+            document.getElementById('myImage').src="/images/maskedArch.jpeg";
             document.getElementById('message')
         }
 
         function Mask2(){
-            document.getElementById('myImage').src="@{/images/archnomask.jpg}";
+            document.getElementById('myImage').src="/images/archnomask.jpg";
             document.getElementById('message')
         }
     </script>
@@ -70,7 +70,7 @@
 
     <div class=imageContainer>
         <img  id="myImage"
-              th:src="@{/images/maskedArch.jpeg}" width="530" height="300"/>
+              src="/images/maskedArch.jpeg" width="530" height="300"/>
     </div>
     <div class="button">
         <button class="btn btn-info" onclick=Mask1();>
