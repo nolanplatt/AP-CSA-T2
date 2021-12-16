@@ -21,6 +21,10 @@ We will be creating a sports recruiting website, hence the name Nighthawk Recrui
 ## Week 3 | WIP Project Review
 Note: our group does not have timeboxes or information prior to week three because we were in other groups. 
 During week three, we created: about pages, new frontend screens, ability to access data asynchrously, and deployment w/ https & ability to perform an update.
+
+### Team Section
+
+### Timebox and Tangibles
 | Team Member | Github Profile                                       | Scrum Board Task                                             | Contribution Links |
 | ----------- | ---------------------------------------------------- | ------------------------------------------------------------ | ---------------------- |
 | Nolan Platt   |  [@nolanplatt](https://github.com/nolanplatt)  | [Website running from https](https://github.com/nolanplatt/AP-CSA-T2/issues/4), [Process to perform update](https://github.com/nolanplatt/AP-CSA-T2/issues/5), [Unit 2/3 FRQ](https://github.com/nolanplatt/AP-CSA-T2/issues/6) |  |
