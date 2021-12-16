@@ -81,6 +81,28 @@ public class MainController<array> {
                 //F
                 array[3] = "Distance Sqrt Result: " + String.valueOf((Math.sqrt(a * a + b * b)));
             }
+
+            if (name.equals("ARohatgi")) {
+                //A
+                LightSequence gradShow = new LightSequence("0101 0101 0101");
+                //B
+                gradShow.display();
+                //C
+                gradShow.changeSequence("0011 0011 0011");
+                //D
+                String resultSeq = gradShow.insertSegment("1111 1111", 4);
+                array[1] = resultSeq;
+                //E
+                String removeSegmentString = "110";
+                String oldSeq = "110101001";
+                String newSeq = oldSeq.replaceFirst(removeSegmentString, "");
+                array[2] = newSeq;
+                //F
+                array[3] = String.valueOf(Math.sqrt(a*a + b*b));
+            }
+
+
+
         } else if (week == 3) {
 
             // Nolan Platt
@@ -129,6 +151,52 @@ public class MainController<array> {
                 boolean check = option1.equals(option2);
                 array[4] = "PART D: " + Boolean.toString(check);
             }
+
+            if(name.equals("ARohatgi")) {
+                //A
+                if (rsvp) {
+                    System.out.println("attending");
+                    array[1] = "attending";
+                } else {
+                    System.out.println("attending");
+                    array[1] = "not attending";
+                }
+
+                //B
+                if (selection == 1) {
+                    System.out.println("beef");
+                    array[2] = "beef";
+                } else if (selection == 2) {
+                    System.out.println("chicken");
+                    array[2] = "chicken";
+                } else if (selection == 3) {
+                    System.out.println("pasta");
+                    array[2] = "pasta";
+                } else {
+                    System.out.println("fish");
+                    array[2] = "fish";
+                }
+                
+                //C
+                if (!rsvp) {
+                    String option1 = "Sorry you can't make it.";
+                    array[3] = "Sorry you can't make it.";
+                } else if (rsvp && selection == 1) {
+                    String option1 = "Thanks for attending. You will be served beef.";
+                    array[3] = "Sorry you can't make it.";
+                }
+
+                //D
+                if (option1 == option2) {
+                    System.out.println("true");
+                    array[4] = "true";
+                } else {
+                    System.out.println("false");
+                    array[4] = "false";
+                }
+
+            }
+
         }
 
         return array;

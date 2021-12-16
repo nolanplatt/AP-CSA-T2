@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8848f99-493c-46a0-afe9-fafac83bf0ad" name="Changes" comment="Initial Commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/AHuang.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/AHuang.html" afterDir="false" />
-    </list>
+    <list default="true" id="a8848f99-493c-46a0-afe9-fafac83bf0ad" name="Changes" comment="format index page" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,10 +84,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/images" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -128,6 +128,7 @@
       <workItem from="1639628243837" duration="1596000" />
       <workItem from="1639636811819" duration="6065000" />
       <workItem from="1639650199966" duration="2846000" />
+      <workItem from="1639671433769" duration="1311000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1639414122031</created>
@@ -136,7 +137,28 @@
       <option name="project" value="LOCAL" />
       <updated>1639414122031</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix graph page">
+      <created>1639671633257</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639671633257</updated>
+    </task>
+    <task id="LOCAL-00003" summary="format index page">
+      <created>1639672517129</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639672517129</updated>
+    </task>
+    <task id="LOCAL-00004" summary="format index page">
+      <created>1639672635803</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1639672635803</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +180,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="get square to 1,1 in /graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="get square to 1,1 in /graph" />
+    <MESSAGE value="fix graph page" />
+    <MESSAGE value="format index page" />
+    <option name="LAST_COMMIT_MESSAGE" value="format index page" />
   </component>
 </project>
