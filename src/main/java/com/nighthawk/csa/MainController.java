@@ -190,6 +190,10 @@ public class MainController {
         return "drawArch";
     }
 
+    @GetMapping("/individual/ARohatgi")
+    public String getARohatgi() {
+        return "ARohatgi";
+    }
 
     // Chris Rubin
 
