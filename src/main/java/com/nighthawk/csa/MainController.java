@@ -5,12 +5,74 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
 public class MainController {
+
+    // Unit 2 FRQ Stuff
+
+    class LightSequence {
+        String seq;
+
+        public LightSequence(String seq) {
+            this.seq = seq;
+        }
+
+        public String insertSegment(String segment, int ind) {
+            StringBuilder sb = new StringBuilder(segment);
+            sb.insert(ind, segment);
+            return sb.toString();
+        }
+
+        public void changeSequence(String seq) {
+            this.seq = seq;
+        }
+
+        public void display() {
+            System.out.println(seq);
+        }
+
+    }
+    public String[] getFRQAnswers(String name, String content) {
+
+        String[] array = new String[4];
+        array[0] = content;
+        int a = 3;
+        int b = 4;
+
+        // Begin FRQ Handling for Each Group Member
+
+        // Nolan Platt
+        if (name.equals("NPlatt")) {
+            //A
+            LightSequence gradShow = new LightSequence("0101 0101 0101");
+            //B
+            gradShow.display();
+            //C
+            gradShow.changeSequence("0011 0011 0011");
+            //D
+            String resultSeq = gradShow.insertSegment("1111 1111", 4);
+            array[1] = "Result Sequence: " + resultSeq;
+            //E
+            String segment = "11";
+            String oldSeq = "1100000111000";
+            int newIndex = oldSeq.indexOf(segment);
+            String newSeq = oldSeq.substring(0, newIndex);
+            newSeq += oldSeq.substring(newIndex + segment.length());
+            array[2] = "New Sequence: " + newSeq;
+            //F
+            array[3] = "Distance Sqrt Result: " + String.valueOf((Math.sqrt(a * a + b * b)));
+        }
+        return array;
+    }
 
     @GetMapping("/aboutus")    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
     public String abtus() {
@@ -83,5 +145,37 @@ public class MainController {
     @GetMapping("/graph")
     public String graph(){
         return "graph";
+    }
+
+    // FRQ API
+    @GetMapping("/frqAPI")
+    @ResponseBody
+    public String[] getFRQ(@RequestParam(name = "name", required = false, defaultValue = "null") String name,
+                           @RequestParam(name = "frqUnit", required = false, defaultValue = "2") int unit) throws IOException {
+
+        Path current = Paths.get("src/main/resources/static/frqs/Unit" + unit + "/" + name + ".txt");
+        String content = Files.readString(current);
+        String[] array = getFRQAnswers(name, content);
+        return array;
+    }
+
+    // About Pages
+
+    // Nolan Platt
+
+    @GetMapping("/individual/NPlatt")
+    public String getNPlatt(){
+        return "NPlatt";
+    }
+
+    // Arch Huang
+    @GetMapping("/individual/AHuang")    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    public String getAHuang() {
+        return "AHuang";
+    }
+
+    @GetMapping("/individual/AHuang/aboutArch/drawArch")    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    public String getDrawArch() {
+        return "drawArch";
     }
 }

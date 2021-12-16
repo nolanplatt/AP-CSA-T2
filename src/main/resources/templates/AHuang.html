@@ -1,21 +1,27 @@
 <!DOCTYPE HTML>
+
 <!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
 <html xmlns:layout="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
 
-<!-- <head> -->
-<div layout:fragment="head" th:remove="tag">
-    <!-- Page specific head additions -->
+ <head>
+     <div layout:fragment="metadata" th:remove="tag">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+               crossorigin="anonymous">
+
+     <!-- Page specific head additions -->
     <title>About Arch</title>
-    <script>
+         <div layout:fragment="script" th:remove="tag">
+         <script>
         function Mask1(){
-            document.getElementById('myImage').src="src/main/resources/static/images/maskedArch.jpeg";
+            document.getElementById('myImage').src="/images/maskedArch.jpeg";
             document.getElementById('message')
         }
 
         function Mask2(){
-            document.getElementById('myImage').src="src/main/resources/static/images/archnomask.jpg";
+            document.getElementById('myImage').src="/images/archnomask.jpg";
             document.getElementById('message')
         }
     </script>
@@ -25,7 +31,10 @@
             document.getElementById('message')
         }
     </script>
-    <script>
+             </div>
+         <div layout:fragment="script" th:remove="tag">
+
+         <script>
         async function getLanguage() {
             const response = await fetch("https://google-translate1.p.rapidapi.com/language/translate/v2/languages", {
                 "method": "GET",
@@ -41,14 +50,19 @@
         }
         getLanguage();
     </script>
-</div>
+             </div>
+     </div>
+ </head>>
 
 <!-- <body> -->
-<div layout:fragment="body" th:remove="tag">
     <!-- Page specific body additions -->
     <body>
+    <div layout:fragment="content" th:remove="tag">
+        <div class="contact" style="min-height: 100vh;">
 
-    <style>
+
+
+        <style>
         body {
             background-image: url('https://cdn.wallpapersafari.com/93/58/GS1pCE.jpg');
         }
@@ -56,7 +70,7 @@
 
     <div class=imageContainer>
         <img  id="myImage"
-              src="src/main/resources/static/images/maskedArch.jpeg" width="530" height="300"/>
+              src="/images/maskedArch.jpeg" width="530" height="300"/>
     </div>
     <div class="button">
         <button class="btn btn-info" onclick=Mask1();>
@@ -85,11 +99,12 @@
     <div id="languageId"></div>
 
     <div class="button">
-        <button class="btn btn-success" onclick="location.href='/aboutArch/drawArch'">
+        <button class="btn btn-success" onclick="location.href='/individual/aboutArch/drawArch'">
             Javascript Draw - Arch
         </button>
     </div>
-
+    </div>
+    </div>
     </body>
     <!-- End of body content specific to page -->
 </div>

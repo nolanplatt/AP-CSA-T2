@@ -1,19 +1,19 @@
-<!-- This page is illustrative and contains ideas about HTML layouts -->
 <!DOCTYPE HTML>
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
 
 <head>
-    <div th:replace="fragments/head :: headfile" th:remove="tag">Standard head for all pages</div>
-    <div layout:fragment="head" th:remove="tag">Head details are added by ThymeLeaf layout consumer</div>
+    <div th:replace="fragments/head :: header"></div>
     <div layout:fragment="metadata"></div>
-    <link th:href="@{/styles/styles.css}" rel="stylesheet" />
-    <!-- layout contains title to avoid warnings -->
-    <title>...</title>
 </head>
 
 <body>
-    <div th:replace="fragments/nav :: header" th:remove="tag">Standard header</div>
-    <div layout:fragment="body" th:remove="tag">Body details are added by ThymeLeaft layout consumer</div>
-    <div th:replace="fragments/footer :: footer" th:remove="tag">Standard footer</div>
+<div th:replace="fragments/nav :: header"></div>
+
+<div layout:fragment="content"></div>
+
+<div th:replace="fragments/footer :: footer"></div>
 </body>
+
+<div layout:fragment="script"></div>
+
 </html>
