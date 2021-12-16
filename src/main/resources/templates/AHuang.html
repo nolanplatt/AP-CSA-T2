@@ -16,12 +16,12 @@
          <div layout:fragment="script" th:remove="tag">
          <script>
         function Mask1(){
-            document.getElementById('myImage').src="@{/images/maskedArch.jpeg}";
+            document.getElementById('myImage').src="/images/maskedArch.jpeg";
             document.getElementById('message')
         }
 
         function Mask2(){
-            document.getElementById('myImage').src="@{/images/archnomask.jpg}";
+            document.getElementById('myImage').src="/images/archnomask.jpg";
             document.getElementById('message')
         }
     </script>
@@ -70,7 +70,7 @@
 
     <div class=imageContainer>
         <img  id="myImage"
-              th:src="@{/images/maskedArch.jpeg}" width="530" height="300"/>
+              src="/images/maskedArch.jpeg" width="530" height="300"/>
     </div>
     <div class="button">
         <button class="btn btn-info" onclick=Mask1();>
@@ -105,7 +105,41 @@
     </div>
     </div>
     </div>
+
+
+    <div id="unit2FRQ">
+        <h4><strong>Unit 2 FRQ</strong></h4><br>
+        <div>
+            <p>
+                LightSequence gradShow = new LightSequence("0101 0101 0101"); //1a
+                <br>
+                gradShow.display(); //1b
+                <br>
+                gradShow.changeSequence("0011 0011 0011"); //1c
+                <br>
+                String resultSeq = gradShow.insertSegment("1111 1111", 4); //1d
+                <br>
+                public String cutSegment(String oldSeq, String segment) {<br>
+                String newSeq = oldSeq.replaceFirst(segment, "");<br>
+                return newSeq;<br>
+                }
+                <br>
+                String newSeq = oldSeq.replaceFirst(segment, ""); //1e
+                <br>
+                double c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)); //1f
+                <br>
+            </p>
+            <h4><strong>Java Output:</strong></h4><br>
+        </div>
+    </div>
+
+
+    <div id="unit3FRQ">
+        <h4><strong>Unit 3 FRQ</strong></h4><br>
+    </div>
+
     </body>
+
     <!-- End of body content specific to page -->
 </div>
 
