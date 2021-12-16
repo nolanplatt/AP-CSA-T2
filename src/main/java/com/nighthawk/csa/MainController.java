@@ -189,10 +189,10 @@ public class MainController<array> {
                 //D
                 if (option1 == option2) {
                     System.out.println("true");
-                    array[4] = "true"
+                    array[4] = "true";
                 } else {
                     System.out.println("false");
-                    array[4] = "false"
+                    array[4] = "false";
                 }
 
             }
