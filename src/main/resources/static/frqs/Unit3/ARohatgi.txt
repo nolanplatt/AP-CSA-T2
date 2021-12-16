@@ -1,0 +1,31 @@
+//A
+if (rsvp) {
+    System.out.println("attending");
+} else {
+    System.out.println("not attending");
+}
+
+//B
+if (selection == 1) {
+    System.out.println("beef");
+} else if (selection == 2) {
+    System.out.println("chicken");
+} else if (selection == 3) {
+    System.out.println("pasta");
+} else {
+    System.out.println("fish");
+}
+ 
+//C
+if (!rsvp) {
+    String option1 = "Sorry you can't make it.";
+} else if (rsvp && selection == 1) {
+    String option1 = "Thanks for attending. You will be served beef.";
+}
+
+//D
+if (option1 == option2) {
+    System.out.println("true");
+} else {
+    System.out.println("false");
+}
