@@ -5,32 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8848f99-493c-46a0-afe9-fafac83bf0ad" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/frqs/Unit2/NPlatt.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/maskednolan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/unmaskednolan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/NPlatt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/GitHubicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/CRubin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21__9_19_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21__9_19_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21__9_19_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21__9_19_AM__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_15_21__8_12_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_15_21__8_12_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/AboutArchController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coders.iml" beforeDir="false" afterPath="$PROJECT_DIR$/coders.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/aboutArch.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/AHuang.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/deploy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/deploy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/ChrisCB/chrisCB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/ChrisCB/chrisCB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/EshaanAbout.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/picOfYeonjoon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/starters/aboutus.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/starters/aboutus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/AboutArchController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/EshaanAbout.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/picOfYeonjoon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/aboutArch.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -76,7 +77,7 @@
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -107,12 +108,15 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\socce\IdeaProjects\AP-CSA-T2\src\main\resources\static\images" />
       <recent name="C:\Users\User\Desktop\CS\Git\GitHub\AP-CSA-T2\src\main\resources\static\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\socce\IdeaProjects\AP-CSA-T2\src\main\resources\templates" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/images" />
     </key>
   </component>
@@ -140,6 +144,7 @@
       <workItem from="1639541132264" duration="1365000" />
       <workItem from="1639627207594" duration="982000" />
       <workItem from="1639628243837" duration="1596000" />
+      <workItem from="1639636811819" duration="6065000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1639414122031</created>
@@ -164,6 +169,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

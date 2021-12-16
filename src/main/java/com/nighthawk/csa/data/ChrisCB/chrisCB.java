@@ -14,8 +14,7 @@ import java.io.FileReader;
 public class chrisCB {
 
     @GetMapping("/Cfrq")
-    public String cb(@RequestParam(name = "week", required = false, defaultValue = "") Model model) {
-        String key = "";
+    public String cb(Model model) {
 
         JSONParser parser = new JSONParser();
         try
@@ -29,21 +28,13 @@ public class chrisCB {
             //Reading the array
             JSONArray CB = (JSONArray)jsonObject.get("CB");
 
-            //Printing all the values
-
             // All CB frqs
             for(Object frq : CB)
             {
                 System.out.println("\t"+frq.toString());
             }
 
-//            String week = object.getString("week");
-
-
             model.addAttribute("CB", CB);
-//            model.addAttribute("week", week);
-
-
 
         } catch(Exception fe)
         {

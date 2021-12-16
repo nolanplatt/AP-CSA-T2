@@ -1,12 +1,16 @@
 package com.nighthawk.csa;
 
 import com.nighthawk.csa.starters.ImageInfo;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -41,6 +45,7 @@ public class MainController {
         }
 
     }
+
     public String[] getFRQAnswers(String name, String content) {
 
         String[] array = new String[4];
@@ -74,33 +79,35 @@ public class MainController {
         return array;
     }
 
-    @GetMapping("/aboutus")    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    @GetMapping("/aboutus")
+    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
     public String abtus() {
         return "starters/aboutus";
     }
 
-    @GetMapping("/greet")    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+    @GetMapping("/greet")
+    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    public String greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model) {
         // @RequestParam handles required and default values, name and data are class variables, data looking like JSON
         model.addAttribute("name", name);   // MODEL is passed to html
         return "starters/greet";                     // returns HTML VIEW (greeting)
     }
 
     @GetMapping("/image")
-    public String image(Model model)  {
+    public String image(Model model) {
         String web_server = "http://p1-coders.cf:5000/";
         List<ImageInfo> lii = new ArrayList<>();
 
         String file0 = "/images/picOfYeonjoon.png";
-        lii.add(new ImageInfo(file0, web_server+file0, 12));
+        lii.add(new ImageInfo(file0, web_server + file0, 12));
         lii.get(0).read_image();
 
         String file1 = "/images/ChrisAbout.png";
-        lii.add(new ImageInfo(file1, web_server+file1, 2));
+        lii.add(new ImageInfo(file1, web_server + file1, 2));
         lii.get(1).read_image();
 
         String file2 = "/images/EshaanAbout.jpg";
-        lii.add(new ImageInfo(file2, web_server+file2, 7));
+        lii.add(new ImageInfo(file2, web_server + file2, 7));
         lii.get(2).read_image();
 
         model.addAttribute("lii", lii);
@@ -108,16 +115,16 @@ public class MainController {
     }
 
     @GetMapping("/grayscale")
-    public String image_grayscale(@RequestParam(name="gray", required=false, defaultValue ="false") boolean gray, Model model) {
+    public String image_grayscale(@RequestParam(name = "gray", required = false, defaultValue = "false") boolean gray, Model model) {
         String web_server = "http://p1-coders:5000/";
         List<ImageInfo> lii = new ArrayList<>();
 
         String file0 = "/images/picOfYeonjoon.png";
-        lii.add(new ImageInfo(file0, web_server+file0, 12));
+        lii.add(new ImageInfo(file0, web_server + file0, 12));
         String str = lii.get(0).grayscale();
 
         String file1 = "/images/ncs_logo.png";
-        lii.add(new ImageInfo(file1, web_server+file1, 12));
+        lii.add(new ImageInfo(file1, web_server + file1, 12));
         String str1 = lii.get(1).grayscale();
 
 
@@ -127,23 +134,24 @@ public class MainController {
         return "starters/image_grayscale";
     }
 
-    @GetMapping("/binary")    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    @GetMapping("/binary")
+    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
     public String binary() {
         return "starters/binary";
     }
 
     @GetMapping("/deploy")
-    public String deploy(){
+    public String deploy() {
         return "deploy";
     }
 
     @GetMapping("/journal")
-    public String journal(){
+    public String journal() {
         return "journal";
     }
 
     @GetMapping("/graph")
-    public String graph(){
+    public String graph() {
         return "graph";
     }
 
@@ -164,18 +172,54 @@ public class MainController {
     // Nolan Platt
 
     @GetMapping("/individual/NPlatt")
-    public String getNPlatt(){
+    public String getNPlatt() {
         return "NPlatt";
     }
 
     // Arch Huang
-    @GetMapping("/individual/AHuang")    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+
+    @GetMapping("/individual/AHuang")
+    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
     public String getAHuang() {
         return "AHuang";
     }
 
-    @GetMapping("/individual/AHuang/aboutArch/drawArch")    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    @GetMapping("/individual/AHuang/aboutArch/drawArch")
+    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
     public String getDrawArch() {
         return "drawArch";
+    }
+
+
+    // Chris Rubin
+
+    @GetMapping("/individual/CRubin")
+    public String getCRUbin(Model model) {
+            JSONParser parser = new JSONParser();
+            try
+            {
+                Object object = parser
+                        .parse(new FileReader("src/main/java/com/nighthawk/csa/data/ChrisCB/ChrisFRQ.json"));
+
+                //convert Object to JSONObject
+                JSONObject jsonObject = (JSONObject)object;
+
+                //Reading the array
+                JSONArray CB = (JSONArray)jsonObject.get("CB");
+
+
+                // All CB frqs
+                for(Object frq : CB)
+                {
+                    System.out.println("\t"+frq.toString());
+                }
+
+                model.addAttribute("CB", CB);
+
+            } catch(Exception fe)
+            {
+                fe.printStackTrace();
+            }
+        return "CRubin";
     }
 }
