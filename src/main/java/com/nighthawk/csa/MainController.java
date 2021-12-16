@@ -212,6 +212,11 @@ public class MainController<array> {
         return "graph";
     }
 
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+
     // FRQ API
     @GetMapping("/frqAPI")
     @ResponseBody
