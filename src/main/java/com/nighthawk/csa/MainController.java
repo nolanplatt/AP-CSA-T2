@@ -17,9 +17,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
-public class MainController {
+public class MainController<array> {
 
     // Unit 2 FRQ Stuff
 
@@ -46,38 +47,94 @@ public class MainController {
 
     }
 
-    public String[] getFRQAnswers(String name, String content) {
+    public String[] getFRQAnswers(int week, String name, String content) {
 
-        String[] array = new String[4];
+        String[] array = new String[5];
         array[0] = content;
-        int a = 3;
-        int b = 4;
 
-        // Begin FRQ Handling for Each Group Member
+        if (week == 2) {
 
-        // Nolan Platt
-        if (name.equals("NPlatt")) {
-            //A
-            LightSequence gradShow = new LightSequence("0101 0101 0101");
-            //B
-            gradShow.display();
-            //C
-            gradShow.changeSequence("0011 0011 0011");
-            //D
-            String resultSeq = gradShow.insertSegment("1111 1111", 4);
-            array[1] = "Result Sequence: " + resultSeq;
-            //E
-            String segment = "11";
-            String oldSeq = "1100000111000";
-            int newIndex = oldSeq.indexOf(segment);
-            String newSeq = oldSeq.substring(0, newIndex);
-            newSeq += oldSeq.substring(newIndex + segment.length());
-            array[2] = "New Sequence: " + newSeq;
-            //F
-            array[3] = "Distance Sqrt Result: " + String.valueOf((Math.sqrt(a * a + b * b)));
+
+            int a = 3;
+            int b = 4;
+
+            // Begin FRQ Handling for Each Group Member
+
+            // Nolan Platt
+            if (name.equals("NPlatt")) {
+                //A
+                LightSequence gradShow = new LightSequence("0101 0101 0101");
+                //B
+                gradShow.display();
+                //C
+                gradShow.changeSequence("0011 0011 0011");
+                //D
+                String resultSeq = gradShow.insertSegment("1111 1111", 4);
+                array[1] = "Result Sequence: " + resultSeq;
+                //E
+                String segment = "11";
+                String oldSeq = "1100000111000";
+                int newIndex = oldSeq.indexOf(segment);
+                String newSeq = oldSeq.substring(0, newIndex);
+                newSeq += oldSeq.substring(newIndex + segment.length());
+                array[2] = "New Sequence: " + newSeq;
+                //F
+                array[3] = "Distance Sqrt Result: " + String.valueOf((Math.sqrt(a * a + b * b)));
+            }
+        } else if (week == 3) {
+
+            // Nolan Platt
+            if (name.equals("NPlatt")) {
+
+                // A
+                boolean rsvp = true;
+                if (rsvp) {
+                    array[1] = "PART A: Attending";
+                } else if (!rsvp) {
+                    array[1] = "PART A: Not attending";
+                }
+
+                // B
+                int selection = 2;
+                String foodItem = "";
+                String[] possibleFoods = {"Beef", "Chicken.", "Pasta.", "Fish."};
+                int ind = selection--;
+                if (ind > 3) {
+                    ind = 3;
+                }
+                foodItem = possibleFoods[ind];
+                array[2] = "PART B: " + foodItem;
+
+                // C
+                boolean bool = true;
+                String newFoodItem = "";
+                String sentence;
+                if (bool) {
+                    String[] newPossibleFoods = {"Beef", "Chicken.", "Pasta.", "Fish."};
+                    sentence = "Thanks for attending. You will be served ";
+                    int newInd = selection--;
+                    if (newInd > 3) {
+                        newInd = 3;
+                    }
+                    newFoodItem = newPossibleFoods[newInd];
+                    array[3] = "PART C: " + newFoodItem;
+                } else if (!bool) {
+                    sentence = "Sorry you can't make it.";
+                    array[3] = "PART C: " + sentence;
+                }
+
+                // D
+                String option1 = "hh";
+                String option2 = "dd";
+                boolean check = option1.equals(option2);
+                array[4] = "PART D: " + Boolean.toString(check);
+            }
         }
+
         return array;
+
     }
+
 
     @GetMapping("/aboutus")
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
@@ -163,7 +220,7 @@ public class MainController {
 
         Path current = Paths.get("src/main/resources/static/frqs/Unit" + unit + "/" + name + ".txt");
         String content = Files.readString(current);
-        String[] array = getFRQAnswers(name, content);
+        String[] array = getFRQAnswers(unit, name, content);
         return array;
     }
 
@@ -195,31 +252,28 @@ public class MainController {
 
     @GetMapping("/individual/CRubin")
     public String getCRUbin(Model model) {
-            JSONParser parser = new JSONParser();
-            try
-            {
-                Object object = parser
-                        .parse(new FileReader("src/main/java/com/nighthawk/csa/data/ChrisCB/ChrisFRQ.json"));
+        JSONParser parser = new JSONParser();
+        try {
+            Object object = parser
+                    .parse(new FileReader("src/main/java/com/nighthawk/csa/data/ChrisCB/ChrisFRQ.json"));
 
-                //convert Object to JSONObject
-                JSONObject jsonObject = (JSONObject)object;
+            //convert Object to JSONObject
+            JSONObject jsonObject = (JSONObject) object;
 
-                //Reading the array
-                JSONArray CB = (JSONArray)jsonObject.get("CB");
+            //Reading the array
+            JSONArray CB = (JSONArray) jsonObject.get("CB");
 
 
-                // All CB frqs
-                for(Object frq : CB)
-                {
-                    System.out.println("\t"+frq.toString());
-                }
-
-                model.addAttribute("CB", CB);
-
-            } catch(Exception fe)
-            {
-                fe.printStackTrace();
+            // All CB frqs
+            for (Object frq : CB) {
+                System.out.println("\t" + frq.toString());
             }
+
+            model.addAttribute("CB", CB);
+
+        } catch (Exception fe) {
+            fe.printStackTrace();
+        }
         return "CRubin";
     }
 }

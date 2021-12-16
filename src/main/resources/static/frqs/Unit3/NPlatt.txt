@@ -1,0 +1,49 @@
+// Nolan Platt | AP Computer Science A | Unit 3 FRQ
+
+
+A) 
+
+if(rsvp) {
+System.out.println("Attending");
+} else if (!rsvp) {
+System.out.println("Not attending");
+}
+
+B)
+
+String foodItem = "";
+String[] possibleFoods = {"Beef", "Chicken.", "Pasta.", "Fish."};
+  int ind = selection--;
+  if(ind>3) {
+ ind=3;
+}
+  foodItem = possibleFoods[ind];
+  System.out.println(foodItem);
+
+C) 
+
+boolean check
+String foodItem = "";
+String sentence;
+if(bool) {
+  String[] possibleFoods = {"Beef", "Chicken.", "Pasta.", "Fish."};
+  sentence = "Thanks for attending. You will be served ";
+  int ind = selection--;
+  if(ind>3) {
+ index=3;
+}
+  foodItem = possibleFoods[index];
+  System.out.println(foodItem);
+  } else if(!bool) {
+sentence = "Sorry you can't make it.";	
+}
+
+D)
+
+String option1;
+String option2;
+boolean check = option1.equals(option2);
+System.out.println(Boolean.toString(check));
+
+
+

@@ -5,24 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8848f99-493c-46a0-afe9-fafac83bf0ad" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/GitHubicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/CRubin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/frqs/Unit3/NPlatt.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21__9_19_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21__9_19_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21__9_19_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21__9_19_AM__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_15_21__8_12_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_15_21__8_12_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coders.iml" beforeDir="false" afterPath="$PROJECT_DIR$/coders.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/ChrisCB/chrisCB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/data/ChrisCB/chrisCB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/EshaanAbout.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/picOfYeonjoon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/NPlatt.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/NPlatt.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/AboutArchController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nighthawk/csa/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/EshaanAbout.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/picOfYeonjoon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/aboutArch.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/nav.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +99,6 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -145,6 +135,7 @@
       <workItem from="1639627207594" duration="982000" />
       <workItem from="1639628243837" duration="1596000" />
       <workItem from="1639636811819" duration="6065000" />
+      <workItem from="1639650199966" duration="1703000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1639414122031</created>
@@ -169,7 +160,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
