@@ -10,7 +10,8 @@
     <title>Draw</title>
 </th:block>
 
-<body>
+<div layout:fragment="script" th:remove="tag">
+    <body>
     <form>
         <div class="form-group">
             <div class="form"></div>
@@ -26,9 +27,7 @@
     <div class="container py-4 bg-primary" style="text-align:center;">
         <canvas id="canvas" width="512" height="384" ></canvas>
     </div>
-</body>
-
-<div layout:fragment="script" th:remove="tag">
+    </body>
     <!-- Start of custom script specific to page -->
     <script src="/static/vanta/three.r119.min.js" th:src="@{/vanta/three.r119.min.js}"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
