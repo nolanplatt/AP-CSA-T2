@@ -154,6 +154,7 @@ public class MainController<array> {
 
             if(name.equals("ARohatgi")) {
                 //A
+                boolean rsvp = true;
                 if (rsvp) {
                     System.out.println("attending");
                     array[1] = "attending";
@@ -163,6 +164,7 @@ public class MainController<array> {
                 }
 
                 //B
+                int selection = 1;
                 if (selection == 1) {
                     System.out.println("beef");
                     array[2] = "beef";
@@ -178,11 +180,13 @@ public class MainController<array> {
                 }
                 
                 //C
+                String option1 = "";
+                String option2 ="";
                 if (!rsvp) {
-                    String option1 = "Sorry you can't make it.";
+                    option1 = "Sorry you can't make it.";
                     array[3] = "Sorry you can't make it.";
                 } else if (rsvp && selection == 1) {
-                    String option1 = "Thanks for attending. You will be served beef.";
+                    option1 = "Thanks for attending. You will be served beef.";
                     array[3] = "Sorry you can't make it.";
                 }
 
