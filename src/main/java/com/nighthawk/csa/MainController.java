@@ -22,6 +22,249 @@ import java.util.Objects;
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
 public class MainController<array> {
 
+
+    // Unit 3 FRQ Stuff
+
+    // Question 1
+    class WordScrambler {
+         String recombine(String groupMember, String word1, String word2) {
+             // Nolan Platt Code
+             String combo = "";
+             if(groupMember.equals("NPlatt")) {
+                  combo = (word1.substring(0, word1.length() / 2));
+
+                 combo+= word2.substring(word2.length() / 2);
+                 return combo;
+         }
+             return combo;
+         }
+         String[] mixedWords(String groupMember, String[] words) {
+             // Nolan Platt Code
+             String[] combo = new String[words.length];
+             if(groupMember.equals("NPlatt")) {
+                 for (int i = 0; i < combo.length; i++) {
+                     combo[i] = recombine("NPlatt", words[i], words[1 + i]);
+                     combo[1 + i] = recombine("NPlatt", words[1 + i], words[i]);
+                 }
+                 return combo;
+             }
+             return combo;
+         }
+    }
+    // Question 2
+    class Mountain {
+        int getPeakIndex(String groupMember, int[] array) {
+            // Nolan Platt Code
+            if (groupMember.equals("NPlatt")) {
+                for (int i = 1; i <= array.length; i++) {
+                    if (array[i] > array[i + 1] && array[i - 1] < array[i]) {
+                        return i;
+                    }
+                    return 0;
+
+                }
+            }
+            return 0;
+        }
+
+        boolean isIncreasing(int[] array, int stop) {
+            /* implementation not shown
+
+             */
+            return true;
+        }
+
+        boolean isDecreasing(int[] array, int stop) {
+            /* implementation not shown
+
+             */
+            return false;
+        }
+        boolean isMountain(String groupMember, int[] array) {
+            // Nolan Platt Code
+            if (groupMember.equals("NPlatt")) {
+                    int currentPeak = getPeakIndex("NPlatt", array);
+
+                    return (currentPeak != -1) && isIncreasing(array, currentPeak) &&
+                            isDecreasing(array, currentPeak);
+            }
+            return true;
+        }
+    }
+    // Question 3
+    class TemperatureGrid {
+        double computeTemp(String groupMember, int row, int col) {
+
+             // Matrix Declaration from FRQ
+            Double[][] temps = new Double[6][5];
+
+            temps[0][0] = 95.5;
+
+            // [row][column]
+
+            // Column 0
+            temps[0][0] = 95.5;
+            temps[1][0] = 0.0;
+            temps[2][0] = 0.0;
+            temps[3][0] = 0.0;
+            temps[4][0] = 0.0;
+            // Column 1
+            temps[0][1] = 100.0;
+            temps[1][1] = 50.0;
+            temps[2][1] = 40.0;
+            temps[3][1] = 20.0;
+            temps[4][1] = 0.0;
+            // Column 2
+            temps[0][2] = 100.0;
+            temps[1][2] = 50.0;
+            temps[2][2] = 40.0;
+            temps[3][2] = 20.0;
+            temps[4][2] = 0.0;
+            // Column 3
+            temps[0][3] = 100.0;
+            temps[1][3] = 50.0;
+            temps[2][3] = 40.0;
+            temps[3][3] = 20.0;
+            temps[4][3] = 0.0;
+            // Column 4
+            temps[0][4] = 110.3;
+            temps[1][4] = 0.0;
+            temps[2][4] = 0.0;
+            temps[3][4] = 0.0;
+            temps[4][4] = 0.0;
+
+            // Nolan Platt Code
+            if(groupMember.equals("NPlatt")) {
+                if (row == 0 ||  row == temps.length - 1|| col == 0 || col == temps[0].length - 1){
+                    return temps[row][col];
+                }
+                else{
+                    return (temps[row - 1][col] + temps[row + 1][col] + temps[row][col - 1] + temps[row][col + 1]) / 4.0;
+                }
+
+            }
+            return 0.0;
+        }
+
+        boolean updateAllTemps(String groupMember, double tolerance) {
+            Double[][] temps = new Double[6][5];
+
+            temps[0][0] = 95.5;
+
+            // [row][column]
+
+            // Column 0
+            temps[0][0] = 95.5;
+            temps[1][0] = 0.0;
+            temps[2][0] = 0.0;
+            temps[3][0] = 0.0;
+            temps[4][0] = 0.0;
+            // Column 1
+            temps[0][1] = 100.0;
+            temps[1][1] = 50.0;
+            temps[2][1] = 40.0;
+            temps[3][1] = 20.0;
+            temps[4][1] = 0.0;
+            // Column 2
+            temps[0][2] = 100.0;
+            temps[1][2] = 50.0;
+            temps[2][2] = 40.0;
+            temps[3][2] = 20.0;
+            temps[4][2] = 0.0;
+            // Column 3
+            temps[0][3] = 100.0;
+            temps[1][3] = 50.0;
+            temps[2][3] = 40.0;
+            temps[3][3] = 20.0;
+            temps[4][3] = 0.0;
+            // Column 4
+            temps[0][4] = 110.3;
+            temps[1][4] = 0.0;
+            temps[2][4] = 0.0;
+            temps[3][4] = 0.0;
+            temps[4][4] = 0.0;
+            // Nolan Platt Code
+            if (groupMember.equals("NPlatt")) {
+                double[][] newTemps = new
+                        double[temps.length][temps[0].length];
+                boolean tolerant = true;
+                for (int i = 0; i < temps.length; i++) {
+                    for (int j = 0; j < temps[0].length; j++) {
+                        newTemps[i][j] = computeTemp("NPlatt", i, j);
+
+                        if (tolerance < temps[i][j] - newTemps[i][j]) {
+                            tolerant= false;
+                        }
+                    }
+                }
+                for (int k = 0; k < temps.length; k++) {
+                    for (int l = 0; l < temps[0].length; l++) {
+                        temps[l][k] = newTemps[l][k];
+                    }
+                }
+                return tolerant;
+
+            }
+            return true;
+        }
+
+        // Question 4
+class ScoreInfo {
+            int score;
+            int numStudents;
+            public ScoreInfo(int aScore) {
+                score = aScore;
+                numStudents = 1;
+            }
+
+            public void increment() {
+                numStudents++;
+            }
+            public int getScore() {
+                return score;
+            }
+            public int getFrequency() {
+                return numStudents;
+            }
+
+        boolean record(String groupMember, int score) {
+            // Nolan Platt Code
+             ArrayList<ScoreInfo> scoreList = new ArrayList<ScoreInfo>();
+            scoreList.add(0, new ScoreInfo(95));
+            scoreList.add(1, new ScoreInfo(63));
+            scoreList.add(2, new ScoreInfo(75));
+            scoreList.add(3, new ScoreInfo(87));
+            scoreList.add(3, new ScoreInfo(34));
+            scoreList.add(3, new ScoreInfo(56));
+
+            if(groupMember.equals("NPlatt")) {
+                for (int i = 0; i < scoreList.size(); i++) {
+                    if (scoreList.get(i).getScore() >  score) {
+                        scoreList.add(i, new ScoreInfo(score));
+                        return true;
+                    } else if (score == scoreList.get(i).getScore()) {
+                        scoreList.get(i).increment();
+                        return false;
+                    }
+                }
+                ScoreInfo si = new ScoreInfo(score);
+                scoreList.add(si);
+                return true;
+            }
+            return false;
+        }
+
+        void recordScores(String groupMember, int[] stuScores) {
+            // Nolan Platt Code
+            if (groupMember.equals("NPlatt")) {
+                for (int i = 0; i < stuScores.length; i++) {
+                    record("NPlatt", stuScores[i]);
+                }
+            }
+        }
+
+        }
+        }
     // Unit 2 FRQ Stuff
 
     class LightSequence {
