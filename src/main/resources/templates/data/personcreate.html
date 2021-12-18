@@ -6,12 +6,14 @@
       layout:decorate="~{layout}" lang="en">
 
 <!-- <head> -->
+<head>
 <div layout:fragment="head" th:remove="tag">
     <title>Person Form</title>
 </div>
-
+</head>
 <!-- <body> -->
-<div layout:fragment="body" th:remove="tag">
+<body>
+<div layout:fragment="content" th:remove="tag">
     <!-- Page specific body additions -->
     <div class="container">
 
@@ -73,5 +75,6 @@
 
     </div>
 </div>
+</body>
 
 </html>

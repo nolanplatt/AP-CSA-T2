@@ -24,12 +24,23 @@
 
 
             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown0" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Project
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" th:href="@{/login}">Login</a>
+                    <a class="dropdown-item" th:href="@{/register}">Register</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Course Materials
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" th:href="@{/deploy}">Deployment Guide</a>
                     <a class="dropdown-item" th:href="@{/graph}">Graph</a>
+                    <a class="dropdown-item" th:href="@{/data/person}">CRUD: Person</a>
 
                 </div>
             </li>

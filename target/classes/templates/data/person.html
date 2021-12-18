@@ -6,13 +6,17 @@
       layout:decorate="~{layout}" lang="en">
 
 <!-- <head> -->
-<div layout:fragment="head" th:remove="tag">
-    <!-- Page specific head additions -->
-    <title>Person List</title>
-</div>
+<head>
+    <div layout:fragment="head" th:remove="tag">
+        <!-- Page specific head additions -->
+        <title>Person List</title>
+    </div>
+</head>
+
 
 <!-- <body> -->
-<div layout:fragment="body" th:remove="tag">
+<body>
+<div layout:fragment="content" th:remove="tag">
     <!-- Page specific body additions -->
     <div class="container">
 
@@ -53,7 +57,8 @@
         </table>
 
     </div>
-
 </div>
+</body>
+
 
 </html>

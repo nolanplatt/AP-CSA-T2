@@ -1,29 +1,36 @@
 package com.nighthawk.csa;
 
+import com.nighthawk.csa.data.SQL.Person;
+import com.nighthawk.csa.data.SQL.PersonSqlRepository;
 import com.nighthawk.csa.starters.ImageInfo;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.RequestEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import javax.validation.Valid;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
 public class MainController<array> {
 
 
-    // Unit 3 FRQ Stuff
+    // 2014 Extra Credit FRQs
 
     // Question 1
     class WordScrambler {
@@ -292,7 +299,7 @@ class ScoreInfo {
 
     public String[] getFRQAnswers(int week, String name, String content) {
 
-        String[] array = new String[5];
+        String[] array = new String[50];
         array[0] = content;
 
         if (week == 2) {
@@ -445,6 +452,16 @@ class ScoreInfo {
             }
 
         }
+        else if (week == 0) { // 0-> 2014 AP Extra Credit FRQs
+           // Nolan Platt FRQ handling
+            if(name.equals("NPlatt")) {
+                // Question 1
+
+                // Question 2
+                // Question 3
+                // Question 4
+            }
+        }
 
         return array;
 
@@ -538,8 +555,10 @@ class ScoreInfo {
     public String[] getFRQ(@RequestParam(name = "name", required = false, defaultValue = "null") String name,
                            @RequestParam(name = "frqUnit", required = false, defaultValue = "2") int unit) throws IOException {
 
+
         Path current = Paths.get("src/main/resources/static/frqs/Unit" + unit + "/" + name + ".txt");
         String content = Files.readString(current);
+        System.out.println("unit-> " + unit);
         String[] array = getFRQAnswers(unit, name, content);
         return array;
     }

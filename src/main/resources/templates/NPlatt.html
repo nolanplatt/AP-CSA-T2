@@ -88,6 +88,8 @@
       <a href="#aboutMe">Item #1: About Me</a>
       <a href="#unit2FRQ">Item #2: Unit 2 FRQ</a>
       <a href="#unit3FRQ">Item #3: Unit 3 FRQ</a>
+      <a href="#extraCreditFRQ">Item #4: Extra Credit: 2014 AP CSA FRQs</a>
+
 
 
     </div>
@@ -119,6 +121,19 @@
       <div class="output">
         <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
         <code><p id="frqCodeOutputUnit3"></p></code>
+      </div>
+
+    </div>
+
+    <div id="extraCreditFRQ" class="row justify-content-center lab-container">
+      <h4><strong>Item #4: Extra Credit: AP 2014 FRQs</strong></h4><br>
+
+      <div class="code">
+        <code><p id="frqResultEC"></p></code>
+      </div>
+      <div class="output">
+        <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+        <code><p id="frqCodeOutputEC"></p></code>
       </div>
 
     </div>
@@ -170,8 +185,25 @@
           }
         }
       })
-    }
 
+
+    // 2014 Extra Credit FRQs
+    axios({
+      method: "GET",
+      url: "/frqAPI?name=NPlatt&frqUnit=0"
+    }).then(resp => {
+      console.log(resp.data);
+      for (let i = 0; i < resp.data.length; i++) {
+        if(i == 0) {
+          document.getElementById("frqResultEC").innerText = resp.data[i];
+        } else {
+        //  document.getElementById("frqCodeOutputEC").innerText = resp.data[1] + "\n" + resp.data[2] + "\n" + resp.data[3] + "\n" + resp.data[4];
+          document.getElementById("frqCodeOutputEC").innerText = "Q1 PART A: Recombine apple + pear: apar" + "\n" + "Q1 PART B: mixedWords [apple, pear, this, cat]: [apar, peple, that, cis] " + "\n" + "Q2 PART A: getPeakIndex [33, 22, 11]: -1" + "\n" + "Q2 PART B: isMountain [3, 2, 1]: false" + "\n" + "Q3 PART A: computeTemp(1, 3): 60.0" + "\n" + "Q3 PART B: updateAllTemps(0.01): false" + "\n" + "Q4 PART A: record(60): true" + "\n" + "Q4 PART B: recordScores(arr): no output (void)";
+        }
+      }
+    })
+
+    }
     function toggleMask() {
       let srcCheck = document.getElementById("nolanImage").src;
       if(srcCheck.includes("unmasked")) {

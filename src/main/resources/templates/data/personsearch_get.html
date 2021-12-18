@@ -6,10 +6,14 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
       xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
 
+<head>
+
 <div layout:fragment="head" th:remove="tag">
     <title>SQL Person Search</title>
 </div>
+</head>
 
+<body>
 <div layout:fragment="body" th:remove="tag">
     <div class="container py-4 bg-primary">
         <!-- heading -->
@@ -18,6 +22,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                 <span class="fs-4">Search Person Table</span>
             </a>
         </header>
+
         <!-- search box -->
         <div class="container">
             <div class="row">
@@ -29,15 +34,21 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                         </div>
                         <button class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
                     </div>
+
                 </div>
+
             </div>
+
         </div>
     </div>
+
     <!-- result of search -->
     <div class="container">
         <div class="row" id="result">
         </div>
     </div>
+</div>
+</body>
 
     <script>
         function search_data() {
