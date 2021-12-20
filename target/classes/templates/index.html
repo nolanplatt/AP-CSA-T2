@@ -1,34 +1,36 @@
 <!-- This page is illustrative and contains ideas about HTML formatting -->
 <!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
-<html xmlns:layout="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.w3.org/1999/xhtml"
-      layout:decorate="~{layout}" lang="en">
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorate="~{layout}"
+    lang="en">
 
 <!-- <head> -->
+
 <head>
     <title>Home | Nighthawk Recruiting</title>
 </head>
 
 <!-- <body> -->
-<body><div layout:fragment="content" th:remove="tag">
-    <!-- Page specific body additions -->
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-lg-6">
-                <img class="w-100" src="/static/images/hero.jpg" th:src="@{/images/homepageAction.jpg}"/>
-            </div>
 
-    <div class="col-lg-6" style="margin: 30px; position: absolute; margin-left: 30%;">
-        <div class="p-5 mt-4">
-            <div class="wrapper-title" style="padding-top: 70px">
-        <h4><strong>Nighthawk Recruiting</strong></h4>
-        <h3 style="width: 50%;">Providing a sustainable, secure, and easy platform for athletes and college coaches.</h3>
-</div>
-</div>
+<body>
+    <div layout:fragment="content" th:remove="tag">
+        <!-- Page specific body additions -->
+        <div class="container my-5">
+            <div class="row">
+                <div style="margin-top: 50px;" class="col-lg-6">
+                    <img class="w-100" src="/static/images/stadium.jpg" th:src="@{/images/stadium.jpg}" />
+                </div>
+                <div class="col-lg-6" style="margin: 30px; position: absolute; margin-left: 30%;">
+                    <div class="p-5 mt-4">
+                        <div class="wrapper-title" style="padding-top: 70px">
+                            <h1 class="title"><strong>Nighthawk Recruiting</strong></h1>
+                            <h3 class="desc" style="width: 50%;"><strong>Providing a sustainable, secure, and easy platform for athletes and
+                                college coaches.</strong></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- End of body content specific to page -->
-</div>
-</div>
 </body>
+
 </html>

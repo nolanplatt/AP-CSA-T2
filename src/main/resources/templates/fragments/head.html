@@ -17,37 +17,37 @@
     <link th:href="@{/css/styles.css}" rel="stylesheet">
     <!-- Common style for site -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Iceberg&family=Roboto:wght@300&display=swap');
 
         :root{
-            --grey: #555B6E;
-            --green: #89B0AE;
+            --blue: #227C9D;
+            --yellow: #FFCB77;
         }
 
-        a {
-            color: var(--green);
+        nav {
+            background-color: var(--blue);
         }
 
         nav .navbar-brand{
-            font-family: 'Iceberg', cursive !important;
+            font-family: 'Arvo', serif !important;
             font-size: 30px !important;
+            color: var(--yellow);
         }
 
         nav .navbar-nav li a{
             font-family: 'Roboto', sans-serif !important;
-            color: var(--green) !important;
+            color: var(--yellow) !important;
         }
 
-        h1 {
-            font-family: 'Iceberg', cursive;
-            color: var(--green);
+        .title {
+            font-family: 'Arvo', serif;
+            color: var(--blue);
         }
 
-        .lead {
-            font-family: 'Roboto', sans-serif !important;
-            color: var(--green) !important;
-
+        .desc {
+            font-family: 'Roboto', serif;
+            color: var(--blue);
         }
 
         @media (min-width: 992px) {
@@ -68,126 +68,104 @@
             background: white;
         }
 
-        /*.dark-mode {*/
-        /*    background-color: var(--white);*/
-        /*    color: var(--black);*/
-        /*}*/
-
-        .fa{
-            font-size: 3em;
-            letter-spacing: 1em;
-            transition: all .2s;
-            color: white;
+        .main {
+            background-color: #FFFFFF;
+            width: 400px;
+            height: 400px;
+            margin: 7em auto;
+            border-radius: 1.5em;
+            box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+        }
+        
+        .sign {
+            padding-top: 40px;
+            color: var(--blue);
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            font-size: 23px;
+        }
+        
+        .un {
+            width: 76%;
+            color: rgb(38, 50, 56);
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            background: rgba(136, 126, 126, 0.04);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            box-sizing: border-box;
+            border: 2px solid rgba(0, 0, 0, 0.02);
+            margin-bottom: 50px;
+            margin-left: 46px;
+            text-align: center;
+            margin-bottom: 27px;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        form.form1 {
+            padding-top: 40px;
+        }
+        
+        .pass {
+            width: 76%;
+            color: rgb(38, 50, 56);
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            background: rgba(136, 126, 126, 0.04);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            box-sizing: border-box;
+            border: 2px solid rgba(0, 0, 0, 0.02);
+            margin-bottom: 50px;
+            margin-left: 46px;
+            text-align: center;
+            margin-bottom: 27px;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .un:focus, .pass:focus {
+            border: 2px solid rgba(0, 0, 0, 0.18) !important;
+            
+        }
+        
+        .submit {
+        cursor: pointer;
+            border-radius: 5em;
+            color: var(--yellow) !important;
+            background: var(--blue);
+            border: 0;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            font-family: 'Roboto', sans-serif;
+            margin-left: 35%;
+            font-size: 13px;
+            box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+        }
+    
+        .res {
+            color: var(--blue) !important;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 10px;
+            padding-top: 40px;
+            font-family: 'Roboto', sans-serif;
+            margin-left: 30%;
+            font-size: 22px;
+        }
+        
+        @media (max-width: 600px) {
+            .main {
+                border-radius: 0px;
         }
 
-        .fa:hover{
-            transform: translateY(10px);
-        }
 
-        .fa-youtube-play:hover{
-            color: #cc0000;
-        }
-
-        .fa-twitter:hover{
-            color: #1da1f2;
-        }
-
-        .fa-github:hover{
-            color: #000000;
-        }
-
-        .btn:link,
-        .btn:visited {
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 15px 40px;
-            display: inline-block;
-            border-radius: 100px;
-            transition: all .2s;
-            position: absolute;
-            color: white;
-            font-size: 2.5em;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
-        }
-
-        .btn:active {
-            transform: translateY(-1px);
-            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
-        }
-
-        .row{
-            margin: auto;
-        }
-
-        /* large number helps nav remain top layer */
-        .navbar {
-            z-index: 1000;
-            background-color: var(--grey);
-        }
-
-
-        form {border: 3px solid #f1f1f1;}
-
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
     </style>
 </th:block>

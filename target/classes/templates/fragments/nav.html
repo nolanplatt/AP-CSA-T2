@@ -9,52 +9,21 @@
 <!-- Begin navigation fragments -->
 <nav class="cnav navbar navbar-expand" th:fragment="header">
     <a class="navbar-brand" href="/">
-        <img alt="" class="d-inline-block align-center"
-             src=""
-             th:src="@{/images/nighthawkrecruitingLogo.png}"
-             height="50"
-             width="auto">
         Nighthawk Recruiting
     </a>
-
     <!-- Bootstrap menus -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <!--root menu -->
-
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown0" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Project
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" th:href="@{/login}">Login</a>
-                    <a class="dropdown-item" th:href="@{/register}">Register</a>
-                </div>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/login}">login</a>
             </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Course Materials
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" th:href="@{/deploy}">Deployment Guide</a>
-                    <a class="dropdown-item" th:href="@{/graph}">Graph</a>
-                    <a class="dropdown-item" th:href="@{/data/person}">CRUD: Person</a>
-
-                </div>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/register}">register</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    APIs
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" th:href="@{/sportsnews}">Sports News</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
+            <li class ></li>            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown6" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    About Us
+                    about
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" th:href="@{/aboutus}">Meet the Team</a>
@@ -64,18 +33,19 @@
                     <a class="dropdown-item" th:href="@{/individual/ARohatgi}">Akshay Rohatgi</a>
                 </div>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   extras
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" th:href="@{/deploy}">Deployment Guide</a>
+                    <a class="dropdown-item" th:href="@{/graph}">Graph</a>
+                    <a class="dropdown-item" th:href="@{/data/person}">CRUD: Person</a>
+                    <a class="dropdown-item" th:href="@{/sportsnews}">Sports News</a>
+                    <a class="dropdown-item" th:href="@{/bmi}">BMI</a>
+                </div>
+            </li>
         </ul>
-    </div>
-    <div class="btn-group">
-        <!-- Clock display -->
-        <div class="px-3 text-dark">
-            <span id="clock" style="color:white"></span>
-        </div>
-        <!-- Dark mode action -->
-        <div class="form-check form-switch">
-            <input type="checkbox" onclick="darkFunction()" class="form-check-input" id="darkSwitch">
-            <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
-        </div>
     </div>
 
     <!-- Navigation bar JavaScript support -->

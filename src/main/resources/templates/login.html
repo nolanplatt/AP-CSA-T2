@@ -1,50 +1,26 @@
 <!-- This page is illustrative and contains ideas about HTML formatting -->
 <!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
-<html
-  xmlns:layout="http://www.w3.org/1999/xhtml"
-  xmlns:th="http://www.w3.org/1999/xhtml"
-  layout:decorate="~{layout}"
-  lang="en"
->
-  <!-- <head> -->
-  <head>
-    <title>Home | Nighthawk Recruiting</title>
-  </head>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorate="~{layout}"
+  lang="en">
+<!-- <head> -->
 
-  <!-- <body> -->
-  <body>
-    <div layout:fragment="content" th:remove="tag">
-      <!-- Page specific body additions -->
-<!-- Button to open the modal login form -->
-<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+<head>
+  <title>Home | Nighthawk Recruiting</title>
+</head>
 
-<!-- The Modal -->
-<div id="id01" style="padding-top: 70px;" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'"
-class="close" title="Close Modal">&times;</span>
+<!-- <body> -->
 
-  <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
+<body>
+  <div layout:fragment="content" th:remove="tag">
+      <div class="main">
+        <p class="sign" align="center">Sign in</p>
+        <form class="form1">
+            <input class="un " type="text" align="center" placeholder="Username">
+            <input class="pass" type="password" align="center" placeholder="Password">
+            <a class="submit" align="center">Sign in</a>
+        </div>
+         
+  </div>
+</body>
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-    </div>
-  </body>
 </html>

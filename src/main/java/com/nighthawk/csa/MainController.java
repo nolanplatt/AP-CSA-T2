@@ -549,6 +549,11 @@ class ScoreInfo {
         return "login";
     }
 
+    @GetMapping("/bmi")
+    public String bmi() {
+        return "bmi";
+    }
+
     // FRQ API
     @GetMapping("/frqAPI")
     @ResponseBody
