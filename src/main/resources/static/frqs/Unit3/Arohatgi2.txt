@@ -1,0 +1,15 @@
+public void drawSquare(int x, int y, int len) {
+	// Draw line up 
+	int n1 = y + len;
+	drawLine(x, y, x, n1);
+
+	// Draw bottom line
+	int n2 = x + len;
+	drawLine(x, y, n2, y);
+
+	// Draw top line
+	drawLine(x, n1, n2, n1);
+
+	// Draw far line
+	drawLine(n2, y, n2, n1);
+}

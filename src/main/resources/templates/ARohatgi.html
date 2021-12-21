@@ -1,12 +1,11 @@
 <!DOCTYPE HTML>
-<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
-      layout:decorate="~{layout}" lang="en">
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorate="~{layout}"
+  lang="en">
 
 <head>
   <div layout:fragment="metadata" th:remove="tag">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-          crossorigin="anonymous">
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Akshay R | About</title>
 
     <style>
@@ -26,6 +25,7 @@
       h4 {
         color: white;
       }
+
       h5 {
         color: black;
         font-size: 25px;
@@ -34,15 +34,16 @@
       p {
         color: white;
       }
+
       .code {
         font-family: MyFancyCustomFont, monospace;
         font-size: inherit;
       }
 
-      p > code,
-      li > code,
-      dd > code,
-      td > code {
+      p>code,
+      li>code,
+      dd>code,
+      td>code {
         background: #ffeff0;
         word-wrap: break-word;
         box-decoration-break: clone;
@@ -52,86 +53,105 @@
 
       .photoContainer {
         left: 6px;
-        position:absolute;
+        position: absolute;
         width: 20vw;
 
       }
-
-
     </style>
   </div>
 </head>
 
 <body onload="fetchFRQs()">
-<div layout:fragment="content" th:remove="tag">
-  <div class="contact" style="min-height: 100vh;">
-    <div class="photoContainer">
-      <a class="image" style="width:200px">
-        <img id="akshayImage"  src="/images/unmaskedAkshay.jpg" alt="Akshay R Image"  height="300">
-      </a>
-      <h5><strong>Akshay Rohatgi | Design Manager</strong></h5>
-      <button onclick="toggleMask()">Toggle Mask</button> <br>
+  <div layout:fragment="content" th:remove="tag">
+    <div class="contact" style="min-height: 100vh;">
+      <div class="photoContainer">
+        <a class="image" style="width:200px">
+          <img id="akshayImage" src="/images/unmaskedAkshay.jpg" alt="Akshay R Image" height="300">
+        </a>
+        <h5><strong>Akshay Rohatgi | Design Manager</strong></h5>
+        <button onclick="toggleMask()">Toggle Mask</button> <br>
 
-      <a href="https://github.com/Akshay-Rohatgi">
-        <img src="https://ih1.redbubble.net/image.1661355582.0011/st,small,507x507-pad,600x600,f8f8f8.jpg" style="width:250px;height:250px">
-      </a>
+        <a href="https://github.com/Akshay-Rohatgi">
+          <img src="https://ih1.redbubble.net/image.1661355582.0011/st,small,507x507-pad,600x600,f8f8f8.jpg"
+            style="width:250px;height:250px">
+        </a>
 
-      <a href="https://docs.google.com/document/d/1POt5ZSdOPzYuAI8J54k6qnc46Kh_qY2FMQ_UjWkgQ9c/edit?usp=sharing">
-        <img src="https://cdn4.iconfinder.com/data/icons/web-development/512/notebook_notepad_journal_book_report_guide_manual_flat_icon_symbol-512.png" style="width:250px;height:250px">
-      </a>
+        <a href="https://docs.google.com/document/d/1POt5ZSdOPzYuAI8J54k6qnc46Kh_qY2FMQ_UjWkgQ9c/edit?usp=sharing">
+          <img
+            src="https://cdn4.iconfinder.com/data/icons/web-development/512/notebook_notepad_journal_book_report_guide_manual_flat_icon_symbol-512.png"
+            style="width:250px;height:250px">
+        </a>
 
-    </div>
-
-    <div class="row justify-content-center lab-container">
-      <h4><u>Akshay Rohatgi: About Me and Individual Technicals </u></h4>
-      <h4><strong>Table of Contents</strong></h4><br>
-      <a href="#aboutMe">Item #1: About Me</a>
-      <a href="#unit2FRQ">Item #2: Unit 2 FRQ</a>
-      <a href="#unit3FRQ">Item #3: Unit 3 FRQ</a>
-
-
-    </div>
-
-    <div id="aboutMe" class="row justify-content-center lab-container">
-      <h4><strong>Item #1: About Me</strong></h4><br>
-      <p>Hello, my name is Akshay Rohatgi. I'm a highschool student with a passion for computer science and cybersecurity.</p>
-
-    </div>
-
-    <div id="aboutMe" class="row justify-content-center lab-container">
-      <h4><strong>Quotes API</strong></h4><br>
-      <button onclick="getQuote()">Get Random Quote!</button> <br>
-      <p id="quote_result"></p> 
-
-    </div>
-
-    <div id="unit2FRQ" class="row justify-content-center lab-container">
-      <h4><strong>Item #2: Unit 2 FRQ</strong></h4><br>
-
-      <div class="code">
-        <code><p id="frqResultUnit2"></p></code>
-      </div>
-      <div class="output">
-        <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
-        <code><p id="frqCodeOutputUnit2"></p></code>
       </div>
 
-    </div>
+      <div class="row justify-content-center lab-container">
+        <h4><u>Akshay Rohatgi: About Me and Individual Technicals </u></h4>
+        <h4><strong>Table of Contents</strong></h4><br>
+        <a href="#aboutMe">Item #1: About Me</a>
+        <a href="#unit2FRQ">Item #2: Unit 2 FRQ</a>
+        <a href="#unit3FRQ">Item #3: Unit 3 FRQ</a>
+        <a href="#unit3p2FRQ">Item #4: Unit 3 FRQ part 2</a>
 
-    <div id="unit3FRQ" class="row justify-content-center lab-container">
-      <h4><strong>Item #3: Unit 3 FRQ</strong></h4><br>
 
-      <div class="code">
-        <code><p id="frqResultUnit3"></p></code>
       </div>
-      <div class="output">
-        <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
-        <code><p id="frqCodeOutputUnit3"></p></code>
+
+      <div id="aboutMe" class="row justify-content-center lab-container">
+        <h4><strong>Item #1: About Me</strong></h4><br>
+        <p>Hello, my name is Akshay Rohatgi. I'm a highschool student with a passion for computer science and
+          cybersecurity.</p>
+
       </div>
+
+      <div id="aboutMe" class="row justify-content-center lab-container">
+        <h4><strong>Quotes API</strong></h4><br>
+        <button onclick="getQuote()">Get Random Quote!</button> <br>
+        <p id="quote_result"></p>
+
+      </div>
+
+      <div id="unit2FRQ" class="row justify-content-center lab-container">
+        <h4><strong>Item #2: Unit 2 FRQ</strong></h4><br>
+
+        <div class="code">
+          <code><p id="frqResultUnit2"></p></code>
+        </div>
+        <div class="output">
+          <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+          <code><p id="frqCodeOutputUnit2"></p></code>
+        </div>
+
+      </div>
+
+      <div id="unit3FRQ" class="row justify-content-center lab-container">
+        <h4><strong>Item #3: Unit 3 FRQ</strong></h4><br>
+
+        <div class="code">
+          <code><p id="frqResultUnit3"></p></code>
+        </div>
+        <div class="output">
+          <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+          <code><p id="frqCodeOutputUnit3"></p></code>
+        </div>
+
+      </div>
+
+      <div id="unit3p2FRQ" class="row justify-content-center lab-container">
+        <h4><strong>Item #4: Unit 3 FRQ part 2</strong></h4><br>
+
+        <div class="code">
+          <code><p id="frqResultUnit3p2"></p></code>
+        </div>
+        <div class="output">
+          <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+          <code><p id="frqCodeOutputUnit3p2"></p><a href="https://nighthawkrecruiting.tk/frqs/Unit3/Arohatgi2.txt">here</a>
+          </code>
+        </div>
+
+      </div>
+
 
     </div>
   </div>
-</div>
 
 
 </body>
@@ -142,8 +162,8 @@
   <script src="/static/vanta/three.r119.min.js" th:src="@{/vanta/three.r119.min.js}"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
-          integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
 
     function getQuote() {
@@ -166,7 +186,7 @@
       }).then(resp => {
         console.log(resp.data);
         for (let i = 0; i < resp.data.length; i++) {
-          if(i == 0) {
+          if (i == 0) {
             document.getElementById("frqResultUnit2").innerText = resp.data[i];
           } else {
             document.getElementById("frqCodeOutputUnit2").innerText = resp.data[1] + "\n" + resp.data[2] + "\n" + resp.data[3];
@@ -182,7 +202,7 @@
       }).then(resp => {
         console.log(resp.data);
         for (let i = 0; i < resp.data.length; i++) {
-          if(i == 0) {
+          if (i == 0) {
             document.getElementById("frqResultUnit3").innerText = resp.data[i];
           } else {
             document.getElementById("frqCodeOutputUnit3").innerText = resp.data[1] + "\n" + resp.data[2] + "\n" + resp.data[3];
@@ -193,7 +213,7 @@
 
     function toggleMask() {
       let srcCheck = document.getElementById("akshayImage").src;
-      if(srcCheck.includes("unmasked")) {
+      if (srcCheck.includes("unmasked")) {
         document.getElementById("akshayImage").src = "/images/maskedAkshay.jpg";
       } else {
         document.getElementById("akshayImage").src = "/images/unmaskedAkshay.jpg";
