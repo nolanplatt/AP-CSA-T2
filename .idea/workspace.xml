@@ -4,17 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8848f99-493c-46a0-afe9-fafac83bf0ad" name="Changes" comment="fix graph page">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/PersonSqlMvcController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/frqs/Unit0/NPlatt.txt" afterDir="false" />
+    <list default="true" id="a8848f99-493c-46a0-afe9-fafac83bf0ad" name="Changes" comment="aboutArch.html temp fix">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/archTPT/RapidAPI.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/archTPT/Unit4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/Ak.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/Ak.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/ChrisAbout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/EshaanAbout.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/Mona_Lisa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/Sexy.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/black-square-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/blue-square-16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/blue-square-16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/blue-square-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/bulb_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/bulb_on.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/freenom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/github_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/green-square-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/java_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/lassen-volcano-256.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/lassen-volcano-original.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/lombok-1.18.20.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/ncs_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/noimagepic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/picOfYeonjoon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/portforward.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/red-square-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/sqlite.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21,_9_19_AM_[Changes]1/white-square-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_13_21__9_19_AM__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_15_21,_8_12_AM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_15_21__8_12_AM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nighthawk/csa/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/NPlatt.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/NPlatt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/data/person.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/data/person.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/data/personcreate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/data/personcreate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/data/personsearch_get.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/data/personsearch_get.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/data/personupdate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/data/personupdate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/AHuang.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/AHuang.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +54,6 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -77,7 +102,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="22EsI0aQprdaGiVuTnMqPoMUXw5" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -95,14 +120,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -141,9 +165,8 @@
       <workItem from="1639636811819" duration="6065000" />
       <workItem from="1639650199966" duration="2846000" />
       <workItem from="1639671433769" duration="917000" />
-      <workItem from="1639770180235" duration="124000" />
-      <workItem from="1639770606800" duration="3093000" />
-      <workItem from="1639780510101" duration="3177000" />
+      <workItem from="1641226338451" duration="1821000" />
+      <workItem from="1641229869520" duration="160000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1639414122031</created>

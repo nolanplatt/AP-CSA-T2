@@ -25,48 +25,30 @@
             document.getElementById('message')
         }
     </script>
-    <script>
-        function openTest() {
-            document.getElementById("link").style.display = "block";
-            document.getElementById('message')
-        }
-    </script>
-             </div>
-         <div layout:fragment="script" th:remove="tag">
-
-         <script>
-        async function getLanguage() {
-            const response = await fetch("https://google-translate1.p.rapidapi.com/language/translate/v2/languages", {
-                "method": "GET",
-                "headers": {
-                    "accept-encoding": "application/gzip",
-                    "x-rapidapi-host": "google-translate1.p.rapidapi.com",
-                    "x-rapidapi-key": "3c101db5femsh08170f558691f17p1b06d8jsn014526dedbe0"
-                }
-            })
-            console.log(response);
-            const language = await response.text();
-            document.getElementById("languageId").innerHTML = language;
-        }
-        getLanguage();
-    </script>
-             </div>
      </div>
- </head>>
+     </div>
+ </head>
 
 <!-- <body> -->
     <!-- Page specific body additions -->
     <body>
     <div layout:fragment="content" th:remove="tag">
         <div class="contact" style="min-height: 100vh;">
+            <style>
+                body {
+                    background-image: url('https://wallpaperaccess.com/full/193864.jpg');
+                }
+            </style>
 
+            <div class="container p-3 my-3 text-black rounded">
 
+            <div class="button">
+                <button class="btn btn-warning" onclick="location.href='/individual/AHuang/Unit4'">
+                    Unit 4 FRQ
+                </button>
+            </div>
 
-        <style>
-        body {
-            background-image: url('https://cdn.wallpapersafari.com/93/58/GS1pCE.jpg');
-        }
-    </style>
+            <br>
 
     <div class=imageContainer>
         <img  id="myImage"
@@ -83,61 +65,14 @@
 
     <br>
 
-    <div class="button">
-        <button class="btn btn-warning" onclick="openTest()">
-            Reveal Journal
-        </button>
-    </div>
-
-    <div id="link" style="display:none">
-        <a href="https://docs.google.com/document/d/1em_jarWLRf7CYE-5v51hX0MLGqWXDoDfaWKtYXLEFfI/edit?usp=sharing">
-            <embed type="image/jpg" src="https://www.apkmirror.com/wp-content/uploads/2021/11/02/61a6ab7f73e1f-384x384.png"
-                   width="160" height="160"></a>
-    </div>
-
-    <h4>Google Translate API</h4>
-    <div id="languageId"></div>
-
-    <div class="button">
-        <button class="btn btn-success" onclick="location.href='/individual/aboutArch/drawArch'">
-            Javascript Draw - Arch
-        </button>
-    </div>
-    </div>
-    </div>
-
-
-    <div id="unit2FRQ">
-        <h4><strong>Unit 2 FRQ</strong></h4><br>
-        <div>
-            <p>
-                LightSequence gradShow = new LightSequence("0101 0101 0101"); //1a
-                <br>
-                gradShow.display(); //1b
-                <br>
-                gradShow.changeSequence("0011 0011 0011"); //1c
-                <br>
-                String resultSeq = gradShow.insertSegment("1111 1111", 4); //1d
-                <br>
-                public String cutSegment(String oldSeq, String segment) {<br>
-                String newSeq = oldSeq.replaceFirst(segment, "");<br>
-                return newSeq;<br>
-                }
-                <br>
-                String newSeq = oldSeq.replaceFirst(segment, ""); //1e
-                <br>
-                double c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)); //1f
-                <br>
-            </p>
-            <h4><strong>Java Output:</strong></h4><br>
+        <div class="button">
+            <button class="btn btn-success" onclick="location.href='/individual/AHuang/RapidAPI'">
+                Rapid API
+            </button>
         </div>
     </div>
-
-
-    <div id="unit3FRQ">
-        <h4><strong>Unit 3 FRQ</strong></h4><br>
     </div>
-
+    </div>
     </body>
 
     <!-- End of body content specific to page -->
