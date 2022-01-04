@@ -31,49 +31,52 @@
 
 <!-- <body> -->
     <!-- Page specific body additions -->
-    <body>
+ <body>
     <div layout:fragment="content" th:remove="tag">
         <div class="contact" style="min-height: 100vh;">
-            <style>
-                body {
-                    background-image: url('https://wallpaperaccess.com/full/193864.jpg');
-                }
-            </style>
 
-            <div class="container p-3 my-3 text-black rounded">
+            <div class="container p-3 my-3 bg-dark text-black rounded">
 
-            <div class="button">
-                <button class="btn btn-warning" onclick="location.href='/individual/AHuang/Unit4'">
-                    Unit 4 FRQ
-                </button>
+                <div class=imageContainer>
+                    <img  id="myImage" src="/images/maskedArch.jpeg" width="530" height="300"/>
+                </div>
+                <div class="button">
+                    <button class="btn btn-info" onclick=Mask1();>
+                        Mask 1
+                    </button>
+                    <button  class="btn btn-info" onclick=Mask2();>
+                        Mask 0
+                    </button>
+                </div>
+
+                <br>
+
+                <div class="button">
+                    <button class="btn btn-success" onclick="location.href='/individual/AHuang/RapidAPI'">
+                        Rapid API
+                    </button>
+                </div>
+
+                <br>
+
+                <div class="button">
+                    <button class="btn btn-warning" onclick="location.href='/archUnit4a'">
+                        Unit 4a FRQ
+                    </button>
+                </div>
+
+                <br>
+
+                <div class="button">
+                    <button class="btn btn-warning" onclick="location.href='#'">
+                        Unit 4b FRQ
+                    </button>
+                </div>
+
             </div>
-
-            <br>
-
-    <div class=imageContainer>
-        <img  id="myImage"
-              src="/images/maskedArch.jpeg" width="530" height="300"/>
-    </div>
-    <div class="button">
-        <button class="btn btn-info" onclick=Mask1();>
-            Mask
-        </button>
-        <button  class="btn btn-info" onclick=Mask2();>
-            No Mask
-        </button>
-    </div>
-
-    <br>
-
-        <div class="button">
-            <button class="btn btn-success" onclick="location.href='/individual/AHuang/RapidAPI'">
-                Rapid API
-            </button>
         </div>
     </div>
-    </div>
-    </div>
-    </body>
+ </body>
 
     <!-- End of body content specific to page -->
 </div>
