@@ -1,4 +1,4 @@
 theme: jekyll-theme-hacker
 description: "Trimester 2 Jekyll Site"
 markdown: kramdown
-webserver: "docs.nighthawkrecruiting.tk"
+url: "https://docs.nighthawkrecruiting.tk"
