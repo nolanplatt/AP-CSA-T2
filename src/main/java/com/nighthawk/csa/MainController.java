@@ -591,6 +591,12 @@ class ScoreInfo {
         return "archTPT/RapidAPI.html";
     }
 
+    @GetMapping("/individual/AHuang/ArchUnit4a")
+    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    public String getAHuangUnit4() {
+        return "archTPT/archUnit4a.html";
+    }
+
     @GetMapping("/individual/AHuang/aboutArch/drawArch")
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
     public String getDrawArch() {
