@@ -89,6 +89,8 @@
       <a href="#unit2FRQ">Item #2: Unit 2 FRQ</a>
       <a href="#unit3FRQ">Item #3: Unit 3 FRQ</a>
       <a href="#extraCreditFRQ">Item #4: Extra Credit: 2014 AP CSA FRQs</a>
+      <a href="#unit4FRQ">Item #5: Unit 4 FRQ</a>
+
 
 
 
@@ -134,6 +136,18 @@
       <div class="output">
         <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
         <code><p id="frqCodeOutputEC"></p></code>
+      </div>
+
+    </div>
+    <div id="unit4FRQ" class="row justify-content-center lab-container">
+      <h4><strong>Item #5: Unit 4 FRQ</strong></h4><br>
+
+      <div class="code">
+        <code><p id="frqResultUnit4"></p></code>
+      </div>
+      <div class="output">
+        <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+        <code><p id="frqCodeOutputUnit4"></p></code>
       </div>
 
     </div>
@@ -186,6 +200,20 @@
         }
       })
 
+      // Unit 4
+
+      axios({
+        method: "GET",
+        url: "/frqAPI?name=NPlatt&frqUnit=4"
+      }).then(resp => {
+        console.log(resp.data);
+        for (let i = 0; i < resp.data.length; i++) {
+          if(i == 0) {
+            document.getElementById("frqResultUnit4").innerText = resp.data[i];
+          } else {
+          }
+        }
+      })
 
     // 2014 Extra Credit FRQs
     axios({
