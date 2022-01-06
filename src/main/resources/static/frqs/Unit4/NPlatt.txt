@@ -1,0 +1,126 @@
+// Nolan Platt | AP Computer Science A | Unit 4 FRQ
+
+
+
+// Question 1 
+
+
+public static void longestStreak(String str) {
+ String finalString = "";
+ String longestPossible = "";
+  String currentPossible = "";
+        for (int i = 0; i < str.length(); i++) {
+            if (lastString != str.charAt(i)) {
+                currentPossible = "";
+            }
+            currentPossible += str.charAt(i);
+
+            if ( currentPossible.length() > largestPossible.length()) {
+                largePossible = currentPossible;
+            }
+
+            finalString = str.charAt(i);
+        }
+        System.out.println(largestPossible + largestPossible.length());
+    }
+
+
+
+// Question 2
+public class CoinGame
+
+{
+
+private int startingCoins; // starting number of coins
+
+private int maxRounds; // maximum number of rounds played
+
+ 
+
+public CoinGame(int s, int r)
+
+{
+
+startingCoins = s;
+
+maxRounds = r;
+
+}
+
+ 
+
+/** Returns the number of coins (1, 2, or 3) that player 1 will spend.
+
+*/
+
+public int getPlayer1Move()
+
+{
+
+/* implementation not shown. */
+
+}
+
+ 
+
+/** Returns the number of coins (1, 2, or 3) that player 2 will spend, as described in part (a).
+
+*/
+
+public int getPlayer2Move(int round)
+
+{
+
+int result;
+
+        if (round / 3) {
+            result = 3;
+        } else if (round / 2) {
+            result = 2;
+        } else {
+            result = 1;
+        }
+        return result;
+
+}
+
+ 
+
+/** Plays a simulated game between two players, as described in part (b).
+
+*/
+
+public void playGame()
+
+{
+	int roundNum = 1;
+        int p1Coins = startingCoins;
+        int p2Coins = startingCoins;
+        while (p2Coins > 3) || p1Coins > 3) || (maxRounds > roundNum)) {
+
+            int p1Spent= getPlayer1Move(roundNum);
+            int p2Spent = getPlayer2Move(roundNum);
+
+            if (p1Spent == p2Spent)
+                p2Coins++;
+            if ((p1Spent - p2Spent) == 1)
+                p2Coins++;
+            } else if (p1Spent - p2Spent) == 2) {
+                p1Coins++;
+            }
+
+            roundNum++;
+        }
+        if (p1Coins == p2Coins) {
+            System.out.println("Result -> Tie");
+        } else if (p1Coins > p2Coins) {
+            System.out.println("Result -> P1 Wins");
+        } else {
+            System.out.println("Result -> P2 Wins");
+        }
+
+    }
+
+}
+
+}

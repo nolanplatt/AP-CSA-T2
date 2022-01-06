@@ -452,6 +452,16 @@ class ScoreInfo {
             }
 
         }
+        else if (week == 4) {
+            // Nolan Platt FRQ handling
+            if(name.equals("NPlatt")) {
+                // Question 1
+
+                // Question 2
+                // Question 3
+                // Question 4
+            }
+        }
         else if (week == 0) { // 0-> 2014 AP Extra Credit FRQs
            // Nolan Platt FRQ handling
             if(name.equals("NPlatt")) {
