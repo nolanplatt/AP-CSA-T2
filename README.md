@@ -7,7 +7,7 @@
 - [Team Insight Graphs](https://github.com/nolanplatt/AP-CSA-T2/graphs/contributors)
 
 ## Idea
-We will be creating a sports recruiting website, hence the name Nighthawk Recruiting. Each athlete will input pictures, statistics and other useful information to create a profile that college coaches can view and recruit athletes. The latest news on athletes across high school sports will be highlighted. Specific tools to assist coaches will also be seen throughout the site, such as a BMI calculator. Additionally, we will include a tab that allows users to rate athletes and sports. This will utilize a real-time, secure database. 
+We will be creating a sports recruiting website, hence the name Nighthawk Recruiting. Each athlete will input pictures, statistics and other useful information to create a profile that college coaches can view and recruit athletes. The latest news on athletes across high school sports will be highlighted. Specific tools to assist coaches will also be seen throughout the site, such as a BMI calculator. Additionally, we will include a tab that allows users to rate athletes and sports. This will utilize a real-time, secure database. This website will be similar to Huddl and will include a ranking system and a rearch system where coaches can look up athletes by their sport/ranking.
 
 ## The Team
 |        Name        | Github Username   |Role                 |Tasks |Scrumboard |Commits |Profile |
