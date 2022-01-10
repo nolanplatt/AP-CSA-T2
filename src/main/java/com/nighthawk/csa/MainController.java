@@ -606,11 +606,15 @@ class ScoreInfo {
     public String getAHuangUnit4a() {
         return "archTPT/archUnit4a.html";
     }
-
     @GetMapping("/individual/AHuang/ArchUnit4b")
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
     public String getAHuangUnit4b() {
         return "archTPT/archUnit4b.html";
+    }
+    @GetMapping("/individual/AHuang/ArchUnit5a")
+    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    public String getAHuangUnit5a() {
+        return "archTPT/archUnit5a.html";
     }
 
     @GetMapping("/individual/AHuang/aboutArch/drawArch")
@@ -618,6 +622,8 @@ class ScoreInfo {
     public String getDrawArch() {
         return "drawArch";
     }
+
+    // Akshay Rohatgi
 
     @GetMapping("/individual/ARohatgi")
     public String getARohatgi() {
