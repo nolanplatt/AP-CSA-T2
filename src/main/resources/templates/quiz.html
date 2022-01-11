@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<!-- <head> -->
+<div layout:fragment="head" th:remove="tag">
+    <!-- Page specific head additions -->
+    <title>Quiz</title>
+</div>
+
+<!-- <body> -->
+<div layout:fragment="body" th:remove="tag">
+    <!-- Page specific body additions -->
+    <div id="spring_intro" class="articles" style="margin: 30px;text-align:center;">
+        <h1><strong>Nutrition Quiz</strong></h1>
+    </div>
+    <body>
+
+    <p th:text="${question}"></p>
+
+    <div layout:fragment="content" th:remove="tag">
+        <!-- Start of body content specific to page -->
+        <div class="contact" style="height: 35vh;">
+            <div class="row justify-content-left" style="margin: 2%;">
+
+                <form action="/quiz" method="GET" id="greetForm">
+                    <div>
+                        <label for="greetField">Answer:</label>
+                        <input name="UserInput" id="greetField" autocomplete="off" autofocus>
+                        <button>Submit</button>
+                        <p th:text="'Result: ' + ${output}"></p>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    </body>
+    <!-- End of body content specific to page -->
+</div>
+
+</html>
