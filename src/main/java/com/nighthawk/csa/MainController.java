@@ -461,6 +461,15 @@ class ScoreInfo {
                 // Question 3
                 // Question 4
             }
+            // Akshay Rohatgi FRQ handling
+            if(name.equals("ARohatgi")) {
+
+                // Question 1
+
+                // Question 2
+
+
+            }
         }
         else if (week == 0) { // 0-> 2014 AP Extra Credit FRQs
            // Nolan Platt FRQ handling
