@@ -658,4 +658,16 @@ class ScoreInfo {
         }
         return "CRubin";
     }
+
+    @GetMapping("/individual/CRubin/ChrisUnit4a")
+    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    public String getCRubinUnit4a() {
+        return "ChrisTPT/chrisunit4a";
+    }
+
+    @GetMapping("/individual/CRubin/ChrisUnit5a")
+    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    public String getCRubinUnit5a() {
+        return "ChrisTPT/chrisunit5a";
+    }
 }
