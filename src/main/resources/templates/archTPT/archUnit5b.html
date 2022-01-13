@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head>
+    <div layout:fragment="metadata" th:remove="tag">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+
+        <!-- Page specific head additions -->
+        <title>About Arch</title>
+        <div layout:fragment="script" th:remove="tag">
+        </div>
+    </div>
+</head>
+
+<!-- <body> -->
+<!-- Page specific body additions -->
+<body>
+<div layout:fragment="content" th:remove="tag">
+
+    <div class="container p-3 my-3 bg-dark text-black rounded">
+
+        <div>
+            <iframe width="1105px" height="500px" src="https://replit.com/@ArchHuang/Unit5b?lite=true"></iframe>
+        </div>
+
+        <div class="button">
+            <button class="btn btn-warning" onclick="location.href='/individual/AHuang'">
+                Return
+            </button>
+        </div>
+
+    </div>
+
+</div>
+</body>
+
+<!-- End of body content specific to page -->
+</div>
+
+</html>

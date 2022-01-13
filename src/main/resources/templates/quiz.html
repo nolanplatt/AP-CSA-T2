@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head>
+    <div layout:fragment="metadata" th:remove="tag">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+
+        <!-- Page specific head additions -->
+        <title>Nutrition Quiz</title>
+        <div layout:fragment="script" th:remove="tag">
+        </div>
+    </div>
+</head>
+
+<!-- <body> -->
+<!-- Page specific body additions -->
+<body>
+<div layout:fragment="content" th:remove="tag">
+
+    <div class="container p-3 my-3 text-black rounded">
+
+        <p th:text="${question}"></p>
+
+        <form action="/quiz" method="GET" id="greetForm">
+            <div>
+                <label for="greetField">Answer:</label>
+                <input name="UserInput" id="greetField" autocomplete="off" autofocus>
+                <button>Submit</button>
+                <p th:text="'Result: ' + ${output}"></p>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+</body>
+
+<!-- End of body content specific to page -->
+</div>
+
+</html>

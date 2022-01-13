@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class FRQ4A {
     public static void main(String[] args) {
-        longestStreak("CCAAAAATTT!");
+        longestStreak("DAAAAAAAAAAAANE!");
     }
 
     public static void longestStreak(String str) {
