@@ -1,30 +1,27 @@
 package com.nighthawk.csa;
 
-import com.nighthawk.csa.data.SQL.Person;
-import com.nighthawk.csa.data.SQL.PersonSqlRepository;
 import com.nighthawk.csa.starters.ImageInfo;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.RequestEntity;
-import org.springframework.http.ResponseEntity;
+import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.validation.Valid;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
 public class MainController<array> {
@@ -34,30 +31,32 @@ public class MainController<array> {
 
     // Question 1
     class WordScrambler {
-         String recombine(String groupMember, String word1, String word2) {
-             // Nolan Platt Code
-             String combo = "";
-             if(groupMember.equals("NPlatt")) {
-                  combo = (word1.substring(0, word1.length() / 2));
+        String recombine(String groupMember, String word1, String word2) {
+            // Nolan Platt Code
+            String combo = "";
+            if (groupMember.equals("NPlatt")) {
+                combo = (word1.substring(0, word1.length() / 2));
 
-                 combo+= word2.substring(word2.length() / 2);
-                 return combo;
-         }
-             return combo;
-         }
-         String[] mixedWords(String groupMember, String[] words) {
-             // Nolan Platt Code
-             String[] combo = new String[words.length];
-             if(groupMember.equals("NPlatt")) {
-                 for (int i = 0; i < combo.length; i++) {
-                     combo[i] = recombine("NPlatt", words[i], words[1 + i]);
-                     combo[1 + i] = recombine("NPlatt", words[1 + i], words[i]);
-                 }
-                 return combo;
-             }
-             return combo;
-         }
+                combo += word2.substring(word2.length() / 2);
+                return combo;
+            }
+            return combo;
+        }
+
+        String[] mixedWords(String groupMember, String[] words) {
+            // Nolan Platt Code
+            String[] combo = new String[words.length];
+            if (groupMember.equals("NPlatt")) {
+                for (int i = 0; i < combo.length; i++) {
+                    combo[i] = recombine("NPlatt", words[i], words[1 + i]);
+                    combo[1 + i] = recombine("NPlatt", words[1 + i], words[i]);
+                }
+                return combo;
+            }
+            return combo;
+        }
     }
+
     // Question 2
     class Mountain {
         int getPeakIndex(String groupMember, int[] array) {
@@ -87,22 +86,24 @@ public class MainController<array> {
              */
             return false;
         }
+
         boolean isMountain(String groupMember, int[] array) {
             // Nolan Platt Code
             if (groupMember.equals("NPlatt")) {
-                    int currentPeak = getPeakIndex("NPlatt", array);
+                int currentPeak = getPeakIndex("NPlatt", array);
 
-                    return (currentPeak != -1) && isIncreasing(array, currentPeak) &&
-                            isDecreasing(array, currentPeak);
+                return (currentPeak != -1) && isIncreasing(array, currentPeak) &&
+                        isDecreasing(array, currentPeak);
             }
             return true;
         }
     }
+
     // Question 3
     class TemperatureGrid {
         double computeTemp(String groupMember, int row, int col) {
 
-             // Matrix Declaration from FRQ
+            // Matrix Declaration from FRQ
             Double[][] temps = new Double[6][5];
 
             temps[0][0] = 95.5;
@@ -141,11 +142,10 @@ public class MainController<array> {
             temps[4][4] = 0.0;
 
             // Nolan Platt Code
-            if(groupMember.equals("NPlatt")) {
-                if (row == 0 ||  row == temps.length - 1|| col == 0 || col == temps[0].length - 1){
+            if (groupMember.equals("NPlatt")) {
+                if (row == 0 || row == temps.length - 1 || col == 0 || col == temps[0].length - 1) {
                     return temps[row][col];
-                }
-                else{
+                } else {
                     return (temps[row - 1][col] + temps[row + 1][col] + temps[row][col - 1] + temps[row][col + 1]) / 4.0;
                 }
 
@@ -200,7 +200,7 @@ public class MainController<array> {
                         newTemps[i][j] = computeTemp("NPlatt", i, j);
 
                         if (tolerance < temps[i][j] - newTemps[i][j]) {
-                            tolerant= false;
+                            tolerant = false;
                         }
                     }
                 }
@@ -216,9 +216,10 @@ public class MainController<array> {
         }
 
         // Question 4
-class ScoreInfo {
+        class ScoreInfo {
             int score;
             int numStudents;
+
             public ScoreInfo(int aScore) {
                 score = aScore;
                 numStudents = 1;
@@ -227,51 +228,53 @@ class ScoreInfo {
             public void increment() {
                 numStudents++;
             }
+
             public int getScore() {
                 return score;
             }
+
             public int getFrequency() {
                 return numStudents;
             }
 
-        boolean record(String groupMember, int score) {
-            // Nolan Platt Code
-             ArrayList<ScoreInfo> scoreList = new ArrayList<ScoreInfo>();
-            scoreList.add(0, new ScoreInfo(95));
-            scoreList.add(1, new ScoreInfo(63));
-            scoreList.add(2, new ScoreInfo(75));
-            scoreList.add(3, new ScoreInfo(87));
-            scoreList.add(3, new ScoreInfo(34));
-            scoreList.add(3, new ScoreInfo(56));
+            boolean record(String groupMember, int score) {
+                // Nolan Platt Code
+                ArrayList<ScoreInfo> scoreList = new ArrayList<ScoreInfo>();
+                scoreList.add(0, new ScoreInfo(95));
+                scoreList.add(1, new ScoreInfo(63));
+                scoreList.add(2, new ScoreInfo(75));
+                scoreList.add(3, new ScoreInfo(87));
+                scoreList.add(3, new ScoreInfo(34));
+                scoreList.add(3, new ScoreInfo(56));
 
-            if(groupMember.equals("NPlatt")) {
-                for (int i = 0; i < scoreList.size(); i++) {
-                    if (scoreList.get(i).getScore() >  score) {
-                        scoreList.add(i, new ScoreInfo(score));
-                        return true;
-                    } else if (score == scoreList.get(i).getScore()) {
-                        scoreList.get(i).increment();
-                        return false;
+                if (groupMember.equals("NPlatt")) {
+                    for (int i = 0; i < scoreList.size(); i++) {
+                        if (scoreList.get(i).getScore() > score) {
+                            scoreList.add(i, new ScoreInfo(score));
+                            return true;
+                        } else if (score == scoreList.get(i).getScore()) {
+                            scoreList.get(i).increment();
+                            return false;
+                        }
+                    }
+                    ScoreInfo si = new ScoreInfo(score);
+                    scoreList.add(si);
+                    return true;
+                }
+                return false;
+            }
+
+            void recordScores(String groupMember, int[] stuScores) {
+                // Nolan Platt Code
+                if (groupMember.equals("NPlatt")) {
+                    for (int i = 0; i < stuScores.length; i++) {
+                        record("NPlatt", stuScores[i]);
                     }
                 }
-                ScoreInfo si = new ScoreInfo(score);
-                scoreList.add(si);
-                return true;
             }
-            return false;
-        }
-
-        void recordScores(String groupMember, int[] stuScores) {
-            // Nolan Platt Code
-            if (groupMember.equals("NPlatt")) {
-                for (int i = 0; i < stuScores.length; i++) {
-                    record("NPlatt", stuScores[i]);
-                }
-            }
-        }
 
         }
-        }
+    }
     // Unit 2 FRQ Stuff
 
     class LightSequence {
@@ -348,9 +351,8 @@ class ScoreInfo {
                 String newSeq = oldSeq.replaceFirst(removeSegmentString, "");
                 array[2] = newSeq;
                 //F
-                array[3] = String.valueOf(Math.sqrt(a*a + b*b));
+                array[3] = String.valueOf(Math.sqrt(a * a + b * b));
             }
-
 
 
         } else if (week == 3) {
@@ -402,7 +404,7 @@ class ScoreInfo {
                 array[4] = "PART D: " + Boolean.toString(check);
             }
 
-            if(name.equals("ARohatgi")) {
+            if (name.equals("ARohatgi")) {
                 //A
                 boolean rsvp = true;
                 if (rsvp) {
@@ -428,10 +430,10 @@ class ScoreInfo {
                     System.out.println("fish");
                     array[2] = "fish";
                 }
-                
+
                 //C
                 String option1 = "";
-                String option2 ="";
+                String option2 = "";
                 if (!rsvp) {
                     option1 = "Sorry you can't make it.";
                     array[3] = "Sorry you can't make it.";
@@ -451,10 +453,9 @@ class ScoreInfo {
 
             }
 
-        }
-        else if (week == 4) {
+        } else if (week == 4) {
             // Nolan Platt FRQ handling
-            if(name.equals("NPlatt")) {
+            if (name.equals("NPlatt")) {
                 // Question 1
 
                 // Question 2
@@ -462,7 +463,7 @@ class ScoreInfo {
                 // Question 4
             }
             // Akshay Rohatgi FRQ handling
-            if(name.equals("ARohatgi")) {
+            if (name.equals("ARohatgi")) {
 
                 // Question 1
 
@@ -470,10 +471,9 @@ class ScoreInfo {
 
 
             }
-        }
-        else if (week == 0) { // 0-> 2014 AP Extra Credit FRQs
-           // Nolan Platt FRQ handling
-            if(name.equals("NPlatt")) {
+        } else if (week == 0) { // 0-> 2014 AP Extra Credit FRQs
+            // Nolan Platt FRQ handling
+            if (name.equals("NPlatt")) {
                 // Question 1
 
                 // Question 2
@@ -687,5 +687,27 @@ class ScoreInfo {
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
     public String getCRubinUnit5a() {
         return "ChrisTPT/chrisunit5a";
+    }
+
+    @GetMapping("/sportsAPI")
+    public String sportsAPI(Model model) throws IOException, InterruptedException, ParseException {
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://livescore6.p.rapidapi.com/matches/v2/list-live?Category=soccer%22"))
+                .header("x-rapidapi-host", "livescore6.p.rapidapi.com")
+                .header("x-rapidapi-key", "00ccce1983msh870532702332d54p113f94jsn9fd7d405018d")
+                .method("GET", HttpRequest.BodyPublishers.noBody())
+                .build();
+        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+        System.out.println(response.body());
+
+        //alternative #2: convert response.body() to JSON object
+        Object obj = new JSONParser().parse(response.body());
+        JSONObject jo = (JSONObject) obj;
+
+//        System.out.println(jo.get("data"));
+//        model.addAttribute("data", jo.get("data"));
+
+        return "data/SportsAPI";
     }
 }
