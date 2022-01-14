@@ -25,7 +25,7 @@
 <body class="ns-bg">
 <div layout:fragment="content">
 <h1 style="text-align: center; margin-top: 1%"><strong id=>RapidAPI</strong></h1>
-<form style="text-align: center" action="/sportsAPI" method="GET" id="refreshpage">
+<form style="text-align: center" action="" method="GET" id="refreshpage">
   <button>Refresh!</button>
 </form>
 
@@ -36,13 +36,11 @@
       <table>
         <tr>
           <th>Title</th>
-          <th>Publish Time</th>
-          <th>Body</th>
+          <th>Source</th>
         </tr>
         <tr th:each="source: ${data}">
-          <td th:text="${source.title}"></td>
-          <td th:text="${source.created_at}"></td>
-          <td th:text="${source.body}"></td>
+<!--          <td th:text="${source.title}"></td>-->
+<!--          <td th:text="${source.source}" th:href="${source.url}"></td>-->
         </tr>
       </table>
     </div>
@@ -51,10 +49,6 @@
 </div>
 
 <style>
-  a{
-    color:lightskyblue;
-  }
-
   table{
     width: 100%;
     font-size: 20px;
