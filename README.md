@@ -10,6 +10,7 @@
 We will be creating a sports recruiting website, hence the name Nighthawk Recruiting. Each athlete will input pictures, statistics and other useful information to create a profile that college coaches can view and recruit athletes. The latest news on athletes across high school sports will be highlighted. Specific tools to assist coaches will also be seen throughout the site, such as a BMI calculator. Additionally, we will include a tab that allows users to rate athletes and sports. This will utilize a real-time, secure database. This website will be similar to Huddl and will include a ranking system and a rearch system where coaches can look up athletes by their sport/ranking.
 
 ## The Team
+
 |        Name        | Github Username   |Role                 |Tasks |Scrumboard |Commits |Profile |
 |:------------------:|-------------------|-------------------|------|-----------|--------|--------|
 | Akshay Rohatgi     |  [@Akshay-Rohatgi](https://github.com/Akshay-Rohatgi)                 |     Design  Manager              | [Tasks](https://github.com/nolanplatt/AP-CSA-T2/issues/assigned/Akshay-Rohatgi) | [Scrumboard](https://github.com/nolanplatt/AP-CSA-T2/projects/1?card_filter_query=assignee%3Akshay-Rohatgi) | [Commits](https://github.com/nolanplatt/AP-CSA-T2/commits?author=Akshay-Rohatgi) | [Profile](https://github.com/Akshay-Rohatgi) |
@@ -24,7 +25,8 @@ During week three, we created: about pages, new frontend screens, ability to acc
 
 ### Team Section
 
-### Timebox and Tangibles
+<h1> Timebox and Tangibles </h1>
+
 | Team Member | Github Profile                                       | Scrum Board Task                                             | Contribution Links |
 | ----------- | ---------------------------------------------------- | ------------------------------------------------------------ | ---------------------- |
 | Nolan Platt   |  [@nolanplatt](https://github.com/nolanplatt)  | [Website running from https](https://github.com/nolanplatt/AP-CSA-T2/issues/4), [Process to perform update](https://github.com/nolanplatt/AP-CSA-T2/issues/5), [Unit 2/3 FRQ](https://github.com/nolanplatt/AP-CSA-T2/issues/6) | [Commit 1](https://github.com/nolanplatt/AP-CSA-T2/commit/4df3e5b06972d4ed4cb4e3a2eaa9c37988adf92b), [Commit 2](https://nighthawkrecruiting.tk/), [Commit 3](https://github.com/nolanplatt/AP-CSA-T2/commit/4df3e5b06972d4ed4cb4e3a2eaa9c37988adf92b), [Commit 4](https://github.com/nolanplatt/AP-CSA-T2/commit/2054e304f72b6f6a3cb887e335820afc0e9f896a)  |
