@@ -677,17 +677,35 @@ public class MainController<array> {
         return "CRubin";
     }
 
+    // Unit 4a
     @GetMapping("/individual/CRubin/ChrisUnit4a")
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
     public String getCRubinUnit4a() {
         return "ChrisTPT/chrisunit4a";
     }
 
+    // Unit 5a
     @GetMapping("/individual/CRubin/ChrisUnit5a")
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
     public String getCRubinUnit5a() {
         return "ChrisTPT/chrisunit5a";
     }
+
+    //Unit 6a
+    @GetMapping("/individual/CRubin/ChrisUnit6a")
+    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    public String getCRubinUnit6a() {
+        return "ChrisTPT/chrisunit6a";
+    }
+
+
+    //Unit 6b
+    @GetMapping("/individual/CRubin/ChrisUnit6b")
+    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    public String getCRubinUnit6b() {
+        return "ChrisTPT/chrisunit6b";
+    }
+
 
     @GetMapping("/sportsAPI")
     public String sportsAPI(Model model) throws IOException, InterruptedException, ParseException {
