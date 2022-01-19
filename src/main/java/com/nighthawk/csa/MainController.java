@@ -691,6 +691,13 @@ public class MainController<array> {
         return "ChrisTPT/chrisunit5a";
     }
 
+    // Unit 5b
+    @GetMapping("/individual/CRubin/ChrisUnit5b")
+    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    public String getCRubinUnit5b() {
+        return "ChrisTPT/chrisunit5b";
+    }
+
     //Unit 6a
     @GetMapping("/individual/CRubin/ChrisUnit6a")
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
