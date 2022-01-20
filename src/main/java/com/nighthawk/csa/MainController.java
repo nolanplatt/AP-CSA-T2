@@ -677,6 +677,13 @@ public class MainController<array> {
         return "CRubin";
     }
 
+    //Unit 3
+    @GetMapping("/individual/CRubin/ChrisUnit3")
+    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    public String getCRubinUnit3() {
+        return "ChrisTPT/chrisunit3";
+    }
+
     // Unit 4a
     @GetMapping("/individual/CRubin/ChrisUnit4a")
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
@@ -711,28 +718,5 @@ public class MainController<array> {
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
     public String getCRubinUnit6b() {
         return "ChrisTPT/chrisunit6b";
-    }
-
-
-    @GetMapping("/sportsAPI")
-    public String sportsAPI(Model model) throws IOException, InterruptedException, ParseException {
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://livescore6.p.rapidapi.com/matches/v2/list-live?Category=soccer%22"))
-                .header("x-rapidapi-host", "livescore6.p.rapidapi.com")
-                .header("x-rapidapi-key", "00ccce1983msh870532702332d54p113f94jsn9fd7d405018d")
-                .method("GET", HttpRequest.BodyPublishers.noBody())
-                .build();
-        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());
-
-        //alternative #2: convert response.body() to JSON object
-        Object obj = new JSONParser().parse(response.body());
-        JSONObject jo = (JSONObject) obj;
-
-//        System.out.println(jo.get("data"));
-//        model.addAttribute("data", jo.get("data"));
-
-        return "data/SportsAPI";
     }
 }
