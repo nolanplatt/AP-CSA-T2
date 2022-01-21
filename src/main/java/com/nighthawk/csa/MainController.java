@@ -471,7 +471,25 @@ public class MainController<array> {
 
 
             }
-        } else if (week == 0) { // 0-> 2014 AP Extra Credit FRQs
+        }
+        if (week == 5) { // Unit 5 FRQ Handling
+            // Nolan Platt FRQ handling
+            if (name.equals("NPlatt")) {
+                // Question 1
+
+                // Question 2
+            }
+        }
+
+        if (week == 6) { // Unit 6 FRQ Handling
+            // Nolan Platt FRQ handling
+            if (name.equals("NPlatt")) {
+                // Question 1
+
+                // Question 2
+            }
+        }
+        else if (week == 0) { // 0-> 2014 AP Extra Credit FRQs
             // Nolan Platt FRQ handling
             if (name.equals("NPlatt")) {
                 // Question 1
