@@ -189,6 +189,16 @@
 
 
     </div>
+
+      <div id="unit4BFRQ" class="row justify-content-center lab-container">
+        <h4><strong>Item #6: Unit 4 FRQ Question 2</strong></h4><br>
+
+        <div class="code">
+          <code><p id="frqResultUnit4B"></p></code>
+        </div>
+
+
+      </div>
   </div>
 
 
@@ -313,6 +323,19 @@
         for (let i = 0; i < resp.data.length; i++) {
           if(i == 0) {
             document.getElementById("frqResultUnit4A").innerText = resp.data[i];
+          } else {
+          }
+        }
+      })
+
+      axios({
+        method: "GET",
+        url: "/frqAPI?name=ARohatgi&frqUnit=41"
+      }).then(resp => {
+        console.log(resp.data);
+        for (let i = 0; i < resp.data.length; i++) {
+          if(i == 0) {
+            document.getElementById("frqResultUnit4B").innerText = resp.data[i];
           } else {
           }
         }
