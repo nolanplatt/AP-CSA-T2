@@ -1,0 +1,66 @@
+// Nolan Platt | AP Computer Science A | Unit 5 FRQ
+
+
+
+// Question 1 
+
+
+class Invitation {
+
+private String hostName;
+
+private String address;
+
+ public String getString(String hostName) {
+        String stringTotaled = "Dear " + hostName + ",  please attend my event at " + address + ". See you then, " + hostName + ".";
+        return stringTotaled;
+    }
+
+  public String getHostName() {
+        return hostName;
+    }
+
+ public void setNewAddress(String addr) {
+        address = addr;
+    }
+
+public Invitation(String a) {
+
+this.address = a;
+
+hostName = "Host";
+
+}
+}
+
+
+// Question 2
+public class PasswordGenerator {
+String prefix;
+int length;
+int pwCount = 0;
+
+PasswordGenerator(prefix, length) {
+this.prefix = prefix;
+this.length = length;
+}
+
+PasswordGenerator(length) {
+this.length = length;
+prefix = "A";
+}
+
+String generatePasswords() {
+String combined = "";
+Random r = new Random();
+for (int i = 0; i < length; i++) {
+      combined += r.nextInt(10);
+  }
+pwCount++;
+return combined;
+}
+
+int getPwCount() {
+return pwCount;
+}
+}
