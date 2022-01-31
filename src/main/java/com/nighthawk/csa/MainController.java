@@ -605,6 +605,39 @@ public class MainController<array> {
         return array;
     }
 
+    // Custom FRQs
+    // Unit 2 CUSTOM
+    @GetMapping("/frqCustomAPIUnit2")
+    @ResponseBody
+    public String[] getFrqCustomAPI(@RequestParam(name = "initial", required = false, defaultValue = "0101 0101 0101") String initial,
+                           @RequestParam(name = "changed", required = false, defaultValue = "0011 0011 0011") String changed,
+                                    @RequestParam(name = "inserted", required = false, defaultValue = "1111 1111") String inserted,
+                                    @RequestParam(name = "aVal", required = false, defaultValue = "3") int aVal,
+                                    @RequestParam(name = "bVal", required = false, defaultValue = "3") int bVal) throws IOException {
+
+
+        String[] array = new String[3];
+        //A
+        LightSequence gradShow = new LightSequence(initial);
+        //B
+        gradShow.display();
+        //C
+        gradShow.changeSequence(changed);
+        //D
+        String resultSeq = gradShow.insertSegment(inserted, 4);
+        array[0] = "Result Sequence: " + resultSeq;
+        //E
+        String segment = "11";
+        String oldSeq = "1100000111000";
+        int newIndex = oldSeq.indexOf(segment);
+        String newSeq = oldSeq.substring(0, newIndex);
+        newSeq += oldSeq.substring(newIndex + segment.length());
+        array[1] = "New Sequence: " + newSeq;
+        //F
+        array[2] = "Distance Sqrt Result: " + String.valueOf((Math.sqrt(aVal * aVal + bVal * bVal)));
+        return array;
+    }
+
     // About Pages
 
     // Nolan Platt
