@@ -113,6 +113,7 @@
       <a href="#unit4FRQ">Item #5: Unit 4 FRQ</a>
       <a href="#unit5FRQ">Item #6: Unit 5 FRQ</a>
       <a href="#unit6FRQ">Item #7: Unit 6 FRQ</a>
+      <a href="#unit7FRQ">Item #8: Unit 7 FRQ</a>
 
     </div>
 
@@ -151,13 +152,11 @@
         <code><p id="frqResultUnit3"></p></code>
       </div>
       <form action="javascript:updateFRQ(`3`)">
-
         <input class="inputBox" type="text" align="center" placeholder="RSVP" id="rsvp">
         <input class="inputBox" type="text" align="center" placeholder="Selection" id="selection">
         <input class="inputBox" type="text" align="center" placeholder="Option 1" id="option1">
         <input class="inputBox" type="text" align="center" placeholder="Option 2" id="option2">
         <input class="changeBtn" type="submit">
-
       </form>
       <div class="output">
         <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
@@ -197,6 +196,17 @@
       <div class="code">
         <code><p id="frqResultUnit5"></p></code>
       </div>
+      <form action="javascript:updateFRQ(`5`)">
+
+        <input class="inputBox" type="text" align="center" placeholder="Hostname" id="hostname">
+        <input class="inputBox" type="text" align="center" placeholder="Address" id="address">
+        <input class="inputBox" type="text" align="center" placeholder="Invitee" id="invitee">
+        <input class="inputBox" type="text" align="center" placeholder="Prefix" id="prefix">
+        <input class="inputBox" type="text" align="center" placeholder="Amount" id="amount">
+        <input class="changeBtn" type="submit">
+
+      </form>
+
       <div class="output">
         <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
         <code><p id="frqCodeOutputUnit5"></p></code>
@@ -213,6 +223,18 @@
           <code><p id="frqCodeOutputUnit6"></p></code>
 
     </div>
+
+        <div id="unit7FRQ" class="row justify-content-center lab-container">
+          <h4><strong>Item #8: Unit 7 FRQ</strong></h4><br>
+
+          <div class="code">
+            <code><p id="frqResultUnit7"></p></code>
+          </div>
+          <div class="output">
+            <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+            <code><p id="frqCodeOutputUnit7"></p></code>
+
+          </div>
 
 
   </div>
@@ -265,8 +287,21 @@
         }).then(resp => {
           console.log(resp.data)
           document.getElementById("frqCodeOutputUnit3").innerText = resp.data[0] + "\n" + resp.data[1] + "\n" + resp.data[2] + "\n" + resp.data[3];
-
-
+        })
+      }
+      // Unit 5
+      if(frq == "5") {
+        var hostname = document.getElementById("hostname").value;
+        var address = document.getElementById("address").value;
+        var invitee = document.getElementById("invitee").value;
+        var prefix = document.getElementById("prefix").value;
+        var amount = document.getElementById("amount").value;
+        axios({
+          method: "GET",
+          url: `/frqCustomAPIUnit5Nolan?hostname=${hostname}&address=${address}&invitee=${invitee}&prefix=${prefix}&amount=${amount}`
+        }).then(resp => {
+          console.log(resp.data)
+          document.getElementById("frqCodeOutputUnit5").innerText = resp.data[0] + "\n" + resp.data[1] + "\n" + resp.data[2] + "\n" + resp.data[3];
         })
       }
     }
@@ -313,6 +348,21 @@
         for (let i = 0; i < resp.data.length; i++) {
           if(i == 0) {
             document.getElementById("frqResultUnit4").innerText = resp.data[i];
+          } else {
+          }
+        }
+      })
+
+      // Unit 5
+
+      axios({
+        method: "GET",
+        url: "/frqAPI?name=NPlatt&frqUnit=5"
+      }).then(resp => {
+        console.log(resp.data);
+        for (let i = 0; i < resp.data.length; i++) {
+          if(i == 0) {
+            document.getElementById("frqResultUnit5").innerText = resp.data[i];
           } else {
           }
         }

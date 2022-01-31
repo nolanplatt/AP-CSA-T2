@@ -806,6 +806,31 @@ public class MainController<array> {
 
         return array;
     }
+    // Unit 5 CUSTOM
+    @GetMapping("/frqCustomAPIUnit5Nolan")
+    @ResponseBody
+    public String[] getfrqCustomAPIUnit5Nolan(@RequestParam(name = "hostname", required = false, defaultValue = "HN") String hostName,
+                                                @RequestParam(name = "address", required = false, defaultValue = "123 John Mortensen Boulevard") String address,
+                                                @RequestParam(name = "invitee", required = false, defaultValue = "Nolan") String invitee,
+                                                @RequestParam(name = "prefix", required = false, defaultValue = "PREFIX") String prefix,
+                                                @RequestParam(name = "amount", required = false, defaultValue = "1") int amount) throws IOException {
+
+        String[] array = new String[6];
+
+        // Question 1
+        array[0] = hostName;
+        array[1] = address;
+        array[2] = "Dear " + invitee + ", please attend my event at " + address + ". See you then, " + hostName + ".";;
+        // Question 2
+        String combined = "";
+        Random r = new Random();
+        for (int i = 0; i < amount; i++) {
+            combined += (prefix + "." +  r.nextInt(10));
+        }
+        array[3] = combined;
+
+        return array;
+    }
 
     // Unit 5A CUSTOM
     @GetMapping("/frqCustomAPIUnit5AAkshay")
