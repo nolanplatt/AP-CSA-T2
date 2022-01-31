@@ -241,6 +241,19 @@
         </div>
       </div>
 
+      <div id="unit6AFRQ" class="row justify-content-center lab-container">
+        <h4><strong>Item #8: Unit 6 FRQ Question 1</strong></h4><br>
+
+        <div class="code">
+          <code><p id="frqResultUnit6A"></p></code>
+        </div>
+
+        <div class="output">
+          <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+          <code><p id="frqCodeOutputUnit6A"></p></code>
+        </div>
+      </div>
+
   </div>
 
 
@@ -433,6 +446,33 @@
         for (let i = 0; i < resp.data.length; i++) {
           if(i == 0) {
             document.getElementById("frqResultUnit5B").innerText = resp.data[i];
+          } else {
+          }
+        }
+      })
+
+      axios({
+        method: "GET",
+        url: "/frqAPI?name=ARohatgi&frqUnit=60"
+      }).then(resp => {
+        console.log(resp.data);
+        console.log(resp.data);
+
+        console.log(resp.data);
+        console.log(resp.data);
+        console.log(resp.data);
+        console.log(resp.data);
+        console.log(resp.data);
+        console.log(resp.data);
+        console.log(resp.data);
+
+
+
+
+
+        for (let i = 0; i < resp.data.length; i++) {
+          if(i == 0) {
+            document.getElementById("frqResultUnit6A").innerText = resp.data[i];
           } else {
           }
         }
