@@ -806,6 +806,27 @@ public class MainController<array> {
         return array;
     }
 
+    // Unit 5A CUSTOM
+    @GetMapping("/frqCustomAPIUnit5AAkshay")
+    @ResponseBody
+    public String[] getFrqCustomAPIUnit5AAkshay(@RequestParam(name = "hostname", required = false, defaultValue = "John") String hostName,
+                                                @RequestParam(name = "address", required = false, defaultValue = "16601 Nighthawk Ln, San Diego, CA 92127") String address,
+                                                @RequestParam(name = "invitee", required = false, defaultValue = "Akshay") String invitee) throws IOException {
+
+        String[] array = new String[3];
+
+        // getHostName
+        array[0] = hostName;
+
+        // setAddress
+        array[1] = address;
+
+        String inviteString = "Dear " + invitee + ", please attend my event at " + address + ". See you then, " + hostName + ".";
+        array[2] = inviteString;
+
+        return array;
+    }
+
     // About Pages
 
     // Nolan Platt

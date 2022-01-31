@@ -186,8 +186,6 @@
           <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
           <code><p id="frqCodeOutputUnit4A"></p></code>
         </div>
-
-
     </div>
 
       <div id="unit4BFRQ" class="row justify-content-center lab-container">
@@ -199,6 +197,29 @@
 
 
       </div>
+
+      <div id="unit5FRQ" class="row justify-content-center lab-container">
+        <h4><strong>Item #7: Unit 5 FRQ Question 1</strong></h4><br>
+
+        <div class="code">
+          <code><p id="frqResultUnit5A"></p></code>
+        </div>
+
+        <form action="javascript:updateFRQ(`5A`)">
+
+          <input class="inputBox" type="text" align="center" placeholder="Host name" id="hostname">
+          <input class="inputBox" type="text" align="center" placeholder="Address" id="address">
+          <input class="inputBox" type="text" align="center" placeholder="Invitee" id="invitee">
+          <input class="changeBtn" type="submit">
+
+        </form>
+
+        <div class="output">
+          <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+          <code><p id="frqCodeOutputUnit5A"></p></code>
+        </div>
+      </div>
+
   </div>
 
 
@@ -279,6 +300,21 @@
         })
       }
 
+      if(frq == "5A") {
+        var hostname = document.getElementById("hostname").value;
+        var address = document.getElementById("address").value;
+        var invitee = document.getElementById("invitee").value;
+
+
+        axios({
+          method: "GET",
+          url: `/frqCustomAPIUnit5AAkshay?hostname=${hostname}&address=${address}&invitee=${invitee}`
+        }).then(resp => {
+          console.log(resp.data)
+          document.getElementById("frqCodeOutputUnit5A").innerText = resp.data[0] + "\n" + resp.data[1] + "\n" + resp.data[2];
+        })
+      }
+
     }
     // Unit 4A
 
@@ -336,6 +372,19 @@
         for (let i = 0; i < resp.data.length; i++) {
           if(i == 0) {
             document.getElementById("frqResultUnit4B").innerText = resp.data[i];
+          } else {
+          }
+        }
+      })
+
+      axios({
+        method: "GET",
+        url: "/frqAPI?name=ARohatgi&frqUnit=50"
+      }).then(resp => {
+        console.log(resp.data);
+        for (let i = 0; i < resp.data.length; i++) {
+          if(i == 0) {
+            document.getElementById("frqResultUnit5A").innerText = resp.data[i];
           } else {
           }
         }
