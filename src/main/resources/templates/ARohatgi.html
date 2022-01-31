@@ -115,6 +115,16 @@
         <div class="code">
           <code><p id="frqResultUnit2"></p></code>
         </div>
+        <form action="javascript:updateFRQ(`2`)">
+
+          <input class="inputBox" type="text" align="center" placeholder="Initial Sequence" id="initialSeq">
+          <input class="inputBox" type="text" align="center" placeholder="Changed Sequence" id="changedSeq">
+          <input class="inputBox" type="text" align="center" placeholder="Inserted Segment" id="insertedSeg">
+          <input class="inputBox" type="text" align="center" placeholder="A Value" id="aValue">
+          <input class="inputBox" type="text" align="center" placeholder="B Value" id="bValue"> <br>
+          <input class="changeBtn" type="submit">
+
+        </form>
         <div class="output">
           <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
           <code><p id="frqCodeOutputUnit2"></p></code>
@@ -186,6 +196,46 @@
         console.log(resp.data.en)
         document.getElementById("quote_result").innerText = resp.data.en;
       })
+    }
+
+    function updateFRQ(frq) {
+      // Unit 2
+      if(frq == "2") {
+        var initial = document.getElementById("initialSeq").value;
+        var changed = document.getElementById("changedSeq").value;
+        var inserted = document.getElementById("insertedSeg").value;
+        var aVal = document.getElementById("aValue").value;
+        var bVal = document.getElementById("bValue").value;
+
+
+        axios({
+          method: "GET",
+          url: `/frqCustomAPIUnit2Akshay?initial=${initial}&changed=${changed}&inserted=${inserted}&aVal=${aVal}&bVal=${bVal}`
+        }).then(resp => {
+          console.log(resp.data)
+          document.getElementById("frqCodeOutputUnit2").innerText = resp.data[0] + "\n" + resp.data[1] + "\n" + resp.data[2];
+
+
+        })
+      }
+      // Unit 3
+      if(frq == "3") {
+        var rsvp = document.getElementById("rsvp").value;
+        var selection = document.getElementById("selection").value;
+        var option1 = document.getElementById("option1").value;
+        var option2 = document.getElementById("option2").value;
+
+
+        axios({
+          method: "GET",
+          url: `/frqCustomAPIUnit3Akshay?rsvp=${rsvp}&selection=${selection}&option1=${option1}&option2=${option2}`
+        }).then(resp => {
+          console.log(resp.data)
+          document.getElementById("frqCodeOutputUnit3").innerText = resp.data[0] + "\n" + resp.data[1] + "\n" + resp.data[2] + "\n" + resp.data[3];
+
+
+        })
+      }
     }
 
     function fetchFRQs() {

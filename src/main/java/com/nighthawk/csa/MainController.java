@@ -606,10 +606,10 @@ public class MainController<array> {
     }
 
     // Custom FRQs
-    // Unit 2 CUSTOM
-    @GetMapping("/frqCustomAPIUnit2")
+    // Unit 2 CUSTOM Nolan Platt
+    @GetMapping("/frqCustomAPIUnit2Nolan")
     @ResponseBody
-    public String[] getFrqCustomAPIUnit2(@RequestParam(name = "initial", required = false, defaultValue = "0101 0101 0101") String initial,
+    public String[] getFrqCustomAPIUnit2Nolan(@RequestParam(name = "initial", required = false, defaultValue = "0101 0101 0101") String initial,
                            @RequestParam(name = "changed", required = false, defaultValue = "0011 0011 0011") String changed,
                                     @RequestParam(name = "inserted", required = false, defaultValue = "1111 1111") String inserted,
                                     @RequestParam(name = "aVal", required = false, defaultValue = "3") int aVal,
@@ -638,8 +638,39 @@ public class MainController<array> {
         return array;
     }
 
+    // Custom FRQs
+    // Unit 2 CUSTOM Akshay Rohatgi
+    @GetMapping("/frqCustomAPIUnit2Akshay")
+    @ResponseBody
+    public String[] getFrqCustomAPIUnit2Akshay(@RequestParam(name = "initial", required = false, defaultValue = "0101 0101 0101") String initial,
+                                         @RequestParam(name = "changed", required = false, defaultValue = "0011 0011 0011") String changed,
+                                         @RequestParam(name = "inserted", required = false, defaultValue = "1111 1111") String inserted,
+                                         @RequestParam(name = "aVal", required = false, defaultValue = "3") int aVal,
+                                         @RequestParam(name = "bVal", required = false, defaultValue = "3") int bVal) throws IOException {
+
+
+        String[] array = new String[3];
+        //A
+        LightSequence gradShow = new LightSequence(initial);
+        //B
+        gradShow.display();
+        //C
+        gradShow.changeSequence(changed);
+        //D
+        String resultSeq = gradShow.insertSegment(inserted, 4);
+        array[0] = resultSeq;
+        //E
+        String removeSegmentString = "110";
+        String oldSeq = "110101001";
+        String newSeq = oldSeq.replaceFirst(removeSegmentString, "");
+        array[1] = newSeq;
+        //F
+        array[2] = String.valueOf(Math.sqrt(aVal*aVal + bVal*bVal));
+        return array;
+    }
+
     // Unit 3 CUSTOM
-    @GetMapping("/frqCustomAPIUnit3")
+    @GetMapping("/frqCustomAPIUnit3Nolan")
     @ResponseBody
     public String[] getFrqCustomAPIUnit3(@RequestParam(name = "rsvp", required = false, defaultValue = "true") boolean rsvp,
                                     @RequestParam(name = "selection", required = false, defaultValue = "1") int selection,
