@@ -220,6 +220,27 @@
         </div>
       </div>
 
+      <div id="unit5BFRQ" class="row justify-content-center lab-container">
+        <h4><strong>Item #8: Unit 5 FRQ Question 2</strong></h4><br>
+
+        <div class="code">
+          <code><p id="frqResultUnit5B"></p></code>
+        </div>
+
+        <form action="javascript:updateFRQ(`5B`)">
+
+          <input class="inputBox" type="text" align="center" placeholder="prefix" id="prefix">
+          <input class="inputBox" type="text" align="center" placeholder="Num of digits" id="num">
+          <input class="changeBtn" type="submit">
+
+        </form>
+
+        <div class="output">
+          <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+          <code><p id="frqCodeOutputUnit5B"></p></code>
+        </div>
+      </div>
+
   </div>
 
 
@@ -315,6 +336,20 @@
         })
       }
 
+      if(frq == "5B") {
+        var prefix = document.getElementById("prefix").value;
+        var num = document.getElementById("num").value;
+
+
+        axios({
+          method: "GET",
+          url: `/frqCustomAPIUnit5BAkshay?prefix=${prefix}&num=${num}`
+        }).then(resp => {
+          console.log(resp.data)
+          document.getElementById("frqCodeOutputUnit5B").innerText = resp.data[0] + "\n" + resp.data[1];
+        })
+      }
+
     }
     // Unit 4A
 
@@ -385,6 +420,19 @@
         for (let i = 0; i < resp.data.length; i++) {
           if(i == 0) {
             document.getElementById("frqResultUnit5A").innerText = resp.data[i];
+          } else {
+          }
+        }
+      })
+
+      axios({
+        method: "GET",
+        url: "/frqAPI?name=ARohatgi&frqUnit=51"
+      }).then(resp => {
+        console.log(resp.data);
+        for (let i = 0; i < resp.data.length; i++) {
+          if(i == 0) {
+            document.getElementById("frqResultUnit5B").innerText = resp.data[i];
           } else {
           }
         }

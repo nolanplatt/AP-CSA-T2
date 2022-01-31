@@ -22,6 +22,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
 public class MainController<array> {
@@ -823,6 +824,35 @@ public class MainController<array> {
 
         String inviteString = "Dear " + invitee + ", please attend my event at " + address + ". See you then, " + hostName + ".";
         array[2] = inviteString;
+
+        return array;
+    }
+
+    // Unit 5B CUSTOM
+    @GetMapping("/frqCustomAPIUnit5BAkshay")
+    @ResponseBody
+    public String[] getFrqCustomAPIUnit5BAkshay(@RequestParam(name = "prefix", required = false, defaultValue = "chs") String prefix,
+                                                @RequestParam(name = "num", required = false, defaultValue = "4") int numRandDigits) throws IOException {
+
+        String[] array = new String[2];
+
+        ArrayList<String> passwords = new ArrayList<String>();
+
+        // pwGen
+        String numberString = "";
+        for(int i = 0; i < numRandDigits; i++) {
+            Random random = new Random();
+            int value = random.nextInt(9);
+            String strValue = String.format("%d", value);
+            numberString = numberString + strValue;
+        }
+        String password = prefix + "." + numberString;
+        array[0] = password;
+        passwords.add(password);
+        System.out.println(password);
+
+        // pwCount
+        array[1] = String.valueOf(passwords.size());
 
         return array;
     }
