@@ -775,6 +775,37 @@ public class MainController<array> {
         return array;
     }
 
+    // Unit 4A CUSTOM
+    @GetMapping("/frqCustomAPIUnit4AAkshay")
+    @ResponseBody
+    public String[] getFrqCustomAPIUnit4AAkshay(@RequestParam(name = "str", required = false, defaultValue = "DAAAAAAAAAAAANE!") String str) throws IOException {
+
+        String[] array = new String[1];
+
+        char lastLtr = ' ';
+        String largestConsecutiveStr = "";
+        String currentConsecutiveStr = "";
+        for (int i = 0; i <str.length(); i++) {
+            System.out.println(str.charAt(i));
+            if ( str.charAt(i) != lastLtr) {
+                currentConsecutiveStr = "";
+            }
+
+            currentConsecutiveStr += str.charAt(i);
+
+            if ( currentConsecutiveStr.length() > largestConsecutiveStr.length()) {
+                largestConsecutiveStr = currentConsecutiveStr;
+            }
+
+            lastLtr = str.charAt(i);
+        }
+        System.out.println(largestConsecutiveStr + " " + largestConsecutiveStr.length());
+
+        array[0] = largestConsecutiveStr + " " + largestConsecutiveStr.length();
+
+        return array;
+    }
+
     // About Pages
 
     // Nolan Platt

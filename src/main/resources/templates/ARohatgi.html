@@ -169,14 +169,22 @@
       </div>
 
       <div id="unit4FRQ" class="row justify-content-center lab-container">
-        <h4><strong>Item #5: Unit 4 FRQ</strong></h4><br>
+        <h4><strong>Item #5: Unit 4 FRQ Question 1</strong></h4><br>
 
         <div class="code">
-          <code><p id="frqResultUnit4"></p></code>
+          <code><p id="frqResultUnit4A"></p></code>
         </div>
+
+        <form action="javascript:updateFRQ(`4A`)">
+
+          <input class="inputBox" type="text" align="center" placeholder="String" id="str">
+          <input class="changeBtn" type="submit">
+
+        </form>
+
         <div class="output">
           <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
-          <code><p id="frqCodeOutputUnit4"></p></code>
+          <code><p id="frqCodeOutputUnit4A"></p></code>
         </div>
 
 
@@ -245,7 +253,24 @@
 
         })
       }
+
+      if(frq == "4A") {
+        console.log("adsfadsf")
+        var string = document.getElementById("str").value;
+
+        axios({
+          method: "GET",
+          url: `/frqCustomAPIUnit4AAkshay?str=${string}`
+        }).then(resp => {
+          console.log(resp.data)
+          document.getElementById("frqCodeOutputUnit4A").innerText = resp.data[0] + "\n";
+
+
+        })
+      }
+
     }
+    // Unit 4A
 
     function fetchFRQs() {
 
@@ -279,19 +304,21 @@
           }
         }
       })
-    }
-    axios({
-      method: "GET",
-      url: "/frqAPI?name=ARohatgi&frqUnit=4"
-    }).then(resp => {
-      console.log(resp.data);
-      for (let i = 0; i < resp.data.length; i++) {
-        if(i == 0) {
-          document.getElementById("frqResultUnit4").innerText = resp.data[i];
-        } else {
+
+      axios({
+        method: "GET",
+        url: "/frqAPI?name=ARohatgi&frqUnit=40"
+      }).then(resp => {
+        console.log(resp.data);
+        for (let i = 0; i < resp.data.length; i++) {
+          if(i == 0) {
+            document.getElementById("frqResultUnit4A").innerText = resp.data[i];
+          } else {
+          }
         }
-      }
-    })
+      })
+
+    }
 
 
     function toggleMask() {
