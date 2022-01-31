@@ -1,0 +1,29 @@
+// Question 1
+
+public class FRQ4A {
+    public static void main(String[] args) {
+        longestStreak("CCAAAAATTT!");
+    }
+
+    public static void longestStreak(String str) {
+        char lastLtr = ' ';
+        String largestConsecutiveStr = "";
+        String currentConsecutiveStr = "";
+        for (int i = 0; i <str.length(); i++) {
+            System.out.println(str.charAt(i));
+            if ( str.charAt(i) != lastLtr) {
+                currentConsecutiveStr = "";
+            }
+
+            currentConsecutiveStr += str.charAt(i);
+
+            if ( currentConsecutiveStr.length() > largestConsecutiveStr.length()) {
+                largestConsecutiveStr = currentConsecutiveStr;
+            }
+
+            lastLtr = str.charAt(i);
+        }
+        System.out.println(largestConsecutiveStr + " " + largestConsecutiveStr.length());
+    }
+
+}

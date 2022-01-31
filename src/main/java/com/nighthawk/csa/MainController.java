@@ -22,6 +22,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
 public class MainController<array> {
@@ -606,10 +607,10 @@ public class MainController<array> {
     }
 
     // Custom FRQs
-    // Unit 2 CUSTOM
-    @GetMapping("/frqCustomAPIUnit2")
+    // Unit 2 CUSTOM Nolan Platt
+    @GetMapping("/frqCustomAPIUnit2Nolan")
     @ResponseBody
-    public String[] getFrqCustomAPIUnit2(@RequestParam(name = "initial", required = false, defaultValue = "0101 0101 0101") String initial,
+    public String[] getFrqCustomAPIUnit2Nolan(@RequestParam(name = "initial", required = false, defaultValue = "0101 0101 0101") String initial,
                            @RequestParam(name = "changed", required = false, defaultValue = "0011 0011 0011") String changed,
                                     @RequestParam(name = "inserted", required = false, defaultValue = "1111 1111") String inserted,
                                     @RequestParam(name = "aVal", required = false, defaultValue = "3") int aVal,
@@ -638,10 +639,41 @@ public class MainController<array> {
         return array;
     }
 
-    // Unit 3 CUSTOM
-    @GetMapping("/frqCustomAPIUnit3")
+    // Custom FRQs
+    // Unit 2 CUSTOM Akshay Rohatgi
+    @GetMapping("/frqCustomAPIUnit2Akshay")
     @ResponseBody
-    public String[] getFrqCustomAPIUnit3(@RequestParam(name = "rsvp", required = false, defaultValue = "true") boolean rsvp,
+    public String[] getFrqCustomAPIUnit2Akshay(@RequestParam(name = "initial", required = false, defaultValue = "0101 0101 0101") String initial,
+                                         @RequestParam(name = "changed", required = false, defaultValue = "0011 0011 0011") String changed,
+                                         @RequestParam(name = "inserted", required = false, defaultValue = "1111 1111") String inserted,
+                                         @RequestParam(name = "aVal", required = false, defaultValue = "3") int aVal,
+                                         @RequestParam(name = "bVal", required = false, defaultValue = "3") int bVal) throws IOException {
+
+
+        String[] array = new String[3];
+        //A
+        LightSequence gradShow = new LightSequence(initial);
+        //B
+        gradShow.display();
+        //C
+        gradShow.changeSequence(changed);
+        //D
+        String resultSeq = gradShow.insertSegment(inserted, 4);
+        array[0] = resultSeq;
+        //E
+        String removeSegmentString = "110";
+        String oldSeq = "110101001";
+        String newSeq = oldSeq.replaceFirst(removeSegmentString, "");
+        array[1] = newSeq;
+        //F
+        array[2] = String.valueOf(Math.sqrt(aVal*aVal + bVal*bVal));
+        return array;
+    }
+
+    // Unit 3 CUSTOM
+    @GetMapping("/frqCustomAPIUnit3Nolan")
+    @ResponseBody
+    public String[] getFrqCustomAPIUnit3Nolan(@RequestParam(name = "rsvp", required = false, defaultValue = "true") boolean rsvp,
                                     @RequestParam(name = "selection", required = false, defaultValue = "1") int selection,
                                     @RequestParam(name = "option1", required = false, defaultValue = "foo") String option1,
                                     @RequestParam(name = "option2", required = false, defaultValue = "bar") String option2) throws IOException {
@@ -686,6 +718,141 @@ public class MainController<array> {
         // D
         boolean check = option1.equals(option2);
         array[3] = "PART D: " + Boolean.toString(check);
+
+        return array;
+    }
+
+    // Unit 3 CUSTOM
+    @GetMapping("/frqCustomAPIUnit3Akshay")
+    @ResponseBody
+    public String[] getFrqCustomAPIUnit3Akshay(@RequestParam(name = "rsvp", required = false, defaultValue = "true") boolean rsvp,
+                                         @RequestParam(name = "selection", required = false, defaultValue = "1") int selection,
+                                         @RequestParam(name = "option1", required = false, defaultValue = "foo") String option1A,
+                                         @RequestParam(name = "option2", required = false, defaultValue = "bar") String option2A) throws IOException {
+
+
+        String[] array = new String[5];
+        // A
+        if (rsvp) {
+            System.out.println("attending");
+            array[0] = "attending";
+        } else {
+            System.out.println("not attending");
+            array[0] = "not attending";
+        }
+        // B
+        String foodItem = "";
+        if (selection == 1) {
+            System.out.println("beef");
+            array[1] = "beef";
+        } else if (selection == 2) {
+            System.out.println("chicken");
+            array[1] = "chicken";
+        } else if (selection == 3) {
+            System.out.println("pasta");
+            array[1] = "pasta";
+        } else {
+            System.out.println("fish");
+            array[1] = "fish";
+        }
+
+        // C
+        if (!rsvp) {
+            option1A = "Sorry you can't make it.";
+            array[2] = "Sorry you can't make it.";
+        } else if (rsvp && selection == 1) {
+            option1A = "Thanks for attending. You will be served beef.";
+            array[2] = "Thanks for attending. You will be served beef.";
+        }
+
+        // D
+        if (option1A == option2A) {
+            System.out.println("true");
+            array[3] = "true";
+        } else {
+            System.out.println("false");
+            array[3] = "false";
+        }
+        return array;
+    }
+
+    // Unit 4A CUSTOM
+    @GetMapping("/frqCustomAPIUnit4AAkshay")
+    @ResponseBody
+    public String[] getFrqCustomAPIUnit4AAkshay(@RequestParam(name = "str", required = false, defaultValue = "DAAAAAAAAAAAANE!") String str) throws IOException {
+
+        String[] array = new String[1];
+
+        char lastLtr = ' ';
+        String largestConsecutiveStr = "";
+        String currentConsecutiveStr = "";
+        for (int i = 0; i <str.length(); i++) {
+            System.out.println(str.charAt(i));
+            if ( str.charAt(i) != lastLtr) {
+                currentConsecutiveStr = "";
+            }
+
+            currentConsecutiveStr += str.charAt(i);
+
+            if ( currentConsecutiveStr.length() > largestConsecutiveStr.length()) {
+                largestConsecutiveStr = currentConsecutiveStr;
+            }
+
+            lastLtr = str.charAt(i);
+        }
+        System.out.println(largestConsecutiveStr + " " + largestConsecutiveStr.length());
+
+        array[0] = largestConsecutiveStr + " " + largestConsecutiveStr.length();
+
+        return array;
+    }
+
+    // Unit 5A CUSTOM
+    @GetMapping("/frqCustomAPIUnit5AAkshay")
+    @ResponseBody
+    public String[] getFrqCustomAPIUnit5AAkshay(@RequestParam(name = "hostname", required = false, defaultValue = "John") String hostName,
+                                                @RequestParam(name = "address", required = false, defaultValue = "16601 Nighthawk Ln, San Diego, CA 92127") String address,
+                                                @RequestParam(name = "invitee", required = false, defaultValue = "Akshay") String invitee) throws IOException {
+
+        String[] array = new String[3];
+
+        // getHostName
+        array[0] = hostName;
+
+        // setAddress
+        array[1] = address;
+
+        String inviteString = "Dear " + invitee + ", please attend my event at " + address + ". See you then, " + hostName + ".";
+        array[2] = inviteString;
+
+        return array;
+    }
+
+    // Unit 5B CUSTOM
+    @GetMapping("/frqCustomAPIUnit5BAkshay")
+    @ResponseBody
+    public String[] getFrqCustomAPIUnit5BAkshay(@RequestParam(name = "prefix", required = false, defaultValue = "chs") String prefix,
+                                                @RequestParam(name = "num", required = false, defaultValue = "4") int numRandDigits) throws IOException {
+
+        String[] array = new String[2];
+
+        ArrayList<String> passwords = new ArrayList<String>();
+
+        // pwGen
+        String numberString = "";
+        for(int i = 0; i < numRandDigits; i++) {
+            Random random = new Random();
+            int value = random.nextInt(9);
+            String strValue = String.format("%d", value);
+            numberString = numberString + strValue;
+        }
+        String password = prefix + "." + numberString;
+        array[0] = password;
+        passwords.add(password);
+        System.out.println(password);
+
+        // pwCount
+        array[1] = String.valueOf(passwords.size());
 
         return array;
     }

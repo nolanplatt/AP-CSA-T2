@@ -243,7 +243,7 @@
 
         axios({
           method: "GET",
-          url: `/frqCustomAPIUnit2?initial=${initial}&changed=${changed}&inserted=${inserted}&aVal=${aVal}&bVal=${bVal}`
+          url: `/frqCustomAPIUnit2Nolan?initial=${initial}&changed=${changed}&inserted=${inserted}&aVal=${aVal}&bVal=${bVal}`
         }).then(resp => {
           console.log(resp.data)
           document.getElementById("frqCodeOutputUnit2").innerText = resp.data[0] + "\n" + resp.data[1] + "\n" + resp.data[2];
@@ -261,7 +261,7 @@
 
         axios({
           method: "GET",
-          url: `/frqCustomAPIUnit3?rsvp=${rsvp}&selection=${selection}&option1=${option1}&option2=${option2}`
+          url: `/frqCustomAPIUnit3Nolan?rsvp=${rsvp}&selection=${selection}&option1=${option1}&option2=${option2}`
         }).then(resp => {
           console.log(resp.data)
           document.getElementById("frqCodeOutputUnit3").innerText = resp.data[0] + "\n" + resp.data[1] + "\n" + resp.data[2] + "\n" + resp.data[3];
