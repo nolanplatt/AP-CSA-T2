@@ -672,7 +672,7 @@ public class MainController<array> {
     // Unit 3 CUSTOM
     @GetMapping("/frqCustomAPIUnit3Nolan")
     @ResponseBody
-    public String[] getFrqCustomAPIUnit3(@RequestParam(name = "rsvp", required = false, defaultValue = "true") boolean rsvp,
+    public String[] getFrqCustomAPIUnit3Nolan(@RequestParam(name = "rsvp", required = false, defaultValue = "true") boolean rsvp,
                                     @RequestParam(name = "selection", required = false, defaultValue = "1") int selection,
                                     @RequestParam(name = "option1", required = false, defaultValue = "foo") String option1,
                                     @RequestParam(name = "option2", required = false, defaultValue = "bar") String option2) throws IOException {
@@ -718,6 +718,60 @@ public class MainController<array> {
         boolean check = option1.equals(option2);
         array[3] = "PART D: " + Boolean.toString(check);
 
+        return array;
+    }
+
+    // Unit 3 CUSTOM
+    @GetMapping("/frqCustomAPIUnit3Akshay")
+    @ResponseBody
+    public String[] getFrqCustomAPIUnit3Akshay(@RequestParam(name = "rsvp", required = false, defaultValue = "true") boolean rsvp,
+                                         @RequestParam(name = "selection", required = false, defaultValue = "1") int selection,
+                                         @RequestParam(name = "option1", required = false, defaultValue = "foo") String option1A,
+                                         @RequestParam(name = "option2", required = false, defaultValue = "bar") String option2A) throws IOException {
+
+
+        String[] array = new String[5];
+        // A
+        if (rsvp) {
+            System.out.println("attending");
+            array[0] = "attending";
+        } else {
+            System.out.println("not attending");
+            array[0] = "not attending";
+        }
+        // B
+        String foodItem = "";
+        if (selection == 1) {
+            System.out.println("beef");
+            array[1] = "beef";
+        } else if (selection == 2) {
+            System.out.println("chicken");
+            array[1] = "chicken";
+        } else if (selection == 3) {
+            System.out.println("pasta");
+            array[1] = "pasta";
+        } else {
+            System.out.println("fish");
+            array[1] = "fish";
+        }
+
+        // C
+        if (!rsvp) {
+            option1A = "Sorry you can't make it.";
+            array[2] = "Sorry you can't make it.";
+        } else if (rsvp && selection == 1) {
+            option1A = "Thanks for attending. You will be served beef.";
+            array[2] = "Thanks for attending. You will be served beef.";
+        }
+
+        // D
+        if (option1A == option2A) {
+            System.out.println("true");
+            array[3] = "true";
+        } else {
+            System.out.println("false");
+            array[3] = "false";
+        }
         return array;
     }
 
