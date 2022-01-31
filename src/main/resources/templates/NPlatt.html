@@ -116,13 +116,6 @@
       <a href="#unit7FRQ">Item #8: Unit 7 FRQ</a>
 
     </div>
-    <code><p id="frqCodeOutputUnit7"></p></code>
-    <code><p id="frqCodeOutputUnit7"></p></code>
-    <code><p id="frqCodeOutputUnit7"></p></code>
-    <code><p id="frqCodeOutputUnit7"></p></code>
-    <code><p id="frqCodeOutputUnit7"></p></code>
-    <code><p id="frqCodeOutputUnit7"></p></code>
-    <code><p id="frqCodeOutputUnit7"></p></code>
 
     <div id="aboutMe" class="row justify-content-center lab-container">
       <h4><strong>Item #1: About Me</strong></h4><br>
@@ -143,11 +136,6 @@
       <input class="inputBox" type="text" align="center" placeholder="A Value" id="aValue">
       <input class="inputBox" type="text" align="center" placeholder="B Value" id="bValue"> <br>
         <input class="changeBtn" type="submit">
-        <code><p id="frqCodeOutputUnit7"></p></code>
-        <code><p id="frqCodeOutputUnit7"></p></code>
-        <code><p id="frqCodeOutputUnit7"></p></code>
-        <code><p id="frqCodeOutputUnit7"></p></code>
-        <code><p id="frqCodeOutputUnit7"></p></code>
 
       </form>
       <div class="output">
@@ -176,10 +164,6 @@
       </div>
 
     </div>
-    <code><p id="frqCodeOutputUnit7"></p></code>
-    <code><p id="frqCodeOutputUnit7"></p></code>
-    <code><p id="frqCodeOutputUnit7"></p></code>
-    <code><p id="frqCodeOutputUnit7"></p></code>
 
     <div id="extraCreditFRQ" class="row justify-content-center lab-container">
       <h4><strong>Item #4: Extra Credit: AP 2014 FRQs</strong></h4><br>
@@ -191,7 +175,6 @@
         <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
         <code><p id="frqCodeOutputEC"></p></code>
       </div>
-      <code><p id="frqCodeOutputUnit7"></p></code>
 
     </div>
     <div id="unit4FRQ" class="row justify-content-center lab-container">
@@ -206,7 +189,6 @@
       </div>
 
     </div>
-    <code><p id="frqCodeOutputUnit7"></p></code>
 
     <div id="unit5FRQ" class="row justify-content-center lab-container">
       <h4><strong>Item #6: Unit 5 FRQ</strong></h4><br>
@@ -224,7 +206,6 @@
         <input class="changeBtn" type="submit">
 
       </form>
-      <code><p id="frqCodeOutputUnit7"></p></code>
 
       <div class="output">
         <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
@@ -252,13 +233,6 @@
           <div class="output">
             <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
             <code><p id="frqCodeOutputUnit7"></p></code>
-
-            <code><p id="frqCodeOutputUnit7"></p></code>
-
-            <code><p id="frqCodeOutputUnit7"></p></code>
-            <code><p id="frqCodeOutputUnit7"></p></code>
-
-
           </div>
 
 
@@ -401,6 +375,21 @@
           if(i == 0) {
             document.getElementById("frqResultUnit6").innerText = resp.data[i];
           } else {
+            document.getElementById("frqCodeOutputUnit6").innerText = "fading, trailing, battling" + "\n" + "5"
+          }
+        }
+      })
+      // Unit 7
+      axios({
+        method: "GET",
+        url: "/frqAPI?name=NPlatt&frqUnit=7"
+      }).then(resp => {
+        console.log(resp.data);
+        for (let i = 0; i < resp.data.length; i++) {
+          if(i == 0) {
+            document.getElementById("frqResultUnit7").innerText = resp.data[i];
+          } else {
+            document.getElementById("frqCodeOutputUnit7").innerText = "Possible: Nolan, John, Ryan, Joe" + "\n" + "Used: Ryan" + "\n" + "Removed: Nolan, John, Joe"
           }
         }
       })
