@@ -609,7 +609,7 @@ public class MainController<array> {
     // Unit 2 CUSTOM
     @GetMapping("/frqCustomAPIUnit2")
     @ResponseBody
-    public String[] getFrqCustomAPI(@RequestParam(name = "initial", required = false, defaultValue = "0101 0101 0101") String initial,
+    public String[] getFrqCustomAPIUnit2(@RequestParam(name = "initial", required = false, defaultValue = "0101 0101 0101") String initial,
                            @RequestParam(name = "changed", required = false, defaultValue = "0011 0011 0011") String changed,
                                     @RequestParam(name = "inserted", required = false, defaultValue = "1111 1111") String inserted,
                                     @RequestParam(name = "aVal", required = false, defaultValue = "3") int aVal,
@@ -635,6 +635,58 @@ public class MainController<array> {
         array[1] = "New Sequence: " + newSeq;
         //F
         array[2] = "Distance Sqrt Result: " + String.valueOf((Math.sqrt(aVal * aVal + bVal * bVal)));
+        return array;
+    }
+
+    // Unit 3 CUSTOM
+    @GetMapping("/frqCustomAPIUnit3")
+    @ResponseBody
+    public String[] getFrqCustomAPIUnit3(@RequestParam(name = "rsvp", required = false, defaultValue = "true") boolean rsvp,
+                                    @RequestParam(name = "selection", required = false, defaultValue = "1") int selection,
+                                    @RequestParam(name = "option1", required = false, defaultValue = "foo") String option1,
+                                    @RequestParam(name = "option2", required = false, defaultValue = "bar") String option2) throws IOException {
+
+
+        String[] array = new String[5];
+        // A
+        if (rsvp) {
+            array[0] = "PART A: Attending";
+        } else if (!rsvp) {
+            array[0] = "PART A: Not attending";
+        }
+
+        // B
+        String foodItem = "";
+        String[] possibleFoods = {"Beef", "Chicken.", "Pasta.", "Fish."};
+        int ind = selection--;
+        if (ind > 3) {
+            ind = 3;
+        }
+        foodItem = possibleFoods[ind];
+        array[1] = "PART B: " + foodItem;
+
+        // C
+        boolean bool = true;
+        String newFoodItem = "";
+        String sentence;
+        if (bool) {
+            String[] newPossibleFoods = {"Beef", "Chicken.", "Pasta.", "Fish."};
+            sentence = "Thanks for attending. You will be served ";
+            int newInd = selection--;
+            if (newInd > 3) {
+                newInd = 3;
+            }
+            newFoodItem = newPossibleFoods[newInd];
+            array[2] = "PART C: " + newFoodItem;
+        } else if (!bool) {
+            sentence = "Sorry you can't make it.";
+            array[2] = "PART C: " + sentence;
+        }
+
+        // D
+        boolean check = option1.equals(option2);
+        array[3] = "PART D: " + Boolean.toString(check);
+
         return array;
     }
 

@@ -150,6 +150,15 @@
       <div class="code">
         <code><p id="frqResultUnit3"></p></code>
       </div>
+      <form action="javascript:updateFRQ(`3`)">
+
+        <input class="inputBox" type="text" align="center" placeholder="RSVP" id="rsvp">
+        <input class="inputBox" type="text" align="center" placeholder="Selection" id="selection">
+        <input class="inputBox" type="text" align="center" placeholder="Option 1" id="option1">
+        <input class="inputBox" type="text" align="center" placeholder="Option 2" id="option2">
+        <input class="changeBtn" type="submit">
+
+      </form>
       <div class="output">
         <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
         <code><p id="frqCodeOutputUnit3"></p></code>
@@ -238,6 +247,24 @@
         }).then(resp => {
           console.log(resp.data)
           document.getElementById("frqCodeOutputUnit2").innerText = resp.data[0] + "\n" + resp.data[1] + "\n" + resp.data[2];
+
+
+        })
+      }
+      // Unit 3
+      if(frq == "3") {
+        var rsvp = document.getElementById("rsvp").value;
+        var selection = document.getElementById("selection").value;
+        var option1 = document.getElementById("option1").value;
+        var option2 = document.getElementById("option2").value;
+
+
+        axios({
+          method: "GET",
+          url: `/frqCustomAPIUnit3?rsvp=${rsvp}&selection=${selection}&option1=${option1}&option2=${option2}`
+        }).then(resp => {
+          console.log(resp.data)
+          document.getElementById("frqCodeOutputUnit3").innerText = resp.data[0] + "\n" + resp.data[1] + "\n" + resp.data[2] + "\n" + resp.data[3];
 
 
         })
