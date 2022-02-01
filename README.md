@@ -22,7 +22,7 @@
   </tr>
   <tr>
     <td>Akshay Rohatgi</td>
-    <td><a href="https://github.com/Archkitten">@Archkitten</a></td>
+    <td><a href="https://github.com/Akshay-Rohatgi">@Akshay-Rohatgi</a></td>
     <td>Design Manager</td>
     <td><a href="https://github.com/nolanplatt/AP-CSA-T2/issues/assigned/Akshay-Rohatgi">Tasks</a></td>
     <td><a href="https://github.com/nolanplatt/AP-CSA-T2/projects/1?card_filter_query=assignee%3Akshay-Rohatgi">Scrum Board</a></td>
@@ -31,7 +31,7 @@
   </tr>
   <tr>
     <td>Arch Huang</td>
-    <td><a href="https://github.com/Akshay-Rohatgi">@Akshay-Rohatgi</a></td>
+    <td><a href="https://github.com/Archkitten">@rchkitten</a></td>
     <td>Github Admin</td>
     <td><a href="https://github.com/nolanplatt/AP-CSA-T2/issues/assigned/Archkitten">Tasks</a></td>
     <td><a href="https://github.com/nolanplatt/AP-CSA-T2/projects/1?card_filter_query=assignee%3Archkitten">Scrum Board</a></td>
