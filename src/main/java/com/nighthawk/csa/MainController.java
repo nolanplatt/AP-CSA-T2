@@ -718,20 +718,20 @@ public class MainController<array> {
     public String sportsAPI(Model model) throws IOException, InterruptedException, ParseException {
 
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://nba-latest-news.p.rapidapi.com/news/source/espn"))
-                .header("x-rapidapi-host", "nba-latest-news.p.rapidapi.com")
-                .header("x-rapidapi-key", "42f28884f0msh2ee7d88bea53b8dp146d11jsn2587c1474f6f")
+                .uri(URI.create("https://livescore6.p.rapidapi.com/matches/v2/list-live?Category=soccer%22"))
+                .header("x-rapidapi-host", "livescore6.p.rapidapi.com")
+                .header("x-rapidapi-key", "00ccce1983msh870532702332d54p113f94jsn9fd7d405018d")
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
         HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
         System.out.println(response.body());
 
         //alternative #2: convert response.body() to JSON object
-//        Object obj = new JSONParser().parse(response.body());
-//        JSONObject jo = (JSONObject) obj;
+        Object obj = new JSONParser().parse(response.body());
+        JSONObject jo = (JSONObject) obj;
 
-//        System.out.println(jo.get("Stages"));
-        model.addAttribute("data", response.body());
+//        System.out.println(jo.get("data"));
+//        model.addAttribute("data", jo.get("data"));
 
         return "data/SportsAPI";
     }

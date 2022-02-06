@@ -22,7 +22,7 @@
   </tr>
   <tr>
     <td>Akshay Rohatgi</td>
-    <td><a href="https://github.com/Archkitten">@Akshay-Rohatgi</a></td>
+    <td><a href="https://github.com/Akshay-Rohatgi">@Akshay-Rohatgi</a></td>
     <td>Design Manager</td>
     <td><a href="https://github.com/nolanplatt/AP-CSA-T2/issues/assigned/Akshay-Rohatgi">Tasks</a></td>
     <td><a href="https://github.com/nolanplatt/AP-CSA-T2/projects/1?card_filter_query=assignee%3Akshay-Rohatgi">Scrum Board</a></td>
@@ -31,7 +31,7 @@
   </tr>
   <tr>
     <td>Arch Huang</td>
-    <td><a href="https://github.com/Akshay-Rohatgi">@Akshay-Rohatgi</a></td>
+    <td><a href="https://github.com/Archkitten">@rchkitten</a></td>
     <td>Github Admin</td>
     <td><a href="https://github.com/nolanplatt/AP-CSA-T2/issues/assigned/Archkitten">Tasks</a></td>
     <td><a href="https://github.com/nolanplatt/AP-CSA-T2/projects/1?card_filter_query=assignee%3Archkitten">Scrum Board</a></td>
@@ -40,7 +40,7 @@
   </tr>
   <tr>
     <td>Christopher Rubin</td>
-    <td><a href="https://github.com/Chris-Ru">@Akshay-Rohatgi</a></td>
+    <td><a href="https://github.com/Chris-Ru">@Chris-Ru</a></td>
     <td>Scrum Master</td>
     <td><a href="https://github.com/nolanplatt/AP-CSA-T2/issues/assigned/Chris-Ru">Tasks</a></td>
     <td><a href="https://github.com/nolanplatt/AP-CSA-T2/projects/1?card_filter_query=assignee%3AChris-Ru">Scrum Board</a></td>
@@ -49,7 +49,7 @@
   </tr>
   <tr>
     <td>Dane Vestal</td>
-    <td><a href="https://github.com/D1935827V">@Akshay-Rohatgi</a></td>
+    <td><a href="https://github.com/D1935827V">@D1935827V</a></td>
     <td>Technical Officer</td>
     <td><a href="https://github.com/nolanplatt/AP-CSA-T2/issues/assigned/D1935827V">Tasks</a></td>
     <td><a href="https://github.com/nolanplatt/AP-CSA-T2/projects/1?card_filter_query=assignee%3AD1935827V">Scrum Board</a></td>
@@ -58,7 +58,7 @@
   </tr>
   <tr>
     <td>Nolan Platt</td>
-    <td><a href="https://github.com/nolanplatt">@Akshay-Rohatgi</a></td>
+    <td><a href="https://github.com/nolanplatt">@nolanplatt</a></td>
     <td>Deployment Manager</td>
     <td><a href="https://github.com/nolanplatt/AP-CSA-T2/issues/assigned/nolanplatt">Tasks</a></td>
     <td><a href="https://github.com/nolanplatt/AP-CSA-T2/projects/1?card_filter_query=assignee%3nolanplatt">Scrum Board</a></td>

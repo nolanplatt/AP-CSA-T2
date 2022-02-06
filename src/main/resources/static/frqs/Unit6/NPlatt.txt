@@ -1,0 +1,53 @@
+// Nolan Platt | AP Computer Science A | Unit 6 FRQ
+
+
+
+// Question 1 
+
+ public void calc() {
+        String ing[] = {"foo", "bar"};
+        for (String i: ing){
+            if (i.endsWith("ing")){
+                System.out.println(i);
+            }
+        }
+    }
+
+
+// Question 2
+ public class Payroll {
+
+        private int[] itemsSold; // number of items sold by each employee
+        private double[] wages; // wages to be computed in part (b)
+
+/** Returns the bonus threshold as described in part (a).
+
+*/
+
+        public double computeBonusThreshold() {
+            int max = itemsSold[0];
+            int min = itemsSold[0];
+            int sum = itemsSold[0];
+            for (int i : itemsSold) {
+                if (i < min) {
+                    min = i;
+                }
+                if (i > max) {
+                    max = i;
+                }
+            }
+            double thres = (sum - max - min)/(itemsSold.length - 2);
+            return thres;
+        }
+
+        public void computeWages(double fixedWage, double perItemWage) {
+            for (int i = 0; i < wages.length; i++) {
+             wages[i] = (itemsSold[i] * perItemWage) + fixedWage;
+		
+		if(itemsSold[i] > computeBonusThreshold()) {
+                wages[i] = wages[i] * 1.1;
+            }
+	}
+
+
+    }
