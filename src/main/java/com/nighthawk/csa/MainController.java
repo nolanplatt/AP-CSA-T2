@@ -4,7 +4,6 @@ import com.nighthawk.csa.starters.ImageInfo;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,10 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -678,61 +673,9 @@ public class MainController<array> {
     }
 
     // Unit 4a
-    @GetMapping("/individual/CRubin/ChrisUnit4a")
+    @GetMapping("/individual/CRubin/ChrisCB")
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
-    public String getCRubinUnit4a() {
-        return "ChrisTPT/chrisunit4a";
-    }
-
-    // Unit 5a
-    @GetMapping("/individual/CRubin/ChrisUnit5a")
-    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
-    public String getCRubinUnit5a() {
-        return "ChrisTPT/chrisunit5a";
-    }
-
-    // Unit 5b
-    @GetMapping("/individual/CRubin/ChrisUnit5b")
-    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
-    public String getCRubinUnit5b() {
-        return "ChrisTPT/chrisunit5b";
-    }
-
-    //Unit 6a
-    @GetMapping("/individual/CRubin/ChrisUnit6a")
-    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
-    public String getCRubinUnit6a() {
-        return "ChrisTPT/chrisunit6a";
-    }
-
-
-    //Unit 6b
-    @GetMapping("/individual/CRubin/ChrisUnit6b")
-    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
-    public String getCRubinUnit6b() {
-        return "ChrisTPT/chrisunit6b";
-    }
-
-
-    @GetMapping("/sportsAPI")
-    public String sportsAPI(Model model) throws IOException, InterruptedException, ParseException {
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://livescore6.p.rapidapi.com/matches/v2/list-live?Category=soccer%22"))
-                .header("x-rapidapi-host", "livescore6.p.rapidapi.com")
-                .header("x-rapidapi-key", "00ccce1983msh870532702332d54p113f94jsn9fd7d405018d")
-                .method("GET", HttpRequest.BodyPublishers.noBody())
-                .build();
-        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());
-
-        //alternative #2: convert response.body() to JSON object
-        Object obj = new JSONParser().parse(response.body());
-        JSONObject jo = (JSONObject) obj;
-
-//        System.out.println(jo.get("data"));
-//        model.addAttribute("data", jo.get("data"));
-
-        return "data/SportsAPI";
+    public String getCRubinCB() {
+        return "ChrisTPT/chrisCB";
     }
 }
