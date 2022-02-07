@@ -1,0 +1,38 @@
+// Nolan Platt | AP Computer Science A | Unit 8 FRQ
+
+
+// Part A
+/** Returns the plot with the highest yield for a given crop type, as described in part (a). */
+
+public Plot getHighestYield(String c) {
+ int initialMax = 0;
+ Plot totPlot;
+        for (int i = 0; i < farmPlots.length; i++) {
+            for (int j = 0; j < farmPlots[0].length; j++) {
+                if ((farmPlots[i][j].getCropType()).equals(c))
+                    if ((farmPlots[i][j].getCropYield()) >= maxYield) {
+                        initialMax = farmPlots[i][j].getCropYield();
+                        totPlot = farmPlots[i][j];
+                    
+                }
+            }
+        }
+        return totPlot;
+    }
+
+// Part B
+
+/** Returns true if all plots in a given column in the two-dimensional array farmPlots
+* contain the same type of crop, or false otherwise, as described in part (b).
+*/
+
+public boolean sameCrop(int col) {
+ boolean result = true;
+        for (int i = 0; i < 4; i++) {
+            if (!(farmPlots[0][col].getCropType()).equals(farmPlots[i][col].getCropType()))
+                output = false;
+        }
+        return output;
+}
+
+

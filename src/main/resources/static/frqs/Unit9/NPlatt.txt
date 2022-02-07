@@ -1,0 +1,87 @@
+// Nolan Platt | AP Computer Science A | Unit 9 FRQ
+
+
+
+// Question 1
+
+// a)
+
+public class PictureBook extends Book {
+ 	String illustrator;
+        public PictureBook(String t, String a, String i) {
+            super(t, a);
+            illustrator = i;
+        }
+        public void printBookInfo() {
+            super.printBookInfo();
+            System.out.print(" and illustrated by " + illustrator);
+        }
+}
+
+
+
+// b)
+
+ArrayList<Book> myLibrary = new ArrayList<Book>();
+
+/* missing code */
+Book book1 = new Book("Frankenstein", "Mary Shelley");
+PictureBook book2 = new PictureBook("The Wonderful Wizard of Oz", "L. Frank Baum", "W.W. Denslow");
+myLibrary.add(book1);
+myLibrary.add(book2);
+
+// c)
+public class BookListing {
+	Book book;
+        double price;
+        public BookListing(Book book, double price) {
+            this.book = book;
+            this.price = price;
+        }
+        public void printDescription() {
+	    book.printBookInfo();
+            System.out.print(", $" + price);
+        }
+}
+
+
+
+// Question 2
+
+// a)
+public class Animal {
+        String family;
+        String species;
+        String name;
+
+        public Animal(String family, String species, String name) {
+            this.family = family;
+            this.species = species;
+            this.name = name;
+        }
+
+        public String toString() {
+            return (name + " the " + species + " is a " + family + ".");
+        }
+    }
+
+
+// b)
+public class Herbivore extends Animal { //(subclass -> extends)
+        public Herbivore(String name, String species) {
+            super("Herbivore", species, name);
+        }
+    }
+
+// c)
+public class Elephant extends Herbivore { //(subclass -> extends)
+        double tusks; // in meters
+        public Elephant(String name, double tusks) {
+            super(name, "Elephant");
+            this.tusks = tusks;
+        }
+
+        public String toString() {
+            return super.toString() + " with tusks" + tusks + " meters long";
+        }
+    }

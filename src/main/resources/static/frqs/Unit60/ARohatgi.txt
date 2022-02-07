@@ -1,0 +1,12 @@
+class QuestionOne {
+    ArrayList<String> words = new ArrayList<>(Arrays.asList("ten", "fading", "post", "card", "thunder", "hinge", "trailing", "batting"));
+
+    public void FindSubStr( String str ) {
+        for (String word : words) {
+            if (word.substring(word.length() - 3).equals(str)) {
+                System.out.println(word);
+            }
+        }
+    }
+
+}

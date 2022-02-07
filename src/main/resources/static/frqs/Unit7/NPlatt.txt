@@ -1,0 +1,21 @@
+// Nolan Platt | AP Computer Science A | Unit 7 FRQ
+
+
+private ArrayList<String> possibleNames new ArrayList<String>();
+
+
+// A
+    public UserName(String firstName, String lastName) {
+        for (int i = 1; i < firstName.length(); i++) {
+            possibleNames.add(lastName + firstName.substring(0, i));
+        }
+    }
+
+
+// B
+    public void setAvailableUserNames(String[] usedNames) {
+       for (int i = 1; i < usedNames.length(); i++) {
+            if (possibleNames.get(i).length > 0) {
+                possibleNames.remove(i);
+            }
+        }
