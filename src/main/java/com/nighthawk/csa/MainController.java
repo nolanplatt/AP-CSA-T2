@@ -4,7 +4,6 @@ import com.nighthawk.csa.starters.ImageInfo;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,16 +12,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
 public class MainController<array> {
@@ -472,25 +466,7 @@ public class MainController<array> {
 
 
             }
-        }
-        if (week == 5) { // Unit 5 FRQ Handling
-            // Nolan Platt FRQ handling
-            if (name.equals("NPlatt")) {
-                // Question 1
-
-                // Question 2
-            }
-        }
-
-        if (week == 6) { // Unit 6 FRQ Handling
-            // Nolan Platt FRQ handling
-            if (name.equals("NPlatt")) {
-                // Question 1
-
-                // Question 2
-            }
-        }
-        else if (week == 0) { // 0-> 2014 AP Extra Credit FRQs
+        } else if (week == 0) { // 0-> 2014 AP Extra Credit FRQs
             // Nolan Platt FRQ handling
             if (name.equals("NPlatt")) {
                 // Question 1
@@ -606,282 +582,6 @@ public class MainController<array> {
         return array;
     }
 
-    // Custom FRQs
-    // Unit 2 CUSTOM Nolan Platt
-    @GetMapping("/frqCustomAPIUnit2Nolan")
-    @ResponseBody
-    public String[] getFrqCustomAPIUnit2Nolan(@RequestParam(name = "initial", required = false, defaultValue = "0101 0101 0101") String initial,
-                           @RequestParam(name = "changed", required = false, defaultValue = "0011 0011 0011") String changed,
-                                    @RequestParam(name = "inserted", required = false, defaultValue = "1111 1111") String inserted,
-                                    @RequestParam(name = "aVal", required = false, defaultValue = "3") int aVal,
-                                    @RequestParam(name = "bVal", required = false, defaultValue = "3") int bVal) throws IOException {
-
-
-        String[] array = new String[3];
-        //A
-        LightSequence gradShow = new LightSequence(initial);
-        //B
-        gradShow.display();
-        //C
-        gradShow.changeSequence(changed);
-        //D
-        String resultSeq = gradShow.insertSegment(inserted, 4);
-        array[0] = "Result Sequence: " + resultSeq;
-        //E
-        String segment = "11";
-        String oldSeq = "1100000111000";
-        int newIndex = oldSeq.indexOf(segment);
-        String newSeq = oldSeq.substring(0, newIndex);
-        newSeq += oldSeq.substring(newIndex + segment.length());
-        array[1] = "New Sequence: " + newSeq;
-        //F
-        array[2] = "Distance Sqrt Result: " + String.valueOf((Math.sqrt(aVal * aVal + bVal * bVal)));
-        return array;
-    }
-
-    // Custom FRQs
-    // Unit 2 CUSTOM Akshay Rohatgi
-    @GetMapping("/frqCustomAPIUnit2Akshay")
-    @ResponseBody
-    public String[] getFrqCustomAPIUnit2Akshay(@RequestParam(name = "initial", required = false, defaultValue = "0101 0101 0101") String initial,
-                                         @RequestParam(name = "changed", required = false, defaultValue = "0011 0011 0011") String changed,
-                                         @RequestParam(name = "inserted", required = false, defaultValue = "1111 1111") String inserted,
-                                         @RequestParam(name = "aVal", required = false, defaultValue = "3") int aVal,
-                                         @RequestParam(name = "bVal", required = false, defaultValue = "3") int bVal) throws IOException {
-
-
-        String[] array = new String[3];
-        //A
-        LightSequence gradShow = new LightSequence(initial);
-        //B
-        gradShow.display();
-        //C
-        gradShow.changeSequence(changed);
-        //D
-        String resultSeq = gradShow.insertSegment(inserted, 4);
-        array[0] = resultSeq;
-        //E
-        String removeSegmentString = "110";
-        String oldSeq = "110101001";
-        String newSeq = oldSeq.replaceFirst(removeSegmentString, "");
-        array[1] = newSeq;
-        //F
-        array[2] = String.valueOf(Math.sqrt(aVal*aVal + bVal*bVal));
-        return array;
-    }
-
-    // Unit 3 CUSTOM
-    @GetMapping("/frqCustomAPIUnit3Nolan")
-    @ResponseBody
-    public String[] getFrqCustomAPIUnit3Nolan(@RequestParam(name = "rsvp", required = false, defaultValue = "true") boolean rsvp,
-                                    @RequestParam(name = "selection", required = false, defaultValue = "1") int selection,
-                                    @RequestParam(name = "option1", required = false, defaultValue = "foo") String option1,
-                                    @RequestParam(name = "option2", required = false, defaultValue = "bar") String option2) throws IOException {
-
-
-        String[] array = new String[5];
-        // A
-        if (rsvp) {
-            array[0] = "PART A: Attending";
-        } else if (!rsvp) {
-            array[0] = "PART A: Not attending";
-        }
-
-        // B
-        String foodItem = "";
-        String[] possibleFoods = {"Beef", "Chicken.", "Pasta.", "Fish."};
-        int ind = selection--;
-        if (ind > 3) {
-            ind = 3;
-        }
-        foodItem = possibleFoods[ind];
-        array[1] = "PART B: " + foodItem;
-
-        // C
-        boolean bool = true;
-        String newFoodItem = "";
-        String sentence;
-        if (bool) {
-            String[] newPossibleFoods = {"Beef", "Chicken.", "Pasta.", "Fish."};
-            sentence = "Thanks for attending. You will be served ";
-            int newInd = selection--;
-            if (newInd > 3) {
-                newInd = 3;
-            }
-            newFoodItem = newPossibleFoods[newInd];
-            array[2] = "PART C: " + newFoodItem;
-        } else if (!bool) {
-            sentence = "Sorry you can't make it.";
-            array[2] = "PART C: " + sentence;
-        }
-
-        // D
-        boolean check = option1.equals(option2);
-        array[3] = "PART D: " + Boolean.toString(check);
-
-        return array;
-    }
-
-    // Unit 3 CUSTOM
-    @GetMapping("/frqCustomAPIUnit3Akshay")
-    @ResponseBody
-    public String[] getFrqCustomAPIUnit3Akshay(@RequestParam(name = "rsvp", required = false, defaultValue = "true") boolean rsvp,
-                                         @RequestParam(name = "selection", required = false, defaultValue = "1") int selection,
-                                         @RequestParam(name = "option1", required = false, defaultValue = "foo") String option1A,
-                                         @RequestParam(name = "option2", required = false, defaultValue = "bar") String option2A) throws IOException {
-
-
-        String[] array = new String[5];
-        // A
-        if (rsvp) {
-            System.out.println("attending");
-            array[0] = "attending";
-        } else {
-            System.out.println("not attending");
-            array[0] = "not attending";
-        }
-        // B
-        String foodItem = "";
-        if (selection == 1) {
-            System.out.println("beef");
-            array[1] = "beef";
-        } else if (selection == 2) {
-            System.out.println("chicken");
-            array[1] = "chicken";
-        } else if (selection == 3) {
-            System.out.println("pasta");
-            array[1] = "pasta";
-        } else {
-            System.out.println("fish");
-            array[1] = "fish";
-        }
-
-        // C
-        if (!rsvp) {
-            option1A = "Sorry you can't make it.";
-            array[2] = "Sorry you can't make it.";
-        } else if (rsvp && selection == 1) {
-            option1A = "Thanks for attending. You will be served beef.";
-            array[2] = "Thanks for attending. You will be served beef.";
-        }
-
-        // D
-        if (option1A == option2A) {
-            System.out.println("true");
-            array[3] = "true";
-        } else {
-            System.out.println("false");
-            array[3] = "false";
-        }
-        return array;
-    }
-
-    // Unit 4A CUSTOM
-    @GetMapping("/frqCustomAPIUnit4AAkshay")
-    @ResponseBody
-    public String[] getFrqCustomAPIUnit4AAkshay(@RequestParam(name = "str", required = false, defaultValue = "DAAAAAAAAAAAANE!") String str) throws IOException {
-
-        String[] array = new String[1];
-
-        char lastLtr = ' ';
-        String largestConsecutiveStr = "";
-        String currentConsecutiveStr = "";
-        for (int i = 0; i <str.length(); i++) {
-            System.out.println(str.charAt(i));
-            if ( str.charAt(i) != lastLtr) {
-                currentConsecutiveStr = "";
-            }
-
-            currentConsecutiveStr += str.charAt(i);
-
-            if ( currentConsecutiveStr.length() > largestConsecutiveStr.length()) {
-                largestConsecutiveStr = currentConsecutiveStr;
-            }
-
-            lastLtr = str.charAt(i);
-        }
-        System.out.println(largestConsecutiveStr + " " + largestConsecutiveStr.length());
-
-        array[0] = largestConsecutiveStr + " " + largestConsecutiveStr.length();
-
-        return array;
-    }
-    // Unit 5 CUSTOM
-    @GetMapping("/frqCustomAPIUnit5Nolan")
-    @ResponseBody
-    public String[] getfrqCustomAPIUnit5Nolan(@RequestParam(name = "hostname", required = false, defaultValue = "HN") String hostName,
-                                                @RequestParam(name = "address", required = false, defaultValue = "123 John Mortensen Boulevard") String address,
-                                                @RequestParam(name = "invitee", required = false, defaultValue = "Nolan") String invitee,
-                                                @RequestParam(name = "prefix", required = false, defaultValue = "PREFIX") String prefix,
-                                                @RequestParam(name = "amount", required = false, defaultValue = "1") int amount) throws IOException {
-
-        String[] array = new String[6];
-
-        // Question 1
-        array[0] = hostName;
-        array[1] = address;
-        array[2] = "Dear " + invitee + ", please attend my event at " + address + ". See you then, " + hostName + ".";;
-        // Question 2
-        String combined = "";
-        Random r = new Random();
-        for (int i = 0; i < amount; i++) {
-            combined += (prefix + "." +  r.nextInt(10));
-        }
-        array[3] = combined;
-
-        return array;
-    }
-
-    // Unit 5A CUSTOM
-    @GetMapping("/frqCustomAPIUnit5AAkshay")
-    @ResponseBody
-    public String[] getFrqCustomAPIUnit5AAkshay(@RequestParam(name = "hostname", required = false, defaultValue = "John") String hostName,
-                                                @RequestParam(name = "address", required = false, defaultValue = "16601 Nighthawk Ln, San Diego, CA 92127") String address,
-                                                @RequestParam(name = "invitee", required = false, defaultValue = "Akshay") String invitee) throws IOException {
-
-        String[] array = new String[3];
-
-        // getHostName
-        array[0] = hostName;
-
-        // setAddress
-        array[1] = address;
-
-        String inviteString = "Dear " + invitee + ", please attend my event at " + address + ". See you then, " + hostName + ".";
-        array[2] = inviteString;
-
-        return array;
-    }
-
-    // Unit 5B CUSTOM
-    @GetMapping("/frqCustomAPIUnit5BAkshay")
-    @ResponseBody
-    public String[] getFrqCustomAPIUnit5BAkshay(@RequestParam(name = "prefix", required = false, defaultValue = "chs") String prefix,
-                                                @RequestParam(name = "num", required = false, defaultValue = "4") int numRandDigits) throws IOException {
-
-        String[] array = new String[2];
-
-        ArrayList<String> passwords = new ArrayList<String>();
-
-        // pwGen
-        String numberString = "";
-        for(int i = 0; i < numRandDigits; i++) {
-            Random random = new Random();
-            int value = random.nextInt(9);
-            String strValue = String.format("%d", value);
-            numberString = numberString + strValue;
-        }
-        String password = prefix + "." + numberString;
-        array[0] = password;
-        passwords.add(password);
-        System.out.println(password);
-
-        // pwCount
-        array[1] = String.valueOf(passwords.size());
-
-        return array;
-    }
-
     // About Pages
 
     // Nolan Platt
@@ -972,46 +672,10 @@ public class MainController<array> {
         return "CRubin";
     }
 
-    //Unit 3
-    @GetMapping("/individual/CRubin/ChrisUnit3")
-    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
-    public String getCRubinUnit3() {
-        return "ChrisTPT/chrisunit3";
-    }
-
     // Unit 4a
-    @GetMapping("/individual/CRubin/ChrisUnit4a")
+    @GetMapping("/individual/CRubin/ChrisCB")
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
-    public String getCRubinUnit4a() {
-        return "ChrisTPT/chrisunit4a";
-    }
-
-    // Unit 5a
-    @GetMapping("/individual/CRubin/ChrisUnit5a")
-    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
-    public String getCRubinUnit5a() {
-        return "ChrisTPT/chrisunit5a";
-    }
-
-    // Unit 5b
-    @GetMapping("/individual/CRubin/ChrisUnit5b")
-    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
-    public String getCRubinUnit5b() {
-        return "ChrisTPT/chrisunit5b";
-    }
-
-    //Unit 6a
-    @GetMapping("/individual/CRubin/ChrisUnit6a")
-    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
-    public String getCRubinUnit6a() {
-        return "ChrisTPT/chrisunit6a";
-    }
-
-
-    //Unit 6b
-    @GetMapping("/individual/CRubin/ChrisUnit6b")
-    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
-    public String getCRubinUnit6b() {
-        return "ChrisTPT/chrisunit6b";
+    public String getCRubinCB() {
+        return "ChrisTPT/chrisCB";
     }
 }

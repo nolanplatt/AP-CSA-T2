@@ -5,7 +5,9 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
 <head>
     <title>...</title>
-    <link th:href="@{/styles/styles.css}" rel="stylesheet" /></head>
+    <link th:href="@{/styles/styles.css}" rel="stylesheet" />
+</head>
+
 <!-- Begin navigation fragments -->
 <nav class="cnav navbar navbar-expand" th:fragment="header">
     <a class="navbar-brand" href="/">
@@ -21,7 +23,8 @@
             <li class="nav-item">
                 <a class="nav-link" th:href="@{/register}">register</a>
             </li>
-            <li class ></li>            <li class="nav-item dropdown">
+            <li class ></li>
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown6" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     about
                 </a>
@@ -91,5 +94,4 @@
         // End Clock Control
     </script>
 </nav>
-</body>
 </html>
