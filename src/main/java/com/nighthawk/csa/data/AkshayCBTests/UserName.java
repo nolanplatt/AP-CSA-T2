@@ -7,14 +7,11 @@ public class UserName {
     String[] used = {"harta", "hartm", "harty"};
     ArrayList<String> possibleNames = new ArrayList<String>();
 
-
-
     public UserName(String firstName, String lastName) {
         String uname = lastName;
         for(int i = 0; i < firstName.length(); i++) {
             uname = uname + firstName.charAt(i);
             System.out.println(uname);
-            assert false;
             possibleNames.add(uname);
         }
         System.out.println(possibleNames);
