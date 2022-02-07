@@ -17,6 +17,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
 public class MainController<array> {
@@ -515,6 +516,116 @@ public class MainController<array> {
 
         model.addAttribute("lii", lii);
         return "starters/image";
+    }
+
+    // Unit 2 CUSTOM Nolan Platt
+    // Unit 3 CUSTOM
+    @GetMapping("/frqCustomAPIUnit3Nolan")
+    @ResponseBody
+    public String[] getFrqCustomAPIUnit3Nolan(@RequestParam(name = "rsvp", required = false, defaultValue = "true") boolean rsvp,
+                                              @RequestParam(name = "selection", required = false, defaultValue = "1") int selection,
+                                              @RequestParam(name = "option1", required = false, defaultValue = "foo") String option1,
+                                              @RequestParam(name = "option2", required = false, defaultValue = "bar") String option2) throws IOException {
+
+
+        String[] array = new String[5];
+        // A
+        if (rsvp) {
+            array[0] = "PART A: Attending";
+        } else if (!rsvp) {
+            array[0] = "PART A: Not attending";
+        }
+
+        // B
+        String foodItem = "";
+        String[] possibleFoods = {"Beef", "Chicken.", "Pasta.", "Fish."};
+        int ind = selection--;
+        if (ind > 3) {
+            ind = 3;
+        }
+        foodItem = possibleFoods[ind];
+        array[1] = "PART B: " + foodItem;
+
+        // C
+        boolean bool = true;
+        String newFoodItem = "";
+        String sentence;
+        if (bool) {
+            String[] newPossibleFoods = {"Beef", "Chicken.", "Pasta.", "Fish."};
+            sentence = "Thanks for attending. You will be served ";
+            int newInd = selection--;
+            if (newInd > 3) {
+                newInd = 3;
+            }
+            newFoodItem = newPossibleFoods[newInd];
+            array[2] = "PART C: " + newFoodItem;
+        } else if (!bool) {
+            sentence = "Sorry you can't make it.";
+            array[2] = "PART C: " + sentence;
+        }
+
+        // D
+        boolean check = option1.equals(option2);
+        array[3] = "PART D: " + Boolean.toString(check);
+
+        return array;
+    }
+
+    @GetMapping("/frqCustomAPIUnit2Nolan")
+    @ResponseBody
+    public String[] getFrqCustomAPIUnit2Nolan(@RequestParam(name = "initial", required = false, defaultValue = "0101 0101 0101") String initial,
+                                              @RequestParam(name = "changed", required = false, defaultValue = "0011 0011 0011") String changed,
+                                              @RequestParam(name = "inserted", required = false, defaultValue = "1111 1111") String inserted,
+                                              @RequestParam(name = "aVal", required = false, defaultValue = "3") int aVal,
+                                              @RequestParam(name = "bVal", required = false, defaultValue = "3") int bVal) throws IOException {
+
+
+        String[] array = new String[3];
+        //A
+        LightSequence gradShow = new LightSequence(initial);
+        //B
+        gradShow.display();
+        //C
+        gradShow.changeSequence(changed);
+        //D
+        String resultSeq = gradShow.insertSegment(inserted, 4);
+        array[0] = "Result Sequence: " + resultSeq;
+        //E
+        String segment = "11";
+        String oldSeq = "1100000111000";
+        int newIndex = oldSeq.indexOf(segment);
+        String newSeq = oldSeq.substring(0, newIndex);
+        newSeq += oldSeq.substring(newIndex + segment.length());
+        array[1] = "New Sequence: " + newSeq;
+        //F
+        array[2] = "Distance Sqrt Result: " + String.valueOf((Math.sqrt(aVal * aVal + bVal * bVal)));
+        return array;
+    }
+
+    // Unit 5 CUSTOM
+    @GetMapping("/frqCustomAPIUnit5Nolan")
+    @ResponseBody
+    public String[] getfrqCustomAPIUnit5Nolan(@RequestParam(name = "hostname", required = false, defaultValue = "HN") String hostName,
+                                              @RequestParam(name = "address", required = false, defaultValue = "123 John Mortensen Boulevard") String address,
+                                              @RequestParam(name = "invitee", required = false, defaultValue = "Nolan") String invitee,
+                                              @RequestParam(name = "prefix", required = false, defaultValue = "PREFIX") String prefix,
+                                              @RequestParam(name = "amount", required = false, defaultValue = "1") int amount) throws IOException {
+
+        String[] array = new String[6];
+
+        // Question 1
+        array[0] = hostName;
+        array[1] = address;
+        array[2] = "Dear " + invitee + ", please attend my event at " + address + ". See you then, " + hostName + ".";;
+        // Question 2
+        String combined = "";
+        Random r = new Random();
+        for (int i = 0; i < amount; i++) {
+            combined += (prefix + "." +  r.nextInt(10));
+        }
+        array[3] = combined;
+
+        return array;
     }
 
     @GetMapping("/grayscale")
