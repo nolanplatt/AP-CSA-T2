@@ -114,6 +114,9 @@
       <a href="#unit5FRQ">Item #6: Unit 5 FRQ</a>
       <a href="#unit6FRQ">Item #7: Unit 6 FRQ</a>
       <a href="#unit7FRQ">Item #8: Unit 7 FRQ</a>
+      <a href="#unit8FRQ">Item #9: Unit 8 FRQ</a>
+      <a href="#unit9FRQ">Item #10: Unit 9 FRQ</a>
+      <a href="#unit10FRQ">Item #11: Unit 10 FRQ</a>
 
     </div>
 
@@ -234,9 +237,43 @@
             <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
             <code><p id="frqCodeOutputUnit7"></p></code>
           </div>
-
-
   </div>
+
+    <div id="unit8FRQ" class="row justify-content-center lab-container">
+      <h4><strong>Item #9: Unit 8 FRQ</strong></h4><br>
+
+      <div class="code">
+        <code><p id="frqResultUnit8"></p></code>
+      </div>
+      <div class="output">
+        <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+        <code><p id="frqCodeOutputUnit8"></p></code>
+      </div>
+    </div>
+
+    <div id="unit9FRQ" class="row justify-content-center lab-container">
+      <h4><strong>Item #10: Unit 9 FRQ</strong></h4><br>
+
+      <div class="code">
+        <code><p id="frqResultUnit9"></p></code>
+      </div>
+      <div class="output">
+        <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+        <code><p id="frqCodeOutputUnit9"></p></code>
+      </div>
+    </div>
+
+    <div id="unit10FRQ" class="row justify-content-center lab-container">
+      <h4><strong>Item #11: Unit 10 FRQ</strong></h4><br>
+
+      <div class="code">
+        <code><p id="frqResultUnit10"></p></code>
+      </div>
+      <div class="output">
+        <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+        <code><p id="frqCodeOutputUnit10"></p></code>
+      </div>
+    </div>
 
 
 </body>
@@ -390,6 +427,50 @@
             document.getElementById("frqResultUnit7").innerText = resp.data[i];
           } else {
             document.getElementById("frqCodeOutputUnit7").innerText = "Possible: Nolan, John, Ryan, Joe" + "\n" + "Used: Ryan" + "\n" + "Removed: Nolan, John, Joe"
+          }
+        }
+      })
+
+      // Unit 8
+      axios({
+        method: "GET",
+        url: "/frqAPI?name=NPlatt&frqUnit=8"
+      }).then(resp => {
+        for (let i = 0; i < resp.data.length; i++) {
+          if(i == 0) {
+            document.getElementById("frqResultUnit8").innerText = resp.data[i];
+          }
+        }
+      })
+      // Unit 9
+      axios({
+        method: "GET",
+        url: "/frqAPI?name=NPlatt&frqUnit=9"
+      }).then(resp => {
+        console.log(resp.data);
+        for (let i = 0; i < resp.data.length; i++) {
+          if(i == 0) {
+            document.getElementById("frqResultUnit9").innerText = resp.data[i];
+          } else {
+            document.getElementById("frqCodeOutputUnit9").innerText = "1a: Peter and Wendy, written by J.M. Barrie and illustrated by F.D. Bedford\n" +
+                    "1c: Frankenstein, written by Mary Shelley, $10.99\n2a: Lisa the lion is a carnivore\n2b: Gary the giraffe is a\n" +
+                    "herbivore\n2c: Percy the elephant is a\n" +
+                    "herbivore with tusks 2.0 meters long"
+          }
+        }
+      })
+
+      // Unit 10
+      axios({
+        method: "GET",
+        url: "/frqAPI?name=NPlatt&frqUnit=10"
+      }).then(resp => {
+        console.log(resp.data);
+        for (let i = 0; i < resp.data.length; i++) {
+          if(i == 0) {
+            document.getElementById("frqResultUnit10").innerText = resp.data[i];
+          } else {
+            document.getElementById("frqCodeOutputUnit10").innerText = "A: GCF(3, 1) = 3\n B: reduceFraction(24, 9) = 8/3"
           }
         }
       })
