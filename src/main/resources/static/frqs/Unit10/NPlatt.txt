@@ -1,0 +1,29 @@
+// Nolan Platt | AP Computer Science A | Unit 10 FRQ
+
+
+//a)
+/** Precondition: a and b are positive integers.
+* Returns the greatest common factor of a and b, as described in part (a).
+*/
+public static int gcf(int a, int b) {
+if((a % b) == 0) {
+return b;
+} else if ((a % b) != 0) {
+return gcf(b, a%b);
+}
+}
+
+//b)
+/** Precondition: numerator and denominator are positive integers.
+* Reduces the fraction numerator / denominator
+* and prints the result, as described in part (b).
+*/ 
+ public static void reduceFraction(int numerator, int denominator) {
+        int simpleNumerator = numerator / gcf(numerator, denominator);
+        int simpleDenominator = denominator / gcf(numerator, denominator);
+        if (denominator == 1) {
+            System.out.println(numerator + "/" + denominator + " reduces to " + simpleNumerator);
+        } else {
+            System.out.println(numerator + "/" + denominator + " reduces to " + simpleNumerator + "/" + simpleDenominator);
+        }
+    }
