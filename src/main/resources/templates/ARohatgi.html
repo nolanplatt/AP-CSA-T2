@@ -280,6 +280,58 @@
         </div>
       </div>
 
+      <div id="unit8FRQ" class="row justify-content-center lab-container">
+        <h4><strong>Item #12: Unit 8 FRQ</strong></h4><br>
+
+        <div class="code">
+          <code><p id="frqResultUnit8"></p></code>
+        </div>
+
+        <div class="output">
+          <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+          <code><p id="frqCodeOutputUnit8"></p></code>
+        </div>
+      </div>
+
+      <div id="unit9AFRQ" class="row justify-content-center lab-container">
+        <h4><strong>Item #13: Unit 9 FRQ Question 1</strong></h4><br>
+
+        <div class="code">
+          <code><p id="frqResultUnit9A"></p></code>
+        </div>
+
+        <div class="output">
+          <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+          <code><p id="frqCodeOutputUnit9A"></p></code>
+        </div>
+      </div>
+
+      <div id="unit9BFRQ" class="row justify-content-center lab-container">
+        <h4><strong>Item #14: Unit 9 FRQ Question 2</strong></h4><br>
+
+        <div class="code">
+          <code><p id="frqResultUnit9B"></p></code>
+        </div>
+
+        <div class="output">
+          <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+          <code><p id="frqCodeOutputUnit9B"></p></code>
+        </div>
+      </div>
+
+      <div id="unit10FRQ" class="row justify-content-center lab-container">
+        <h4><strong>Item #14: Unit 10 FRQ</strong></h4><br>
+
+        <div class="code">
+          <code><p id="frqResultUnit10"></p></code>
+        </div>
+
+        <div class="output">
+          <p><strong>OUTPUT FROM JAVA FRQ CODE</strong></p>
+          <code><p id="frqCodeOutputUnit10"></p></code>
+        </div>
+      </div>
+      
   </div>
 
 
@@ -511,6 +563,58 @@
         for (let i = 0; i < resp.data.length; i++) {
           if(i == 0) {
             document.getElementById("frqResultUnit7").innerText = resp.data[i];
+          } else {
+          }
+        }
+      })
+
+      axios({
+        method: "GET",
+        url: "/frqAPI?name=ARohatgi&frqUnit=8"
+      }).then(resp => {
+        console.log(resp.data);
+        for (let i = 0; i < resp.data.length; i++) {
+          if(i == 0) {
+            document.getElementById("frqResultUnit8").innerText = resp.data[i];
+          } else {
+          }
+        }
+      })
+
+      axios({
+        method: "GET",
+        url: "/frqAPI?name=ARohatgi&frqUnit=90"
+      }).then(resp => {
+        console.log(resp.data);
+        for (let i = 0; i < resp.data.length; i++) {
+          if(i == 0) {
+            document.getElementById("frqResultUnit9A").innerText = resp.data[i];
+          } else {
+          }
+        }
+      })
+
+      axios({
+        method: "GET",
+        url: "/frqAPI?name=ARohatgi&frqUnit=91"
+      }).then(resp => {
+        console.log(resp.data);
+        for (let i = 0; i < resp.data.length; i++) {
+          if(i == 0) {
+            document.getElementById("frqResultUnit9B").innerText = resp.data[i];
+          } else {
+          }
+        }
+      })
+
+      axios({
+        method: "GET",
+        url: "/frqAPI?name=ARohatgi&frqUnit=10"
+      }).then(resp => {
+        console.log(resp.data);
+        for (let i = 0; i < resp.data.length; i++) {
+          if(i == 0) {
+            document.getElementById("frqResultUnit10").innerText = resp.data[i];
           } else {
           }
         }
