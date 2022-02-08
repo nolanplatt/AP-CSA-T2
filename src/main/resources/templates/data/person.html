@@ -21,7 +21,7 @@
     <div class="container">
 
         <div class="row justify-content-md-center" style="margin-top:7%;">
-            <h1>SQL Person List</h1>
+            <h1>Sports Recruitment Database</h1>
         </div>
         <div class="row justify-content-md-center">
             <a th:href="@{/data/personcreate/}">Create Person</a>
@@ -32,10 +32,13 @@
             <tr>
                 <th>ID</th>
                 <th>EMail</th>
-                <th>Person</th>
+                <th>Phone Number</th>
+                <th>Name</th>
                 <th>Sport</th>
                 <th>Image</th>
                 <th>Age</th>
+                <th>Experience(Years)</th>
+                <th>Recruited Status</th>
                 <th>Action</th>
             </tr>
             </thead>
@@ -43,11 +46,15 @@
             <tr th:each="person : ${list}">
                 <td th:text="${person.id}">Person ID</td>
                 <td th:text="${person.email}">Birth Date</td>
+                <td th:text="${person.phonenumber}"> Phone Number</td>
                 <td th:text="${person.name}">Name</td>
                 <td th:text="${person.sport}">Sport</td>
                 <td><img th:src="@{${person.image}}" style="width:50px;height:50px;" class="face" alt="Dane"></td>
                 <td th:if="${person.getAge() != -1}" th:text="${person.getAge()}">Age</td>
                 <td th:unless="${person.getAge() != -1}" th:text="Unknown">Unknown Age</td>
+                <td th:text="${person.experience}">Experience(Years)</td>
+                <td th:text="${person.recruited}">Recruited?</td>
+
                 <td>
                     <a th:href="@{/data/personupdate/{id}(id = ${person.id})}">Update</a>
                     <a th:href="@{/data/persondelete/{id}(id = ${person.id})}">Delete</a>

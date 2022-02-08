@@ -37,6 +37,19 @@ public class Person {
     @NonNull: Places this in @RequiredArgsConstructor
     @Size(min=2, max=30): Allows names between 2 and 30 characters long.
      */
+
+    @NonNull
+    @Size(min = 7, max = 11, message = "Phone Number (7 chars)")
+    private String phonenumber;
+
+    @NonNull
+    @Size(min = 1, max = 2, message = "Experience (1 to 2 chars)")
+    private String experience;
+
+    @NonNull
+    @Size(min = 2, max = 3, message = "Recruited")
+    private String recruited;
+
     @NonNull
     @Size(min = 2, max = 30, message = "Name (2 to 30 chars)")
     private String name;
@@ -53,8 +66,11 @@ public class Person {
     private Date dob;
 
     /* Initializer used when setting data from an API */
-    public Person(String email, String name, String sport, String image, Date dob) {
+    public Person(String email, String phonenumber, String experience, String recruited,String name, String sport, String image, Date dob) {
         this.email = email;
+        this.phonenumber = phonenumber;
+        this.experience = experience;
+        this.recruited = recruited;
         this.name = name;
         this.sport = sport;
         this.image = image;
