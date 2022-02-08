@@ -9,8 +9,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script>
+        function hiJS() {
+            document.getElementById("timer").innerHTML = "hi";
+        }
+        function byeJS() {
+            document.getElementById("timer").innerHTML = "bye";
+        }
+    </script>
 </head>
 <body>
+    <div layout:fragment="content" th:remove="tag">
+        <div class="contact" style="min-height: 100vh;">
 
+            <!--Start of body-->
+            <div class="container p-3 my-3 bg-dark text-black rounded">
+                <p id="timer">...</p>
+                <br>
+                <button class="btn btn-info" onclick=hiJS();>
+                    hi
+                </button>
+                <br>
+                <button class="btn btn-info" onclick=byeJS();>
+                    bye
+                </button>
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>
