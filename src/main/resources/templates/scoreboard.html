@@ -16,6 +16,9 @@
         function byeJS() {
             document.getElementById("timer").innerHTML = "bye";
         }
+        function setTimer() {
+            document.getElementById("timer").innerHTML = "00:00";
+        }
     </script>
 </head>
 <body>
@@ -24,15 +27,54 @@
 
             <!--Start of body-->
             <div class="container p-3 my-3 bg-dark text-black rounded">
-                <p id="timer">...</p>
-                <br>
-                <button class="btn btn-info" onclick=hiJS();>
-                    hi
-                </button>
-                <br>
-                <button class="btn btn-info" onclick=byeJS();>
-                    bye
-                </button>
+                <div class="row p-3 my-3 bg-black text-light rounded">
+                    <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
+                        <p id="home_score">...</p>
+                    </div>
+
+                    <div class="col-1"></div>
+
+                    <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
+                        <p id="timer">...</p>
+                    </div>
+
+                    <div class="col-1"></div>
+
+                    <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
+                        <p id="guest_score">...</p>
+                    </div>
+
+                    <div class="col-1"></div>
+
+                    <div class="col-12"><br></div>
+                    <div class="col-12"><br></div>
+                    <div class="col-12"><br></div>
+
+                    <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
+                        <p>Nothing here</p>
+                    </div>
+
+                    <div class="col-1"></div>
+
+                    <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
+                        <button class="btn btn-info" onclick=hiJS();>
+                            hi
+                        </button>
+                        <br>
+                        <button class="btn btn-info" onclick=byeJS();>
+                            bye
+                        </button>
+                    </div>
+
+                    <div class="col-1"></div>
+
+                    <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
+                        <p>Nothing here</p>
+                    </div>
+
+                    <div class="col-1"></div>
+
+                </div>
             </div>
 
         </div>
