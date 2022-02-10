@@ -10,14 +10,18 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
-        function hiJS() {
-            document.getElementById("timer").innerHTML = "hi";
-        }
-        function byeJS() {
-            document.getElementById("timer").innerHTML = "bye";
-        }
+        let minutes = 0;
+        let seconds = 0;
+
         function setTimer() {
-            document.getElementById("timer").innerHTML = "00:00";
+            const minutes_temp = document.getElementById("minutes_html").value;
+            const seconds_temp = document.getElementById("seconds_html").value;
+
+            // The numbers only work if I divide by 1. Don't ask why. I don't know.
+            minutes = minutes_temp / 1;
+            seconds = seconds_temp / 1;
+
+            document.getElementById("timer").innerHTML = minutes + ":" + seconds;
         }
     </script>
 </head>
@@ -57,12 +61,12 @@
                     <div class="col-1"></div>
 
                     <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
-                        <button class="btn btn-info" onclick=hiJS();>
-                            hi
-                        </button>
-                        <br>
-                        <button class="btn btn-info" onclick=byeJS();>
-                            bye
+                        <label>Enter Minutes:</label>
+                        <input id="minutes_html" placeholder="99"><br>
+                        <label>Enter Seconds:</label>
+                        <input id="seconds_html" placeholder="99"><br>
+                        <button class="btn btn-warning" onclick=setTimer();>
+                            Set Timer
                         </button>
                     </div>
 
