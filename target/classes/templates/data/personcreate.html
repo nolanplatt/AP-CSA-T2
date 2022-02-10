@@ -53,6 +53,11 @@
                             <small th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</small>
                         </div>
                         <div class="input-group mb-2 mr-sm-2">
+                            <label for="name">Phone Number:</label>
+                            <input type="text" th:field="*{phonenumber}" id="phonenumber">
+                            <small th:if="${#fields.hasErrors('phonenumber')}" th:errors="*{phonenumber}">Phone Number Error</small>
+                        </div>
+                        <div class="input-group mb-2 mr-sm-2">
                             <label for="sport">Sport:</label>
                             <input type="text" th:field="*{sport}" id="sport">
                             <small th:if="${#fields.hasErrors('sport')}" th:errors="*{sport}">Sport Error</small>
@@ -66,6 +71,16 @@
                             <label for="dob">Birth Date:</label>
                             <input type="date" th:field="*{dob}" id="dob">
                             <small th:if="${#fields.hasErrors('dob')}" th:errors="*{dob}">Birth Date Error</small>
+                        </div>
+                        <div class="input-group mb-2 mr-sm-2">
+                            <label for="experience">Experience(years):</label>
+                            <input type="text" th:field="*{experience}" id="experience">
+                            <small th:if="${#fields.hasErrors('experience')}" th:errors="*{experience}">Experience Error</small>
+                        </div>
+                        <div class="input-group mb-2 mr-sm-2">
+                            <label for="recruited">Recruited(yes or no):</label>
+                            <input type="text" th:field="*{recruited}" id="recruited">
+                            <small th:if="${#fields.hasErrors('recruited')}" th:errors="*{recruited}">Recruited Error</small>
                         </div>
                         <button type="submit" class="btn btn-primary">Add</button>
                     </form>
