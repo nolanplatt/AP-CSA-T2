@@ -30,7 +30,7 @@ public class QuizController {
     @GetMapping("/quiz")
     public String greeting(@RequestParam(name= "UserInput", required=false, defaultValue="...") String UserInputJava, Model model) {
 
-        final int numberOfQuestions = 4;
+        final int numberOfQuestions = 6;
 
         if (questionId == 0) {
             model.addAttribute("question", "To get started, press enter.");
@@ -54,8 +54,8 @@ public class QuizController {
         }
 
         else if (questionId == 2) {
-            model.addAttribute("question", "Please type 2");
-            if (UserInputJava.equals("2")) {
+            model.addAttribute("question", "What is the normal BMI for an adult?");
+            if (UserInputJava.equals("18.5 to 24.9")) {
                 model.addAttribute("output", "Correct! Press enter to continue.");
                 // Chooses a random questionId, but if they choose the same question, reselect the questionId.
                 do {
@@ -69,8 +69,8 @@ public class QuizController {
         }
 
         else if (questionId == 3) {
-            model.addAttribute("question", "Please type 3");
-            if (UserInputJava.equals("3")) {
+            model.addAttribute("question", "What does BMI stand for?");
+            if (UserInputJava.equals("Body Mass Index")) {
                 model.addAttribute("output", "Correct! Press enter to continue.");
                 // Chooses a random questionId, but if they choose the same question, reselect the questionId.
                 do {
@@ -84,8 +84,8 @@ public class QuizController {
         }
 
         else if (questionId == 4) {
-            model.addAttribute("question", "Please type 4");
-            if (UserInputJava.equals("4")) {
+            model.addAttribute("question", "What BMI range is considered overweight");
+            if (UserInputJava.equals("25 to 29.9")) {
                 model.addAttribute("output", "Correct! Press enter to continue.");
                 // Chooses a random questionId, but if they choose the same question, reselect the questionId.
                 do {
@@ -93,6 +93,37 @@ public class QuizController {
                 }
                 while (questionId == 4);
             }
+            else {
+                model.addAttribute("output", "Wrong!");
+            }
+        }
+
+        else if (questionId == 5) {
+            model.addAttribute("question", "What BMI range is considered obese");
+            if (UserInputJava.equals("30 to 39.9")) {
+                model.addAttribute("output", "Correct! Press enter to continue.");
+                // Chooses a random questionId, but if they choose the same question, reselect the questionId.
+                do {
+                    questionId = (int) (Math.floor(Math.random() * numberOfQuestions) + 1);
+                }
+                while (questionId == 5);
+            }
+            else {
+                model.addAttribute("output", "Wrong!");
+            }
+        }
+
+        else if (questionId == 6) {
+            model.addAttribute("question", "What converts food into energy?");
+            if (UserInputJava.equals("cellular respiration") || UserInputJava.equals("metabolism")) {
+                model.addAttribute("output", "Correct! Press enter to continue.");
+                // Chooses a random questionId, but if they choose the same question, reselect the questionId.
+                do {
+                    questionId = (int) (Math.floor(Math.random() * numberOfQuestions) + 1);
+                }
+                while (questionId == 6);
+            }
+
             else {
                 model.addAttribute("output", "Wrong!");
             }
