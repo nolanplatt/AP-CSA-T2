@@ -49,6 +49,27 @@
             }
         }
     </script>
+    <script>
+        let homeScore = 0;
+        function addHome() {
+            homeScore += 1;
+            document.getElementById("home_score").innerHTML = homeScore;
+        }
+        function resetHome() {
+            homeScore = 0;
+            document.getElementById("home_score").innerHTML = homeScore;
+        }
+
+        let guestScore = 0;
+        function addGuest() {
+            guestScore += 1;
+            document.getElementById("guest_score").innerHTML = guestScore;
+        }
+        function resetGuest() {
+            guestScore = 0;
+            document.getElementById("guest_score").innerHTML = guestScore;
+        }
+    </script>
 </head>
 <body>
     <div layout:fragment="content" th:remove="tag">
@@ -58,19 +79,19 @@
             <div class="container p-3 my-3 bg-dark text-black rounded">
                 <div class="row p-3 my-3 bg-black text-light rounded">
                     <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
-                        <p id="home_score">...</p>
+                        <p id="home_score">0</p>
                     </div>
 
                     <div class="col-1"></div>
 
                     <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
-                        <p id="timer">...</p>
+                        <p id="timer">00:00</p>
                     </div>
 
                     <div class="col-1"></div>
 
                     <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
-                        <p id="guest_score">...</p>
+                        <p id="guest_score">0</p>
                     </div>
 
                     <div class="col-1"></div>
@@ -80,7 +101,12 @@
                     <div class="col-12"><br></div>
 
                     <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
-                        <p>Nothing here</p>
+                        <button class="btn btn-primary" onclick=addHome();>
+                            Add Home
+                        </button>
+                        <button class="btn btn-success" onclick=resetHome();>
+                            Reset Home
+                        </button>
                     </div>
 
                     <div class="col-1"></div>
@@ -98,7 +124,12 @@
                     <div class="col-1"></div>
 
                     <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
-                        <p>Nothing here</p>
+                        <button class="btn btn-danger" onclick=addGuest();>
+                            Add Guest
+                        </button>
+                        <button class="btn btn-secondary" onclick=resetGuest();>
+                            Reset Guest
+                        </button>
                     </div>
 
                     <div class="col-1"></div>
