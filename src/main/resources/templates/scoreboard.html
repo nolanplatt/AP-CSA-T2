@@ -10,8 +10,12 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
+        let countdown;
+
         let minutes = 0;
         let seconds = 0;
+
+        let timerRunning = false;
 
         function setTimer() {
             const minutes_temp = document.getElementById("minutes_html").value;
@@ -21,7 +25,28 @@
             minutes = minutes_temp / 1;
             seconds = seconds_temp / 1;
 
+            // Send time values back to "timer" HTML element.
             document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+
+            // If the timer is not running, run one instance of the timer. Otherwise, don't make a new one.
+            if (timerRunning == false) {
+                timerRunning = true;
+                // Timer Instance
+                countdown = setInterval(function () {
+                    // Reduces seconds by 1 every second. If it drops below 0, reduce minutes by 1.
+                    seconds -= 1;
+                    if (seconds < 0) {
+                        seconds = 59;
+                        minutes -= 1;
+                    }
+                    if (minutes < 0) {
+                        seconds = 0;
+                        minutes = 0;
+                    }
+                    // Send time values back to "timer" HTML element.
+                    document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+                }, 1000);
+            }
         }
     </script>
 </head>
@@ -62,9 +87,9 @@
 
                     <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
                         <label>Enter Minutes:</label>
-                        <input id="minutes_html" placeholder="99"><br>
+                        <input id="minutes_html" placeholder="59"><br>
                         <label>Enter Seconds:</label>
-                        <input id="seconds_html" placeholder="99"><br>
+                        <input id="seconds_html" placeholder="59"><br>
                         <button class="btn btn-warning" onclick=setTimer();>
                             Set Timer
                         </button>
