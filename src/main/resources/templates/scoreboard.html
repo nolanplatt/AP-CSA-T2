@@ -10,8 +10,12 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
+        let countdown;
+
         let minutes = 0;
         let seconds = 0;
+
+        let timerRunning = false;
 
         function setTimer() {
             const minutes_temp = document.getElementById("minutes_html").value;
@@ -21,7 +25,49 @@
             minutes = minutes_temp / 1;
             seconds = seconds_temp / 1;
 
+            // Send time values back to "timer" HTML element.
             document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+
+            // If the timer is not running, run one instance of the timer. Otherwise, don't make a new one.
+            if (timerRunning == false) {
+                timerRunning = true;
+                // Timer Instance
+                countdown = setInterval(function () {
+                    // Reduces seconds by 1 every second. If it drops below 0, reduce minutes by 1.
+                    seconds -= 1;
+                    if (seconds < 0) {
+                        seconds = 59;
+                        minutes -= 1;
+                    }
+                    if (minutes < 0) {
+                        seconds = 0;
+                        minutes = 0;
+                    }
+                    // Send time values back to "timer" HTML element.
+                    document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+                }, 1000);
+            }
+        }
+    </script>
+    <script>
+        let homeScore = 0;
+        function addHome() {
+            homeScore += 1;
+            document.getElementById("home_score").innerHTML = homeScore;
+        }
+        function resetHome() {
+            homeScore = 0;
+            document.getElementById("home_score").innerHTML = homeScore;
+        }
+
+        let guestScore = 0;
+        function addGuest() {
+            guestScore += 1;
+            document.getElementById("guest_score").innerHTML = guestScore;
+        }
+        function resetGuest() {
+            guestScore = 0;
+            document.getElementById("guest_score").innerHTML = guestScore;
         }
     </script>
 </head>
@@ -33,19 +79,19 @@
             <div class="container p-3 my-3 bg-dark text-black rounded">
                 <div class="row p-3 my-3 bg-black text-light rounded">
                     <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
-                        <p id="home_score">...</p>
+                        <p id="home_score">0</p>
                     </div>
 
                     <div class="col-1"></div>
 
                     <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
-                        <p id="timer">...</p>
+                        <p id="timer">00:00</p>
                     </div>
 
                     <div class="col-1"></div>
 
                     <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
-                        <p id="guest_score">...</p>
+                        <p id="guest_score">0</p>
                     </div>
 
                     <div class="col-1"></div>
@@ -55,16 +101,21 @@
                     <div class="col-12"><br></div>
 
                     <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
-                        <p>Nothing here</p>
+                        <button class="btn btn-primary" onclick=addHome();>
+                            Add Home
+                        </button>
+                        <button class="btn btn-success" onclick=resetHome();>
+                            Reset Home
+                        </button>
                     </div>
 
                     <div class="col-1"></div>
 
                     <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
                         <label>Enter Minutes:</label>
-                        <input id="minutes_html" placeholder="99"><br>
+                        <input id="minutes_html" placeholder="59"><br>
                         <label>Enter Seconds:</label>
-                        <input id="seconds_html" placeholder="99"><br>
+                        <input id="seconds_html" placeholder="59"><br>
                         <button class="btn btn-warning" onclick=setTimer();>
                             Set Timer
                         </button>
@@ -73,7 +124,12 @@
                     <div class="col-1"></div>
 
                     <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
-                        <p>Nothing here</p>
+                        <button class="btn btn-danger" onclick=addGuest();>
+                            Add Guest
+                        </button>
+                        <button class="btn btn-secondary" onclick=resetGuest();>
+                            Reset Guest
+                        </button>
                     </div>
 
                     <div class="col-1"></div>
