@@ -1,4 +1,4 @@
-package com.nighthawk.csa;
+package com.nighthawk.csa.QuizMVC;
 /*
 This project was made by altering "Greet" from the spring_portfolio
 I changed variables to make them stand out and be more meaningful, instead of everything being called 'name'
