@@ -24,9 +24,26 @@
             // The numbers only work if I divide by 1. Don't ask why. I don't know.
             minutes = minutes_temp / 1;
             seconds = seconds_temp / 1;
+            // Make sure seconds don't overflow.
+            while (seconds >= 60) {
+                seconds -= 60;
+                minutes += 1;
+            }
 
             // Send time values back to "timer" HTML element.
-            document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+            // If minutes or seconds are single digits, add a leading zero.
+            if (seconds < 10 && minutes < 10) {
+                document.getElementById("timer").innerHTML = "0" + minutes + ":" + "0" + seconds;
+            }
+            else if (seconds < 10) {
+                document.getElementById("timer").innerHTML = minutes + ":" + "0" + seconds;
+            }
+            else if (minutes < 10) {
+                document.getElementById("timer").innerHTML = "0" + minutes + ":" + seconds;
+            }
+            else {
+                document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+            }
 
             // If the timer is not running, run one instance of the timer. Otherwise, don't make a new one.
             if (timerRunning == false) {
@@ -43,8 +60,22 @@
                         seconds = 0;
                         minutes = 0;
                     }
+
                     // Send time values back to "timer" HTML element.
-                    document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+                    // If minutes or seconds are single digits, add a leading zero.
+                    if (seconds < 10 && minutes < 10) {
+                        document.getElementById("timer").innerHTML = "0" + minutes + ":" + "0" + seconds;
+                    }
+                    else if (seconds < 10) {
+                        document.getElementById("timer").innerHTML = minutes + ":" + "0" + seconds;
+                    }
+                    else if (minutes < 10) {
+                        document.getElementById("timer").innerHTML = "0" + minutes + ":" + seconds;
+                    }
+                    else {
+                        document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+                    }
+
                 }, 1000);
             }
         }
@@ -79,19 +110,19 @@
             <div class="container p-3 my-3 bg-dark text-black rounded">
                 <div class="row p-3 my-3 bg-black text-light rounded">
                     <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
-                        <p id="home_score">0</p>
+                        <p id="home_score" style="font-size:50px">0</p>
                     </div>
 
                     <div class="col-1"></div>
 
                     <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
-                        <p id="timer">00:00</p>
+                        <p id="timer" style="font-size:60px">00:00</p>
                     </div>
 
                     <div class="col-1"></div>
 
                     <div class="col-3 my-3 bg-light text-dark rounded" style="text-align: center" >
-                        <p id="guest_score">0</p>
+                        <p id="guest_score" style="font-size:50px">0</p>
                     </div>
 
                     <div class="col-1"></div>
