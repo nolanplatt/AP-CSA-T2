@@ -1,7 +1,7 @@
 <h1>Team Rubber Chicken 🐔🐣</h1>
 
 <h2>Nighthawk Recruiting: Project Rundown</h2>
-<li><a href="https://nighthawkrecruiting.tk/">Runtime Link (Running Project)</a></li>
+<li><a href="https://nighthawkrecruiting.tk/">Runtime Link - Running Project</a></li>
 <li><a href="https://github.com/nolanplatt/AP-CSA-T2/projects/1">Team Scrum Board</a></li>
 <li><a href="https://github.com/nolanplatt/AP-CSA-T2/commits/master">All Team Commits</a></li>
 <li><a href="https://github.com/nolanplatt/AP-CSA-T2/graphs/contributors">Team Insight Graphs</a></li>
