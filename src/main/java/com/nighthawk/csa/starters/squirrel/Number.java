@@ -42,14 +42,23 @@ public class Number {
         }
 
         // Insert Number instance into ArrayList Squirrel in least to greatest order by random number, mine required nested loops
-        int leastRandomNumber = 37;
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                if (squirrels.get(j).getSquirrelAmount() < leastRandomNumber) {
+        for (int i = 0; i < squirrels.size(); i++) {
+            int greatestRandomNumber = 0;
+            for (int j = 0; j < squirrels.size(); j++) {
+                if (squirrels.get(j).getSquirrelAmount() > greatestRandomNumber) {
+                    greatestRandomNumber = squirrels.get(j).getSquirrelAmount();
                     squirrels.add(squirrels.get(j));
                     squirrels.remove(j);
-                    leastRandomNumber = squirrels.get(j).getSquirrelAmount();
+                    j--;
                 }
+                else if (squirrels.get(j).getSquirrelAmount() == greatestRandomNumber) {
+                    squirrels.add(squirrels.get(j));
+                    squirrels.remove(j);
+                }
+                // With this current system, it gets sorted correctly as long as:
+                // There isn't more than one duplicate squirrelAmount. In other words...
+                // One duplicate is fine, like 5, 14, 14, 16, 23...
+                // But it'll mess up if there are two duplicates like 5, 20, 20, 25, 25.
             }
         }
 
