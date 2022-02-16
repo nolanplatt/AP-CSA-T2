@@ -40,6 +40,11 @@ public class QuizController {
 
         else if (questionId == 1) {
             model.addAttribute("question", "What is the BMI of a 6 foot person that weighs 140 pounds? Answer to the nearest tenth.");
+
+            // -------------------------- Answer (for demonstration) --------------------------
+            model.addAttribute("answer", "19.0");
+            // -------------------------- Answer (for demonstration) --------------------------
+
             if (UserInputJava.equals("19.0")) {
                 model.addAttribute("output", "Correct! Press enter to continue.");
                 // Chooses a random questionId, but if they choose the same question, reselect the questionId.
@@ -55,6 +60,11 @@ public class QuizController {
 
         else if (questionId == 2) {
             model.addAttribute("question", "What is the normal BMI for an adult?");
+
+            // -------------------------- Answer (for demonstration) --------------------------
+            model.addAttribute("answer", "18.5 to 24.9");
+            // -------------------------- Answer (for demonstration) --------------------------
+
             if (UserInputJava.equals("18.5 to 24.9")) {
                 model.addAttribute("output", "Correct! Press enter to continue.");
                 // Chooses a random questionId, but if they choose the same question, reselect the questionId.
@@ -70,6 +80,11 @@ public class QuizController {
 
         else if (questionId == 3) {
             model.addAttribute("question", "What does BMI stand for?");
+
+            // -------------------------- Answer (for demonstration) --------------------------
+            model.addAttribute("answer", "Body Mass Index");
+            // -------------------------- Answer (for demonstration) --------------------------
+
             if (UserInputJava.equals("Body Mass Index")) {
                 model.addAttribute("output", "Correct! Press enter to continue.");
                 // Chooses a random questionId, but if they choose the same question, reselect the questionId.
@@ -85,6 +100,11 @@ public class QuizController {
 
         else if (questionId == 4) {
             model.addAttribute("question", "What BMI range is considered overweight");
+
+            // -------------------------- Answer (for demonstration) --------------------------
+            model.addAttribute("answer", "25 to 29.9");
+            // -------------------------- Answer (for demonstration) --------------------------
+
             if (UserInputJava.equals("25 to 29.9")) {
                 model.addAttribute("output", "Correct! Press enter to continue.");
                 // Chooses a random questionId, but if they choose the same question, reselect the questionId.
@@ -100,6 +120,11 @@ public class QuizController {
 
         else if (questionId == 5) {
             model.addAttribute("question", "What BMI range is considered obese");
+
+            // -------------------------- Answer (for demonstration) --------------------------
+            model.addAttribute("answer", "30 to 39.9");
+            // -------------------------- Answer (for demonstration) --------------------------
+
             if (UserInputJava.equals("30 to 39.9")) {
                 model.addAttribute("output", "Correct! Press enter to continue.");
                 // Chooses a random questionId, but if they choose the same question, reselect the questionId.
@@ -115,6 +140,11 @@ public class QuizController {
 
         else if (questionId == 6) {
             model.addAttribute("question", "What converts food into energy?");
+
+            // -------------------------- Answer (for demonstration) --------------------------
+            model.addAttribute("answer", "cellular respiration");
+            // -------------------------- Answer (for demonstration) --------------------------
+
             if (UserInputJava.equals("cellular respiration") || UserInputJava.equals("metabolism")) {
                 model.addAttribute("output", "Correct! Press enter to continue.");
                 // Chooses a random questionId, but if they choose the same question, reselect the questionId.
