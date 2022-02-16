@@ -3,46 +3,63 @@ package com.nighthawk.csa;
 import java.util.ArrayList;
 
 // Write a Class Number
-public class ChrisNumber {
+class Number {
     // instance variables
-    private int min=3;
-    private int max=36;
+    int squirrelNum;
+    int index;
+    static int indexCounter = 0;
 
     // Number has a zero Argument constructor
     // It initializes a random number between 3 and 36, ie the number of squirrels in class
-    public ChrisNumber(int min, int max) {
-        // constructor
-        this.min = min;
-        this.max = max;
+    public Number() {
+        // Since Math.random() * 34 will return a value between 0 and 33,
+        // Then adding 3 to both will pick a random number between 3 and 36.
+        squirrelNum = (int) Math.floor(Math.random() * 34) + 3;
+        // Index
+        index = indexCounter;
+        indexCounter++;
     }
 
     // It contains a getter for the Random Number
-    public double rand(){
-        return Math.random() * ( max - min );
+    public int getSquirrelNum() {
+        return squirrelNum;
     }
 
-
     // It contains a getter for Index, or the order it was initialized
-    public Index() {
-
+    public int getIndex() {
+        return index;
     }
 
     // Write a tester method
     public static void main(String[] args) {
 
         // Create an ArrayList of Type Number, my ArrayList is called squirrels
-        ArrayList<Number> squirrels = new ArrayList<Number>();
+        ArrayList<Number> squirrels = new ArrayList<>();
+
 
         // Initialize 10 squirrels of class type Number
-        // Insert Number instance into ArrayList Squirrel in least to greatest order by random number, mine required nested loops
+        for (int i = 0; i < 10; i++) {
+            Number squirrel = new Number();
+            squirrels.add(squirrel);
+        }
 
+        // Insert Number instance into ArrayList Squirrel in least to greatest order by random number, mine required nested loops
+        int min = 37;
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (squirrels.get(j).getSquirrelNum() < min) {
+                    squirrels.add(squirrels.get(j));
+                    squirrels.remove(j);
+                    min = squirrels.get(j).getSquirrelNum();
+                }
+            }
+        }
 
         // Print a formatted message with number of Squirrels and Index by which they were created, use enhanced for loop
-        for( : ) {
-
+        for (Number i : squirrels) {
+            System.out.println("Squirrels: " + i.getSquirrelNum() + " Day: " + i.getIndex());
         }
     }
-
 }
 
 // Squirrels: 3 Day: 9
