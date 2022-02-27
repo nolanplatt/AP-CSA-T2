@@ -1,0 +1,58 @@
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorate="~{layout}"
+      lang="en">
+<!-- <head> -->
+
+<head>
+    <title>Player Profile | Nighthawk Recruiting</title>
+</head>
+
+<!-- <body> -->
+
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <div class="main">
+        <p id=playername class="sign" align="center">Name</p>
+        <div>
+            <img id="pfp" src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="Profile Picture" style="display: block; margin-left: auto;  margin-right: auto;" width="241px" height="193px">
+        </div>
+
+        <p id="sport" align="center">Sport</p>
+        <p id="age" align="center">Age: </p>
+
+        <form class="form1">
+            <a id=contactinfo class="submit" href="mailto:example@example.com" align="center">Contact</a>
+        </form>
+    </div>
+
+</div>
+</body>
+
+<div layout:fragment="script" th:remove="tag">
+    <script>
+
+        console.log(window.location.href)
+        var id = window.location.href.split("/")[4];
+        console.log(id)
+
+
+        axios({
+            method: "get",
+            url: "/api/person/get/" + id,
+            headers: { "Content-Type": "text/plain" }
+        }).then(resp => {
+            var json_profile = resp.data;
+            console.log(json_profile)
+            document.getElementById("playername").innerText = json_profile.name;
+            document.getElementById("contactinfo").href = "mailto:" + json_profile.email;
+            document.getElementById("pfp").src = json_profile.image;
+            document.getElementById("sport").innerText = json_profile.sport;
+            document.getElementById("age").innerText = "Age: " + json_profile.age + " years";
+        });
+
+
+    </script>
+</div>
+
+</html>
