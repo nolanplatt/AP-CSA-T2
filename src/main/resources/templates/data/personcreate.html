@@ -78,7 +78,7 @@
                             <small th:if="${#fields.hasErrors('experience')}" th:errors="*{experience}">Experience Error</small>
                         </div>
                         <div class="input-group mb-2 mr-sm-2">
-                            <label for="recruited">Recruited(yes or no):</label>
+                            <label for="recruited">Recruited(true or false):</label>
                             <input type="text" th:field="*{recruited}" id="recruited">
                             <small th:if="${#fields.hasErrors('recruited')}" th:errors="*{recruited}">Recruited Error</small>
                         </div>

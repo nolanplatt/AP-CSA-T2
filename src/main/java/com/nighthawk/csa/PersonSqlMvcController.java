@@ -142,7 +142,7 @@ public class PersonSqlMvcController implements WebMvcConfigurer {
     public ResponseEntity<Object> postPerson(@RequestParam("email") String email,
                                              @RequestParam("phonenumber") String phonenumber,
                                              @RequestParam("experience") String experience,
-                                             @RequestParam("recruited") String recruited,
+                                             @RequestParam("recruited") Boolean recruited,
                                              @RequestParam("name") String name,
                                              @RequestParam("sport") String sport,
                                              @RequestParam("image") String image,

@@ -47,8 +47,8 @@ public class Person {
     private String experience;
 
     @NonNull
-    @Size(min = 2, max = 3, message = "Recruited")
-    private String recruited;
+//    @Size(min = 4, max = 5, message = "Recruited")
+    private Boolean recruited;
 
     @NonNull
     @Size(min = 2, max = 30, message = "Name (2 to 30 chars)")
@@ -66,7 +66,7 @@ public class Person {
     private Date dob;
 
     /* Initializer used when setting data from an API */
-    public Person(String email, String phonenumber, String experience, String recruited,String name, String sport, String image, Date dob) {
+    public Person(String email, String phonenumber, String experience, Boolean recruited,String name, String sport, String image, Date dob) {
         this.email = email;
         this.phonenumber = phonenumber;
         this.experience = experience;

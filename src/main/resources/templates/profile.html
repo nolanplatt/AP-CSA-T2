@@ -16,13 +16,15 @@
         <p id=playername class="sign" align="center">Name</p>
         <div>
             <img id="pfp" src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="Profile Picture" style="display: block; margin-left: auto;  margin-right: auto;" width="241px" height="193px">
+            <p style="margin: 0" id="sport" align="center">Sport</p>
+            <p style="margin: 0" id="experience" align="center">Experience: </p>
+            <p style="margin: 1px" id="status" align="center">Recruitment Status: </p>
+            <a id=contactinfo class="submit" href="mailto:example@example.com" align="center">Contact</a>
+
         </div>
 
-        <p id="sport" align="center">Sport</p>
-        <p id="age" align="center">Age: </p>
-
         <form class="form1">
-            <a id=contactinfo class="submit" href="mailto:example@example.com" align="center">Contact</a>
+<!--            <a id=contactinfo class="submit" href="mailto:example@example.com" align="center">Contact</a>-->
         </form>
     </div>
 
@@ -49,6 +51,13 @@
             document.getElementById("pfp").src = json_profile.image;
             document.getElementById("sport").innerText = json_profile.sport;
             document.getElementById("age").innerText = "Age: " + json_profile.age + " years";
+            document.getElementById("experience").innerText = "Experience: " + json_profile.experience + " years";
+            if (json_profile.experience) {
+                document.getElementById("status").innerText = "Recruitment Status: recruited";
+            } else {
+                document.getElementById("status").innerText = "Recruitment Status: free agent";
+            }
+
         });
 
 
