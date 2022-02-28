@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorate="~{layout}" lang="en">
+
+
+<head>
+    <div layout:fragment="metadata" th:remove="tag">
+        <title>Admin Authentication</title>
+    </div>
+</head>
+
+<body onload="updateTimes()">
+<div layout:fragment="content" th:remove="tag">
+
+    <div class="main">
+        <p class="sign" align="center">Admin Access Only - Protected by SHA-256 Encryption</p>
+        <form class="form1">
+            <input class="pass" id="password" type="password" align="center" placeholder="Password">
+            <a class="submit" onclick="attemptLogin();" align="center">Sign in</a>
+        </form>
+    </div>
+
+
+</div>
+
+</body>
+
+<div layout:fragment="script" th:remove="tag">
+    <script src="/static/vanta/three.r119.min.js" th:src="@{/vanta/three.r119.min.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function attemptLogin() {
+            let pw = document.getElementById("password").value;
+            window.location.replace("/personAuthAPI?password=" + pw);
+        }
+    </script>
+</div>
+
+</html>

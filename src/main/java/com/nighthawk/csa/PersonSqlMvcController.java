@@ -14,7 +14,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -28,6 +30,21 @@ public class PersonSqlMvcController implements WebMvcConfigurer {
     @Autowired
     private PersonSqlRepository repository;
 
+    @GetMapping("/data/personAuth")
+    public String getPersonAuth() {
+        return "data/personAuth";
+    }
+
+    @GetMapping("/personAuthAPI")
+    public String getPersonAuthAPI(@RequestParam(name = "password") String password, HttpServletResponse httpResponse) throws IOException {
+        if(password.equals("LHopital")) {
+            System.out.println("Admin PW Matches");
+            return "redirect:data/person";
+        } else {
+            System.out.println("!!!false");
+            return "data/personAuth";
+        }
+    }
     @GetMapping("/data/person")
     public String person(Model model) {
         List<Person> list = repository.listAll();
