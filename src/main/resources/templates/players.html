@@ -12,8 +12,39 @@
 
 <body>
 <div layout:fragment="content" th:remove="tag">
-    <div id="list" class="players">
-        <h1> Player List </h1>
+    <div class="container">
+
+        <div class="row justify-content-md-center" style="margin-top:7%;">
+            <h1>Player List</h1>
+        </div>
+
+        <table id="playerTable" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Sport</th>
+                    <th>Age</th>
+                    <th>Recruited Status</th>
+                    <th>Profile</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>blue</td>
+                    <td>blue</td>
+                    <td>blue</td>
+                    <td>blue</td>
+                    <td>blue</td>
+                </tr>
+
+
+
+            </tbody>
+
+        </table>
+
     </div>
 
 </div>
@@ -28,10 +59,36 @@
             headers: { "Content-Type": "text/plain" }
         }).then(resp => {
             for (var i = 0; i < resp.data.length; i++) {
-                console.log(resp.data[i])
-                var tag = document.createElement('p');
-                tag.appendChild(document.createTextNode("Name: " + resp.data[i].name + " Playing " + resp.data[i].sport))
-                document.getElementById("list").appendChild(tag)
+
+                var tableRef = document.getElementById('playerTable');
+                var newRow = tableRef.insertRow(-1);
+
+                var nameCell = newRow.insertCell(0);
+                var name = document.createTextNode(resp.data[i].name);
+                nameCell.appendChild(name);
+
+                var sportCell = newRow.insertCell(1);
+                var sport = document.createTextNode(resp.data[i].sport);
+                sportCell.appendChild(sport);
+
+                var ageCell = newRow.insertCell(2);
+                var age = document.createTextNode(resp.data[i].age);
+                ageCell.appendChild(age);
+
+
+                var recruitCell = newRow.insertCell(3);
+                if (resp.data[i].recruited) {
+                    recruitCell.appendChild(document.createTextNode("recruited"));
+                } else {
+                    recruitCell.appendChild(document.createTextNode("not recruited"));
+                }
+
+                var profileCell = newRow.insertCell(4);
+                var link = document.createElement('a');
+                link.appendChild(document.createTextNode("player profile"))
+                link.href = "/player/" + resp.data[i].id
+                profileCell.appendChild(link);
+
             }
 
         });

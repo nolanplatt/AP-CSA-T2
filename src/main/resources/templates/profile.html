@@ -51,7 +51,7 @@
             document.getElementById("pfp").src = json_profile.image;
             document.getElementById("sport").innerText = json_profile.sport;
             document.getElementById("experience").innerText = "Experience: " + json_profile.experience + " years";
-            if (json_profile.experience) {
+            if (json_profile.recruited) {
                 document.getElementById("status").innerText = "Recruitment Status: recruited";
             } else {
                 document.getElementById("status").innerText = "Recruitment Status: free agent";
