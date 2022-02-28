@@ -1,0 +1,42 @@
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorate="~{layout}"
+      lang="en">
+<!-- <head> -->
+
+<head>
+    <title>Player List | Nighthawk Recruiting</title>
+</head>
+
+<!-- <body> -->
+
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <div id="list" class="players">
+        <h1> Player List </h1>
+    </div>
+
+</div>
+</body>
+
+<div layout:fragment="script" th:remove="tag">
+    <script>
+
+        axios({
+            method: "get",
+            url: "/api/people/get",
+            headers: { "Content-Type": "text/plain" }
+        }).then(resp => {
+            for (var i = 0; i < resp.data.length; i++) {
+                console.log(resp.data[i])
+                var tag = document.createElement('p');
+                tag.appendChild(document.createTextNode("Name: " + resp.data[i].name + " Playing " + resp.data[i].sport))
+                document.getElementById("list").appendChild(tag)
+            }
+
+        });
+
+    </script>
+</div>
+
+</html>
