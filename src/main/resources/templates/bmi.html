@@ -29,6 +29,19 @@
             var bmi = ((weight/(height*height))*703).toFixed(2);
             console.log("BMI: " + bmi);
             document.getElementById("result").innerHTML = "BMI: " + bmi;
+            alternateCalculation() // for accuracy
+        }
+
+        function alternateCalculation() {
+            var weight = document.getElementById("weight").value;
+            var height = document.getElementById("height").value;
+            var calculateSec1 = (weight)/(height*height);
+            var calculateSec2 = calculateSec1 * 703;
+            console.log("BMI -> " + round(calculateSec2, 1))
+        }
+        function round(value, toWhat) {
+            var multiplier = Math.pow(10, toWhat || 0);
+            return Math.round(value * multiplier) / multiplier;
         }
     </script>
 </div>

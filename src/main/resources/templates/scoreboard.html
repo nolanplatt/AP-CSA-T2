@@ -32,7 +32,7 @@
 
             // Send time values back to "timer" HTML element.
             // If minutes or seconds are single digits, add a leading zero.
-            if (seconds < 10 && minutes < 10) {
+            if (minutes < 10 && seconds < 10) {
                 document.getElementById("timer").innerHTML = "0" + minutes + ":" + "0" + seconds;
             }
             else if (seconds < 10) {
@@ -51,7 +51,7 @@
                 // Timer Instance
                 countdown = setInterval(function () {
                     // Reduces seconds by 1 every second. If it drops below 0, reduce minutes by 1.
-                    seconds -= 1;
+                    seconds --;
                     if (seconds < 0) {
                         seconds = 59;
                         minutes -= 1;
@@ -63,7 +63,7 @@
 
                     // Send time values back to "timer" HTML element.
                     // If minutes or seconds are single digits, add a leading zero.
-                    if (seconds < 10 && minutes < 10) {
+                    if (minutes < 10 && seconds < 10) {
                         document.getElementById("timer").innerHTML = "0" + minutes + ":" + "0" + seconds;
                     }
                     else if (seconds < 10) {
